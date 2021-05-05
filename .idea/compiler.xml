@@ -18,7 +18,10 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="#1001_OnlineWebShop" target="11" />
-      <module name="#1002_SportBetsCalculator" target="1.5" />
+      <module name="#1001_OnlineWebShop.main" target="11" />
+      <module name="#1001_OnlineWebShop.test" target="11" />
+      <module name="team_dog.main" target="1.8" />
+      <module name="team_dog.test" target="1.8" />
       <module name="test" target="1.5" />
     </bytecodeTargetLevel>
   </component>
