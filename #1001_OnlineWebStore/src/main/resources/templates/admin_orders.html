@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Orders</title>
+
+    <link th:href="@{/css/bootstrap.css}" rel="stylesheet">
+    <link th:href="@{/css/styles.css}" rel="stylesheet">
+
+    <script type="text/javascript" th:src="@{/js/storescripts.js}"></script>
+
+</head>
+<body class="p-5">
+
+<h3>This is admin page and must be secured by Spring Security </h3>
+<form action="#" th:action="@{/home}" method="get">
+    <input type="submit" value="Return to Shop"/>
+</form>
+<br>
+
+<form th:action="@{/admin/item/types}" method="get">
+    <input type="submit" value="Item types"/>
+</form>
+<br>
+
+<form action="#" th:action="@{/admin/orders}" method="get">
+    <input type="submit" value="Orders"/>
+</form>
+<hr/>
+
+<div th:each="order:${orders}">
+    <p>
+        <a th:text="'Order id: ' + ${order.orderId}"></a><br>
+        <a th:text="'Order created at: ' + ${order.createdAt}"></a><br>
+        <a th:text="'Order status: ' + ${order.orderStatus}"></a><br>
+        <a>Items in order: </a><br>
+        <a th:each="item:${order.getOrderedItems()}">
+            <a th:text="'&emsp;&emsp;&emsp;' + ${item.id}"></a>
+            <a th:text="' - ' + ${item.name}"></a><br>
+        </a>
+        <a th:text="'Email: ' + ${order.email}"></a><br>
+        <a th:text="'Delivery adress: ' + ${order.address}"></a><br>
+        <a th:text="'User notes: ' + ${order.userInfo}"></a><br>
+        <a th:text="'Admin notes: ' + ${order.adminInfo}"></a><br>
+    </p>
+    <form>
+        <input type="submit" th:formaction="@{/admin/orders/edit/{path}(path=${order.orderId})}" formmethod="post" value="Edit note"/>
+        <input type="submit" th:formaction="@{/admin/orders/approve/{path}(path=${order.orderId})}" formmethod="post" value="Approve Payment"/>
+        <input type="submit" th:formaction="@{/admin/orders/decline/{path}(path=${order.orderId})}" formmethod="post" value="Decline Order"/>
+    </form>
+    <hr/>
+</div>
+
+</body>
+</html>
