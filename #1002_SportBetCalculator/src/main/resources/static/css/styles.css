@@ -1,0 +1,52 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td, th {
+    border-bottom: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    word-wrap: break-word;
+}
+
+tr:nth-child(even) {
+    background-color: #e2f5c0;
+}
+
+td.empty, th.empty {
+    width: 2px;
+    background-color: #5f5e5e;
+}
+
+
+.top-ares {
+    height: 30%;
+}
+.add-record {
+    width: 20%;
+    float: left;
+    background-color: #f8f8f8;
+}
+.add-strategy {
+    top: 0;
+    width: 20%;
+    float: left;
+}
+.show-strategy {
+    width: 60%;
+    float: left;
+    background-color: #f8f8f8;
+}
+
+.bet-links {
+    clear:both;
+}
+
+.records {
+    clear:both
+}
+
+.calc-header {
+    background-color: #ffffb9;
+}

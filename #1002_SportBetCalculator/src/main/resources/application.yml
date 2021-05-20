@@ -1,3 +1,15 @@
+server:
+  port: 8080
+
 spring:
   thymeleaf:
     cache: false
+  jpa:
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:mysql://localhost:3306/sport_bets_db
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+

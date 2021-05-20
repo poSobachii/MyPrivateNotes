@@ -4,19 +4,139 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Calculator V1</title>
-    <!--    <link rel="stylesheet" th:href="@{/rsc/css/main2.css}"/>-->
+    <link th:href="@{/css/styles.css}" rel="stylesheet">
 </head>
 <body>
-<h3>Simple calculator for counting bets </h3>
+<h3 class="calc-header">V1 calculator </h3>
 
-<form action="#" th:action="@{/addRecord}" th:object="${simpleRecordDTO}" method="post">
-    <p> Team #1: <input type="text" th:field="*{firstTeam}"></p>
-    <p> Coefficient #1: <input type="text" th:field="*{firstTeamRate}"></p>
-    <p> Team #2: <input type="text" th:field="*{secondTeam}"></p>
-    <p> Coefficient #2: <input type="text" th:field="*{secondTeamRate}"></p>
-    <p> Minimal bet: <input type="text" th:field="*{betMinimalAmount}"></p>
-    <p><input type="submit" value="Submit"/> <input type="reset" value="Reset"></p>
-</form>
+<div>
+    <div class="add-record">
+        <form action="#" th:action="@{/addRecord}" th:object="${dataRecordDTO}" method="post">
+            <p> Date: <input type="date" required="required" th:field="*{dateOfMatch}"></p>
+            <p> Team #1: <input type="text" required="required" th:field="*{nameTeamOne}"></p>
+            <p> Coefficient #1: <input type="number" step="0.01" required="required" th:field="*{betRateTeamOne}"></p>
+            <p> Team #2: <input type="text" required="required" th:field="*{nameTeamTwo}"></p>
+            <p> Coefficient #2: <input type="number" step="0.01" required="required" th:field="*{betRateTeamTwo}"></p>
+            <p><input type="submit" value="Submit"/> <input type="reset" value="Reset"></p>
+        </form>
+    </div>
 
+    <div class="add-strategy">
+        <form action="#" th:action="@{/addStrategy}" th:object="${bettingStrategyDTO}" method="post">
+            <p> Name: <input type="text" required="required" th:field="*{strategyName}"></p>
+            <p> Start Summ: <input type="number" step="0.01" required="required" th:field="*{startingSum}"></p>
+            <p> Risk policy(min ratio): <input type="number" step="0.01" required="required" th:field="*{maxRatio}"></p>
+            <p> Bet Summ: <input type="number" step="0.01" required="required" th:field="*{betSum}"></p>
+            <p><input type="submit" value="Submit"/> <input type="reset" value="Reset"></p>
+        </form>
+
+    </div>
+    <div class="show-strategy">
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Starting Summ</th>
+                <th>Risk Ratio</th>
+                <th>Current Summ</th>
+                <th>Bet qty.</th>
+                <th>Remove</th>
+            <tr>
+            <tr th:each="strategy : ${strategies}">
+                <td th:text="${strategy.getStrategyName()}"></td>
+                <td th:text="${strategy.getStartingSum()}"></td>
+                <td th:text="${strategy.getMaxRatio()}"></td>
+                <td th:text="${strategy.getCurrentSum()}"></td>
+                <td th:text="${strategy.getAffectedBetQty()}"></td>
+                <td>
+                    <form>
+                        <input type="submit" th:formaction="@{/deletestr/{path} (path=${strategy.id})}"
+                               formmethod="post"
+                               value="Delete"/>
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div class="bet-links" th:each="link : ${links}">
+    <a th:href="${link}" th:text="${link}"></a>
+</div>
+<hr/>
+<div class="records">
+    <table>
+        <tr>
+            <th>Game Date</th>
+            <th class="empty"></th>
+            <th>Team 1</th>
+            <th>Coeff #1</th>
+            <th>Bet Size</th>
+            <th class="empty"></th>
+            <th>Team 2</th>
+            <th>Coeff #2</th>
+            <th>Bet Size</th>
+            <th class="empty"></th>
+            <th>Sum</th>
+            <th>Profit</th>
+            <th>Ratio</th>
+            <th class="empty"></th>
+            <th>Bet Status</th>
+            <th>Result</th>
+            <th>Decline</th>
+
+        </tr>
+        <tr th:each="record : ${records}">
+            <td th:text="${record.getDateOfMatch()}" th:field="${record.dateOfMatch}"></td>
+            <td class="empty"></td>
+            <td th:text="${record.getNameTeamOne()}"></td>
+            <td th:text="${record.getBetRateTeamOne()}"></td>
+            <td th:text="${record.getBetSizeTeamOne()}"></td>
+            <td class="empty"></td>
+            <td th:text="${record.getNameTeamTwo()}"></td>
+            <td th:text="${record.getBetRateTeamTwo()}"></td>
+            <td th:text="${record.getBetSizeTeamTwo()}"></td>
+            <td class="empty"></td>
+            <td th:text="${record.getBetSum()}"></td>
+            <td th:text="${record.getCleanWinSum()}"></td>
+            <td th:text="${record.getWinRatio()}"></td>
+            <td class="empty"></td>
+            <td th:switch="${record.getBetStatus()}">
+                <div th:case="${T(gamma.enums.BetStatus).CREATED}" th:text="${record.getBetStatus()}"></div>
+                <div th:case="${T(gamma.enums.BetStatus).COMPLETED}">
+                    <form action="#" th:action="@{/calculate/{path} (path=${record.id})}" method="post">
+                        <a th:text="${record.getBetStatus()}"></a>
+                        <input type="submit" value="CALCULATE"/>
+                    </form>
+                </div>
+                <div th:case="${T(gamma.enums.BetStatus).CALCULATED}">
+                    <form action="#" th:action="@{/hide/{path} (path=${record.id})}" method="post">
+                        <a th:text="${record.getBetStatus()}"></a>
+                        <input type="submit" value="HIDE"/>
+                    </form>
+                </div>
+            </td>
+            <td>
+                <div th:if="${record.getBetResult() != null}" th:text="${record.getBetResult()}"></div>
+                <div th:if="${record.getBetResult() == null}">
+                    <form action="#" th:action="@{/proceed}" method="post">
+                        <input type="submit" th:formaction="@{/proceed/{path}?result=1 (path=${record.id})}"
+                               formmethod="post" value="Team_1"/>
+                        <input type="submit" th:formaction="@{/proceed/{path}?result=2 (path=${record.id})}"
+                               formmethod="post" value="Team_2"/>
+                        <input type="submit" th:formaction="@{/proceed/{path}?result=0 (path=${record.id})}"
+                               formmethod="post" value="Lost"/>
+                    </form>
+                </div>
+            </td>
+            <td>
+                <form>
+                    <input type="submit" th:formaction="@{/delete/{path} (path=${record.id})}" formmethod="post"
+                           value="Delete"/>
+                </form>
+            </td>
+
+        </tr>
+
+    </table>
+</div>
 </body>
 </html>
