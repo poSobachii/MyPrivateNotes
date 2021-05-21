@@ -30,10 +30,11 @@ public class MainController {
         return "home";
     }
 
-    @GetMapping("/calculation")
+    @GetMapping("/calculation/live")
     public String main(Model model, DataRecordDTO recordDto, BettingStrategyDTO bettingStrategyDTO) {
+        model.addAttribute("date", recordService.getDate());
         model.addAttribute("links", BetLink.betLinks);
-        model.addAttribute("records", recordService.getAllRecords());
+        model.addAttribute("records", recordService.getAllOpenedRecords());
         model.addAttribute("record", new DataRecord());
         model.addAttribute("strategies", strategyService.getAllStrategies());
         return "calculateV1";
@@ -42,37 +43,43 @@ public class MainController {
     @PostMapping("/addRecord")
     public String addRecord(DataRecordDTO recordDto){
         recordService.addNewRecord(recordDto);
-        return "redirect:/calculation";
+        return "redirect:/calculation/live";
     }
 
     @PostMapping("/addStrategy")
     public String addStrategy(BettingStrategyDTO bettingStrategyDTO){
         strategyService.addNewStrategy(bettingStrategyDTO);
-        return "redirect:/calculation";
+        return "redirect:/calculation/live";
     }
 
     @PostMapping("/proceed/{path}")
     public String proceed(@PathVariable Long path, @RequestParam Integer result){
         recordService.proceedResult(path, result);
-        return "redirect:/calculation";
+        return "redirect:/calculation/live";
     }
 
     @PostMapping("/calculate/{path}")
     public String calculateBet(@PathVariable Long path){
         recordService.calculateBet(path);
-        return "redirect:/calculation";
+        return "redirect:/calculation/live";
     }
 
     @PostMapping("/delete/{path}")
     public String delete(@PathVariable Long path){
         recordService.deleteRecord(path);
-        return "redirect:/calculation";
+        return "redirect:/calculation/live";
     }
 
     @PostMapping("/deletestr/{path}")
     public String deleteStrategy(@PathVariable Long path){
         strategyService.deleteStrategy(path);
-        return "redirect:/calculation";
+        return "redirect:/calculation/live";
+    }
+
+    @PostMapping("/hide/{path}")
+    public String hideBet(@PathVariable Long path){
+        recordService.hideRecord(path);
+        return "redirect:/calculation/live";
     }
 
 

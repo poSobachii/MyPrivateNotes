@@ -46,11 +46,11 @@ public class DataRecord {
     private BigDecimal cleanWinSum;
     private BigDecimal winRatio;
 
-    public DataRecord(DataRecordDTO dataRecordDTO) {
-        this.dateOfMatch = dataRecordDTO.getDateOfMatch();
-        this.nameTeamOne = dataRecordDTO.getNameTeamOne();
-        this.nameTeamTwo = dataRecordDTO.getNameTeamTwo();
-        this.betRateTeamOne = dataRecordDTO.getBetRateTeamOne();
-        this.betRateTeamTwo = dataRecordDTO.getBetRateTeamTwo();
+    public DataRecord(String date, String teamOne, String teamTwo, BigDecimal coefOne, BigDecimal coefTwo) {
+        this.dateOfMatch = date;
+        this.nameTeamOne = teamOne;
+        this.nameTeamTwo = teamTwo;
+        this.betRateTeamOne = coefOne;
+        this.betRateTeamTwo = coefTwo;
     }
 }

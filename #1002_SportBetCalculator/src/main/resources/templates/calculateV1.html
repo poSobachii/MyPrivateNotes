@@ -12,10 +12,9 @@
 <div>
     <div class="add-record">
         <form action="#" th:action="@{/addRecord}" th:object="${dataRecordDTO}" method="post">
-            <p> Date: <input type="date" required="required" th:field="*{dateOfMatch}"></p>
-            <p> Team #1: <input type="text" required="required" th:field="*{nameTeamOne}"></p>
+            <p> Date: <input type="date" th:field="*{dateOfMatch}"> <a th:text="${date}"></a></p>
+            <p> Team #1: <input type="text" required="required" th:field="*{teamNames}"></p>
             <p> Coefficient #1: <input type="number" step="0.01" required="required" th:field="*{betRateTeamOne}"></p>
-            <p> Team #2: <input type="text" required="required" th:field="*{nameTeamTwo}"></p>
             <p> Coefficient #2: <input type="number" step="0.01" required="required" th:field="*{betRateTeamTwo}"></p>
             <p><input type="submit" value="Submit"/> <input type="reset" value="Reset"></p>
         </form>

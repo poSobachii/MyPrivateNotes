@@ -14,10 +14,8 @@ import java.math.BigDecimal;
 public class DataRecordDTO {
     private String dateOfMatch;
 
-    private String nameTeamOne;
+    private String teamNames;
     private BigDecimal betRateTeamOne;
-
-    private String nameTeamTwo;
     private BigDecimal betRateTeamTwo;
 
 }

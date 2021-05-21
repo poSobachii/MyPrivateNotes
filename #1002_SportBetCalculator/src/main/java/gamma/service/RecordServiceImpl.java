@@ -10,9 +10,11 @@ import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.util.Comparator;
 import java.util.List;
 
 import static gamma.enums.BetStatus.CALCULATED;
+import static gamma.enums.BetStatus.CLOSED;
 import static gamma.enums.BetStatus.COMPLETED;
 import static gamma.enums.BetStatus.CREATED;
 
@@ -20,6 +22,7 @@ import static gamma.enums.BetStatus.CREATED;
 public class RecordServiceImpl implements RecordService {
 
     private BigDecimal minimalBetSize = BigDecimal.TEN;
+    private String date;
 
     @Autowired
     DataRecordRepository dataRecordRepository;
@@ -27,13 +30,23 @@ public class RecordServiceImpl implements RecordService {
     StrategyService strategyService;
 
     @Override
-    public List<DataRecord> getAllRecords() {
-        return dataRecordRepository.findAll();
+    public List<DataRecord> getAllOpenedRecords() {
+        List<DataRecord> dataRecordList =  dataRecordRepository.findNonHidden();
+        dataRecordList.sort(Comparator.comparing(DataRecord::getDateOfMatch));
+        return dataRecordList;
     }
 
     @Override
     public void addNewRecord(DataRecordDTO recordDto) {
-        DataRecord dataRecord = new DataRecord(recordDto);
+        if(!recordDto.getDateOfMatch().equals("")) {
+            this.date = recordDto.getDateOfMatch();
+        }
+
+        String[] teams = recordDto.getTeamNames().split("-");
+        String teamOne = teams[0];
+        String teamTwo = teams[1];
+        DataRecord dataRecord = new DataRecord(date, teamOne , teamTwo ,recordDto.getBetRateTeamOne() ,recordDto.getBetRateTeamTwo());
+
         calculateBetSize(dataRecord, recordDto);
         dataRecord.setBetStatus(CREATED);
         dataRecordRepository.save(dataRecord);
@@ -69,6 +82,18 @@ public class RecordServiceImpl implements RecordService {
         dataRecordRepository.save(dataRecord);
     }
 
+    @Override
+    public void hideRecord(Long path) {
+        DataRecord dataRecord = dataRecordRepository.getOne(path);
+        dataRecord.setBetStatus(CLOSED);
+        dataRecordRepository.save(dataRecord);
+    }
+
+    @Override
+    public String getDate() {
+        return date;
+    }
+
     private void calculateBetSize(DataRecord record, DataRecordDTO recordDTO) {
         int compare = recordDTO.getBetRateTeamOne().compareTo(recordDTO.getBetRateTeamTwo());
         BigDecimal maxWinSize;
@@ -82,7 +107,7 @@ public class RecordServiceImpl implements RecordService {
             record.setBetSizeTeamTwo(otherTeamBetSize);
 
         } else if (compare < 0) {
-            System.out.println("T_2 ratio is bigger: " + recordDTO.getBetRateTeamOne() + " T_1 ratio: " + recordDTO.getBetRateTeamTwo());
+            System.out.println("T_2 ratio is bigger: " + recordDTO.getBetRateTeamTwo() + " T_1 ratio: " + recordDTO.getBetRateTeamOne());
             maxWinSize = minimalBetSize.multiply(recordDTO.getBetRateTeamTwo());
             otherTeamBetSize = maxWinSize.divide(recordDTO.getBetRateTeamOne(), 2, RoundingMode.CEILING);
             record.setBetSizeTeamOne(otherTeamBetSize);

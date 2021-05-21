@@ -41,6 +41,6 @@ public class BettingStrategy {
     }
 
     public void addAffectedBet() {
-        this.affectedBetQty =+ 1;
+        this.affectedBetQty += 1;
     }
 }

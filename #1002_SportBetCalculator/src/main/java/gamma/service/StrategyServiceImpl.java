@@ -8,6 +8,7 @@ import gamma.repository.BettingStrategyRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Comparator;
 import java.util.List;
 
 @Service
@@ -24,7 +25,9 @@ public class StrategyServiceImpl implements StrategyService {
 
     @Override
     public List<BettingStrategy> getAllStrategies() {
-        return bettingStrategyRepository.findAll();
+        List<BettingStrategy>  strategies =  bettingStrategyRepository.findAll();
+        strategies.sort(Comparator.comparing(BettingStrategy::getMaxRatio).reversed());
+        return strategies;
     }
 
     @Override

@@ -8,7 +8,7 @@ import java.util.List;
 public interface RecordService {
 
 
-    List<DataRecord> getAllRecords();
+    List<DataRecord> getAllOpenedRecords();
 
     void addNewRecord(DataRecordDTO recordDto);
 
@@ -17,5 +17,9 @@ public interface RecordService {
     void proceedResult(Long path, Integer result);
 
     void calculateBet(Long path);
+
+    void hideRecord(Long path);
+
+    String getDate();
 }
 
