@@ -1,0 +1,35 @@
+docker run --name "mssql2" -p 1433:1433  574048536853.dkr.ecr.us-east-1.amazonaws.com/weissr/mssql-server:eutest-cs-04082020-0911
+
+docker run --name "yoyo" -d -p 4444:4444 selenium/standalone-chrome
+http://localhost:4444/wd/hub/           //ghostdriver hub ?
+
+docker:
+-d              // run without logs
+-e              // pass environment argument
+-p              // use port
+-it             //interactive regime, turns the terminal of docker
+docker ps // - to see full list
+docker rm yoyo
+docker ps -a
+docker container prune
+docker system prune               // to stop everything unused and delete
+docker system prune -a               // delete all
+
+docker stop $(docker ps -a -q)                 // stopp all containers
+docker rm $(docker ps -a -q)           // delete all containers
+docker rm -f containter_name            // stop and delete container
+docker rmi <IMAGE ID>               // kill docker image
+docker rmi $(docker images -a -q)          // to remove all images
+docker image prune -a
+docker build -t helloworld .      // to build a docker image with this name. Must be a Dockerfile.withnoextension in a folder.
+docker login
+docker tag dogstyle posobachii/catstyle     // image dogstyle is merged with ur username / catstyle repository
+docker push posobachii/catstyle              // push into catstyle repository
+
+
+docker cp eudemo3_20200102_1558.bak mssql:/var/opt/mssql/backup                     // copy to docker inventory
+docker exec -it container id /name ls -all                     // to check docker inventory
+docker exec mssql ls var/opt/
+docker exec -it jnks cat var/jenkins_home/secrets/initialAdminPassword                                  // read file on docker server
+docker exec -it jmtr sh                         // enter docker container console
+docker exec -it msslq2 ls -la                         // check files with permisions

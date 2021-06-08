@@ -14,6 +14,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="#16_DockerSimpleApp" />
         <module name="#1002_SportBetCalculator" />
       </profile>
     </annotationProcessing>
@@ -21,6 +22,7 @@
       <module name="#1001_OnlineWebShop" target="11" />
       <module name="#1001_OnlineWebShop.main" target="11" />
       <module name="#1001_OnlineWebShop.test" target="11" />
+      <module name="Docker-app" target="1.8" />
       <module name="team_dog.main" target="1.8" />
       <module name="team_dog.test" target="1.8" />
       <module name="test" target="1.5" />
@@ -29,6 +31,8 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="#1002_SportBetCalculator" options="-parameters" />
+      <module name="#16_DockerSimpleApp" options="-parameters" />
+      <module name="Docker-app" options="-parameters" />
     </option>
   </component>
 </project>

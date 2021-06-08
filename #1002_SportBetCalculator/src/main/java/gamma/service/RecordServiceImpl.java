@@ -3,7 +3,6 @@ package gamma.service;
 import gamma.entity.DataRecord;
 import gamma.entity.DataRecordDTO;
 import gamma.enums.BetResult;
-import gamma.enums.BetStatus;
 import gamma.repository.DataRecordRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
