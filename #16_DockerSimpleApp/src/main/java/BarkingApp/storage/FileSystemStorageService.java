@@ -1,5 +1,7 @@
 package BarkingApp.storage;
 
+import BarkingApp.repos.Logging;
+import BarkingApp.repos.LoggingRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
@@ -23,6 +25,9 @@ import java.util.stream.Stream;
 public class FileSystemStorageService implements StorageService {
 
     private final Path rootLocation;
+
+    @Autowired
+    private LoggingRepository loggingRepository;
 
     @Autowired
     public FileSystemStorageService(StorageProperties properties) {
@@ -50,6 +55,9 @@ public class FileSystemStorageService implements StorageService {
         catch (IOException e) {
             throw new StorageException("Failed to store file " + filename, e);
         }
+
+        Logging logging = new Logging(filename);
+        loggingRepository.save(logging);
     }
 
     @Override

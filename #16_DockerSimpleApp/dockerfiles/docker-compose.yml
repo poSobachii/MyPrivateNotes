@@ -1,0 +1,21 @@
+networks:
+  compose-test:
+    external: true
+services:
+  backend:
+    image: barkapp
+    networks:
+      - compose-test
+    ports:
+      - "8080:8080"
+  db:
+    image: mcr.microsoft.com/mssql/server:2017-latest
+    networks:
+      - compose-test
+    expose:
+      - "1433"
+    ports:
+      - "1433:1433"
+    environment:
+      ACCEPT_EULA: Y
+      SA_PASSWORD: Sobaka01234!

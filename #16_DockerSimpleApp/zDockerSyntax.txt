@@ -12,6 +12,7 @@ docker ps // - to see full list
 docker rm yoyo
 docker ps -a
 docker container prune
+docker container inpsect <container name>           // to see details
 docker system prune               // to stop everything unused and delete
 docker system prune -a               // delete all
 
@@ -26,6 +27,17 @@ docker login
 docker tag dogstyle posobachii/catstyle     // image dogstyle is merged with ur username / catstyle repository
 docker push posobachii/catstyle              // push into catstyle repository
 
+docker logs <container_name>                // to check logs
+
+docker volume create dog-vol                    // to create volume
+docker volume ls                                // to check all your volumes
+docker run --name "bark3" --mount source=dog-vol,destination=/upload-dir -p 8080:8080 barks
+docker run --name "bark3" -v dog-vol:/upload-dir -p 8080:8080 barks          // both are attaching volumes to container. now if the container dies , and the same volume is attached to a new, data will be saved
+
+docker network ls           // to see all networks
+docker network create dog-network               // to create network
+docker run --name "bark" --network dog-network -p 8080:8080 bark            // specify network
+docker network connect dog-network bark3                    // change network to specific container
 
 docker cp eudemo3_20200102_1558.bak mssql:/var/opt/mssql/backup                     // copy to docker inventory
 docker exec -it container id /name ls -all                     // to check docker inventory
@@ -33,3 +45,10 @@ docker exec mssql ls var/opt/
 docker exec -it jnks cat var/jenkins_home/secrets/initialAdminPassword                                  // read file on docker server
 docker exec -it jmtr sh                         // enter docker container console
 docker exec -it msslq2 ls -la                         // check files with permisions
+
+docker commit bark newbark                      // to create image from your used container
+docker run --name "newbark" -d -p 8080:8080 newbark         // you will see all changes made in old container
+
+docker run --name "mssql100" -e ACCEPT_EULA=Y -e SA_PASSWORD=Sobaka01234! -p 1450:1433 -d mcr.microsoft.com/mssql/server:2017-latest                // default user SA
+
+docker-compose up                   // to build composed app from your yml file

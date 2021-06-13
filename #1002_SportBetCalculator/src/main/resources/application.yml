@@ -2,16 +2,17 @@ server:
   port: 8080
 
 spring:
+  profiles:
+    active: mssql
   thymeleaf:
     cache: false
   jpa:
     hibernate:
       ddl-auto: update
-#  datasource:
-#    url: jdbc:mysql://localhost:3306/sport_bets_db
-#    username: root
-#    password: 123456
-#    driver-class-name: com.mysql.jdbc.Driver
+
+---
+spring:
+  profiles: h2
   datasource:
     url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
     platform: h2
@@ -19,3 +20,20 @@ spring:
     password:
     driverClassName: org.h2.Driver
     initialization-mode: always
+---
+spring:
+  profiles: mysql
+  datasource:
+    url: jdbc:mysql://localhost:3306/sport_bets_db
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+---
+spring:
+  profiles: mssql
+  datasource:
+    url: jdbc:sqlserver://localhost:1450;databaseName=sport_bets_db
+    username: SA
+    password: Sobaka01234!
+    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+---

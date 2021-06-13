@@ -8,7 +8,7 @@ docker build -t barkapp .      // the "." dot is neccessary argument
 docker images                   // your image should appear
 
 docker run --name "bark" -p 8080:8080 barkapp           // test run
-docker run --name "bark" -p 8081:8080 barkapp           // test run different port e.g. http://localhost:8081/
+docker run --name "bark2" -p 8081:8080 barkapp           // test run different port e.g. http://localhost:8081/
 
 docker exec -it bark sh                 // we can enter container
 ls                      // to see all files inside, where we will se our .jar file
@@ -19,6 +19,7 @@ docker push posobachii/bark                 // push your image to docker hub
 
 docker run --name "bark" -p 8080:8080 posobachii/bark:latest                // now you can use this link to run your application
 
-
+docker volume create dog-vol                    // to create volume
+docker volume ls                                // to check all your volumes
 docker run --name "bark3" --mount source=dog-vol,destination=/upload-dir -p 8080:8080 barks
-docker run --name "bark3" -v dog-vol:/upload-dir -p 8080:8080 barks
+docker run --name "bark3" -v dog-vol:/upload-dir -p 8080:8080 barks          // both are attaching volumes to container. now if the container dies , and the same volume is attached to a new, data will be saved
