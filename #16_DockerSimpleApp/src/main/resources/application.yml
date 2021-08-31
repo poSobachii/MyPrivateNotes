@@ -1,13 +1,12 @@
 dog:
   message: El Tuzik
-
 spring:
   servlet:
     multipart:
       max-file-size: 500MB
       max-request-size: 500MB
   profiles:
-    active: mssql
+    active: dockerdb
   thymeleaf:
     cache: false
   jpa:

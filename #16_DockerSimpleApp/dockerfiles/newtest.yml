@@ -1,19 +1,19 @@
 networks:
-  compose-test:
-    external: true
+  external: true
+  name: testtest
 
 services:
   backend:
     image: dogstyle
     networks:
-      - compose-test
+      - testtest
     ports:
       - "8080:8080"
     container_name: compose-bark
   db:
     image: mcr.microsoft.com/mssql/server:2017-latest
     networks:
-      - compose-test
+      - testtest
     expose:
       - "1433"
     ports:

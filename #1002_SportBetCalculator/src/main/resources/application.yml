@@ -3,7 +3,7 @@ server:
 
 spring:
   profiles:
-    active: mssql
+    active: h2
   thymeleaf:
     cache: false
   jpa:

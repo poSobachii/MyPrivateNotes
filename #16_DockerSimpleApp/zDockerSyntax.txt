@@ -22,10 +22,14 @@ docker rm -f containter_name            // stop and delete container
 docker rmi <IMAGE ID>               // kill docker image
 docker rmi $(docker images -a -q)          // to remove all images
 docker image prune -a
-docker build -t helloworld .      // to build a docker image with this name. Must be a Dockerfile.withnoextension in a folder.
+
+docker build -t dogstyle .      // to build a docker image with this name. Must be a Dockerfile.withnoextension in a folder.
 docker login
 docker tag dogstyle posobachii/catstyle     // image dogstyle is merged with ur username / catstyle repository
 docker push posobachii/catstyle              // push into catstyle repository
+
+docker run --name "bark" -p 8080:8080 dogstyle
+docker run --name "bark" --network dog-network-test10 -p 8080:8080 dogstyle
 
 docker logs <container_name>                // to check logs
 
@@ -49,6 +53,6 @@ docker exec -it msslq2 ls -la                         // check files with permis
 docker commit bark newbark                      // to create image from your used container
 docker run --name "newbark" -d -p 8080:8080 newbark         // you will see all changes made in old container
 
-docker run --name "mssql100" -e ACCEPT_EULA=Y -e SA_PASSWORD=Sobaka01234! -p 1450:1433 -d mcr.microsoft.com/mssql/server:2017-latest                // default user SA
+docker run --name "mssql100" -e ACCEPT_EULA=Y -e SA_PASSWORD=Sobaka01234! -p 1433:1433 -d mcr.microsoft.com/mssql/server:2017-latest                // default user SA
 
 docker-compose up                   // to build composed app from your yml file
