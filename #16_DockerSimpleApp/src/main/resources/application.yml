@@ -6,7 +6,7 @@ spring:
       max-file-size: 500MB
       max-request-size: 500MB
   profiles:
-    active: dockerdb
+    active: h2
   thymeleaf:
     cache: false
   jpa:

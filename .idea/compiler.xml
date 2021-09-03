@@ -26,6 +26,8 @@
       <module name="#1002_SportBetCalculator" options="-parameters" />
       <module name="#16_DockerSimpleApp" options="-parameters" />
       <module name="Docker-app" options="-parameters" />
+      <module name="DockerSimpleApp" options="-parameters" />
+      <module name="SportBetCalculator" options="-parameters" />
     </option>
   </component>
 </project>
