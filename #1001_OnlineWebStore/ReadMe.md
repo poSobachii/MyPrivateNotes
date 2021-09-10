@@ -9,3 +9,8 @@ The online store have a homepage with news feed & user interactive menu and item
 A basket that can print out pdf invoice for the customer , and save it to database for further monitoring <br/>
 Admin dashboard that is secured only for autorised users e.g. managers that can modify news feed, add, remove, edit existing items<br/>
 Monitor bought items and invoices.
+
+
+
+launch application  
+go to localhost:8080

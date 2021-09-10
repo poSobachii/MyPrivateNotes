@@ -1,5 +1,3 @@
-docker run --name "mssql2" -p 1433:1433  574048536853.dkr.ecr.us-east-1.amazonaws.com/weissr/mssql-server:eutest-cs-04082020-0911
-
 docker run --name "yoyo" -d -p 4444:4444 selenium/standalone-chrome
 http://localhost:4444/wd/hub/           //ghostdriver hub ?
 
