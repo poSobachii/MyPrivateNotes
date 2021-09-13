@@ -1,0 +1,270 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/4.4.1/css/bootstrap.css}"/>
+    <script th:src="@{/webjars/jquery/3.4.1/jquery.js}"></script>
+    <title>Client Application</title>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="py-5 text-center">
+        <h2 class="text-primary">Steam v0.000000001</h2>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="mb-3">
+                <div class="input-group">
+                    <input type="text" id="from" class="form-control" placeholder="Login with a nickname"/>
+                    <div class="btn-group">
+                        <button type="button" id="connect" class="btn btn-sm btn-outline-secondary" onclick="connect()">
+                            Connect
+                        </button>
+                        <button type="button" id="disconnect" class="btn btn-sm btn-outline-secondary"
+                                onclick="disconnect()" disabled>Disconnect
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3" id="logged" style="display: none;">
+                <p><i>You are Connected.</i><br>
+                    <i id="balance"></i><br>
+                <hr/>
+                </p>
+            </div>
+            <div class="mb-3" id="gameSelection" style="display: none;">
+
+            </div>
+            <div class="mb-3" id="queueCancellation" style="display: none;">
+                <div class="btn-group">
+                    <button type="button" id="leaveQueue" class="btn btn-sm btn-outline-secondary"
+                            onclick="leaveQueue()" disabled>Leave Queue
+                    </button>
+                </div>
+            </div>
+            <div class="mb-3" id="gameActionBar" style="display: none;">
+                <div class="mb-3" id="timerNotification">
+                    <p><i>Dealer have dealt cards. Make your choice</i></p>
+                    <p><i>You have 30 seconds to choose or FOLD will be picked automatically</i><br></p>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary" onclick="playerDecision('PLAY')">
+                        Play
+                    </button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary" onclick="playerDecision('FOLD')">
+                        Fold
+                    </button>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-6">
+            <div id="content"></div>
+            <div>
+                        <span class="float-right">
+                            <button id="clear" class="btn btn-primary" onclick="clearMessages()" style="display: none;">Clear</button>
+                        </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script th:src="@{/webjars/sockjs-client/1.1.2/sockjs.js}" type="text/javascript"></script>
+<script th:src="@{/webjars/stomp-websocket/2.3.3-1/stomp.js}" type="text/javascript"></script>
+<script type="text/javascript">
+
+    var stompClient = null;
+    var userName = null;
+    var userId = null;
+    var gameId = null;
+    var defaultNotificationColor = "alert-info";
+    var playerActionColor = "alert-dark";
+
+    function connect() {
+        userName = $("#from").val();
+        if (userName == null || userName === "") {
+            alert('Please input a nickname!');
+            return;
+        }
+        $.post('/player/connect',
+            {username: userName},
+            function (response) {
+                resolvePlayer(response)
+                var socket = new SockJS('/server/connection');
+                stompClient = Stomp.over(socket);
+                stompClient.connect({username: userName}, function () {
+                    var subUrl = '/game-status' + userName
+                    console.log('sub url ' + subUrl)
+                    stompClient.subscribe('/game-status' + userName, function (output) {
+                        gameStarted(JSON.parse(output.body))
+                    });
+                    stompClient.subscribe('/running-game-decisions' + userName, function (output) {
+                        decisionUpdate(JSON.parse(output.body))
+                    });
+                    showLoggedIn(true);
+
+                }, function (err) {
+                    console.log('error' + err)
+                });
+
+            }).done(function () {
+            console.log('player connected')
+        }).fail(function (jqxhr, settings, ex) {
+                console.log('error' + jqxhr.responseText)
+                var response = JSON.parse(jqxhr.responseText)
+                alert(response.message);
+            }
+        );
+    }
+
+    function disconnect() {
+        if (stompClient != null) {
+            $.post('/player/disconnect',
+                {'userId': userId},
+                function () {
+                    stompClient.disconnect(function () {
+                        showLoggedIn(false);
+                    });
+
+                }).done(function () {
+                console.log('player disconnected')
+            }).fail(function (jqxhr, settings, ex) {
+                    console.log('failed, ' + ex);
+                }
+            );
+        }
+    }
+
+    function decisionUpdate(decision) {
+        showMessage(createTextNode(decision.notificationText, decision.notificationColor))
+        updateBalance(decision.playerBalance)
+        decisionTaken(false)
+
+    }
+
+    function resolvePlayer(playerInfo) {
+        userId = playerInfo.id;
+        updatePlayerAvailableGames(playerInfo.availableGameList)
+        updateBalance(playerInfo.balance)
+    }
+
+    function updateBalance(userTokens) {
+        $("#balance").html('Your balance is ' + userTokens + ' tokens');
+    }
+
+    function playerDecision(decision) {
+        $.post('/player/in-game-decision',
+            {'gameId': gameId, 'playerId': userId, 'decision': decision})
+        showMessage(createTextNode('You choose to ' + decision, playerActionColor))
+        decisionTaken(true)
+    }
+
+    function decisionTaken(hasTaken) {
+        $("#gameActionBar :button").attr("disabled", hasTaken);
+        if (hasTaken) {
+            $("#timerNotification").hide();
+        } else {
+            $("#timerNotification").show();
+        }
+    }
+
+    function gameStarted(gameStatus) {
+        gameId = gameStatus.gameId
+        setInGame(gameStatus.running)
+        showMessage(createTextNode(gameStatus.notificationText, defaultNotificationColor))
+        updateBalance(gameStatus.playerBalance)
+    }
+
+
+    function showLoggedIn(connected) {
+        $("#connect").prop("disabled", connected);
+        $("#disconnect").prop("disabled", !connected);
+        if (connected) {
+            $("#logged").show();
+            $("#gameSelection").show();
+            $("#queueCancellation").show();
+        } else {
+            $("#logged").hide();
+            $("#gameSelection").hide();
+            $("#queueCancellation").hide();
+        }
+    }
+
+    function setInGame(inGame) {
+        if (inGame) {
+            $("#gameSelection").hide();
+            $("#queueCancellation").hide();
+            $("#gameActionBar").show()
+        } else {
+            $("#gameSelection").show();
+            $("#queueCancellation").show();
+            $("#gameActionBar").hide()
+            setQueued(inGame)
+        }
+    }
+
+    function setQueued(isQueued) {
+        $("#leaveQueue").prop("disabled", !isQueued);
+        $("#gameSelection :button").attr("disabled", isQueued);
+
+    }
+
+
+    function enterQueueForGame(queuedGameId) {
+        $.post('/queue/enter',
+            {'userId': userId, 'queuedGameId': queuedGameId},
+            function (response) {
+                showMessage(createTextNode(response, defaultNotificationColor))
+                setQueued(true)
+            });
+    }
+
+    function leaveQueue() {
+        $.post('/queue/leave',
+            {'userId': userId},
+            function (response) {
+                showMessage(createTextNode(response, defaultNotificationColor))
+                setQueued(false)
+            });
+    }
+
+    function showMessage(message) {
+        $("#content").html($("#content").html() + message);
+        $("#clear").show();
+    }
+
+    function createTextNode(message, color) {
+        return '<div class="row mb-1 ' + color + ' "><div class="col-md-8">' + message + '</div></div>';
+    }
+
+    function updatePlayerAvailableGames(games) {
+        $("#gameSelection").html("")
+        $("#gameSelection").html($("#gameSelection").html() + '<i>Please choose game to play below</i><br>');
+        games.forEach(function (game) {
+            var gameButton = createGameQueueButton(game)
+            $("#gameSelection").html($("#gameSelection").html() + gameButton);
+        })
+    }
+
+    function createGameQueueButton(game) {
+        return '<button type="button" class="btn btn-sm btn-outline-secondary" onclick="enterQueueForGame(' + game.id + ')">' + game.gameName + '</button>'
+    }
+
+    function clearMessages() {
+        $("#content").html("");
+        $("#clear").hide();
+    }
+
+    window.addEventListener('beforeunload', function (e) {
+        e.preventDefault();
+        disconnect()
+    });
+
+
+</script>
+
+</body>
+</html>

@@ -1,8 +1,5 @@
 Online Store app. 
 
-by Aleksandr Grishanov <br/> 
-smartdoggydog@gmail.com
-
 
 Modular Online store project allowing a non IT user( user with low pc skills) to handle themselves their own small online store <br>
 The online store have a homepage with news feed & user interactive menu and item selection. <br/> 
