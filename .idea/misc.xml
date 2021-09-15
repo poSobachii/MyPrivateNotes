@@ -3,6 +3,7 @@
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/#1001_OnlineWebStore" />
+    <type id="Spring" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -18,6 +19,8 @@
         <option value="$PROJECT_DIR$/#5_Quarkus_Java/QuarkusBasic/pom.xml" />
         <option value="$PROJECT_DIR$/#5_Quarkus_Java/QuarkusReactiveApp/pom.xml" />
         <option value="$PROJECT_DIR$/#1003_SimpleCardGames/pom.xml" />
+        <option value="$PROJECT_DIR$/intrum-agr-hw/pom.xml" />
+        <option value="$PROJECT_DIR$/#1004_TestedRestApp/pom.xml" />
       </list>
     </option>
   </component>
