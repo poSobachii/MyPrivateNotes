@@ -1,0 +1,11 @@
+myshop/H2database/PrintContent.class
+myshop/Entities/BasicWare.class
+myshop/Repository/BasicWareRepository.class
+myshop/Controller/WebController.class
+myshop/PDfHandler/PDFConverter.class
+myshop/H2database/DatabaseHandler.class
+myshop/startGrindingMoney.class
+myshop/BasketPack/Order.class
+myshop/DatabaseDAO/DatabaseDAO.class
+myshop/BasketPack/BasketOrder.class
+myshop/H2database/OneWareInfoPrint.class
