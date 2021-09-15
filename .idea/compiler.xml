@@ -14,10 +14,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="swagger, rest-assured, rest-it-tests" />
-        <module name="JS, thymleaf, websockets" />
         <module name="docker-example" />
-        <module name="java servlet page" />
         <module name="QuarkusReactiveApp" />
         <module name="QuarkusBasic" />
         <module name="spring-app" />
@@ -30,6 +27,11 @@
       <module name="#1001_OnlineWebShop.main" target="11" />
       <module name="#1001_OnlineWebShop.test" target="11" />
       <module name="Docker-app" target="1.8" />
+      <module name="intrum-agr-hw" target="11" />
+      <module name="java servlet page" target="1.8" />
+      <module name="JS, thymleaf, websockets" target="1.8" />
+      <module name="MyShop" target="1.8" />
+      <module name="swagger, rest-assured, rest-it-tests" target="11" />
       <module name="team_dog.main" target="1.8" />
       <module name="team_dog.test" target="1.8" />
       <module name="test" target="1.5" />
@@ -43,8 +45,10 @@
       <module name="JS, thymleaf, websockets" options="-parameters" />
       <module name="JavaBasics" options="-parameters" />
       <module name="JavaBasics2" options="-parameters" />
+      <module name="MyShop" options="-parameters" />
       <module name="QuarkusReactiveApp" options="-parameters" />
       <module name="docker-example" options="-parameters" />
+      <module name="intrum-agr-hw" options="-parameters" />
       <module name="java servlet page" options="-parameters" />
       <module name="spring-app" options="-parameters" />
       <module name="swagger, rest-assured, rest-it-tests" options="-parameters" />

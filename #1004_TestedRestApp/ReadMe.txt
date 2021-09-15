@@ -1,3 +1,6 @@
+intrum home task for interview
+Rest application with tests
+#REST-ASSURED
 
 Run application, no profiles needed.\
 head to - http://localhost:8080/swagger-ui.html#  - to test endpoints \

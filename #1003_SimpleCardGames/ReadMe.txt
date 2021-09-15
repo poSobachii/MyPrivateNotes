@@ -1,3 +1,11 @@
+Evo home task for technical interview, 1&2 card games
+#JAVASCRIPT
+#THYMELEAF
+#WEBSOCKETS
+#BOOTSTRAP - added boostrap through pom dependencies
+#JQUERY - same for jquery
+
+
 launch application; go to http://localhost:8080/
 
 connect by desired nickname ( existing player fetched from DB or created automatically new)
