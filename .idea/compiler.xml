@@ -14,10 +14,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="docker-example" />
         <module name="QuarkusReactiveApp" />
         <module name="QuarkusBasic" />
-        <module name="spring-app" />
         <module name="JavaBasics2" />
         <module name="JavaBasics" />
       </profile>
@@ -27,10 +25,12 @@
       <module name="#1001_OnlineWebShop.main" target="11" />
       <module name="#1001_OnlineWebShop.test" target="11" />
       <module name="Docker-app" target="1.8" />
+      <module name="docker-example" target="1.8" />
       <module name="intrum-agr-hw" target="11" />
       <module name="java servlet page" target="1.8" />
       <module name="JS, thymleaf, websockets" target="1.8" />
       <module name="MyShop" target="1.8" />
+      <module name="spring-app" target="11" />
       <module name="swagger, rest-assured, rest-it-tests" target="11" />
       <module name="team_dog.main" target="1.8" />
       <module name="team_dog.test" target="1.8" />

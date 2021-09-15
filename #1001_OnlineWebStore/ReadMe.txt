@@ -1,4 +1,6 @@
-Online Store app. 
+Online Store app.
+#GRADLE
+#THYMELEAF - dynamic url selection
 
 
 Modular Online store project allowing a non IT user( user with low pc skills) to handle themselves their own small online store <br>

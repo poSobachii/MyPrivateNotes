@@ -2,9 +2,9 @@ Evo home task for technical interview, 1&2 card games
 #JAVASCRIPT
 #THYMELEAF
 #WEBSOCKETS
-#BOOTSTRAP - added boostrap through pom dependencies
+#BOOTSTRAP  - added boostrap through pom dependencies
 #JQUERY - same for jquery
-
+#ENUM   - many enum manipulations
 
 launch application; go to http://localhost:8080/
 

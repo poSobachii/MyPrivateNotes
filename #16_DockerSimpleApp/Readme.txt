@@ -1,3 +1,9 @@
+Complete docker java jar example how to deploy jar to image
+#DOCKER
+#JAR
+#COMPOSE
+#THYMELEAF  - executed as jar file
+
 package as jar defined in pom.xml file under plugin section
 run:  mvn clean install
 in target folder you will find .jar file

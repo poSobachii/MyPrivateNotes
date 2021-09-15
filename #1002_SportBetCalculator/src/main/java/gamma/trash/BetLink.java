@@ -3,6 +3,7 @@ package gamma.trash;
 import java.util.Arrays;
 import java.util.List;
 
+@Deprecated
 public class BetLink {
 
     public static List<String> betLinks = Arrays.asList(
