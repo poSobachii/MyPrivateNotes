@@ -1,3 +1,9 @@
+Quarkus simpe app
+#QUARKUS
+#REST
+
+
+
 mvn io.quarkus:quarkus-maven-plugin:0.13.1:create \
     -DprojectGroupId=quarkusSimpleApp \
     -DprojectArtifactId=quarkus-simple-app \

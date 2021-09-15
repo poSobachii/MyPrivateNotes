@@ -1,3 +1,7 @@
+Quarkus reactive app
+#QUARKUS
+#REST
+
 ./mvnw compile quarkus:dev
 // launch app
 

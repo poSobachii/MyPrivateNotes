@@ -14,8 +14,6 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="QuarkusReactiveApp" />
-        <module name="QuarkusBasic" />
         <module name="JavaBasics2" />
         <module name="JavaBasics" />
       </profile>
@@ -30,6 +28,8 @@
       <module name="java servlet page" target="1.8" />
       <module name="JS, thymleaf, websockets" target="1.8" />
       <module name="MyShop" target="1.8" />
+      <module name="QuarkusBasic" target="1.8" />
+      <module name="QuarkusReactiveApp" target="11" />
       <module name="spring-app" target="11" />
       <module name="swagger, rest-assured, rest-it-tests" target="11" />
       <module name="team_dog.main" target="1.8" />
