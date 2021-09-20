@@ -15,7 +15,6 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="JavaBasics2" />
-        <module name="#1006_FBmanager" />
         <module name="JavaBasics" />
       </profile>
     </annotationProcessing>
@@ -25,6 +24,8 @@
       <module name="#1001_OnlineWebShop.test" target="11" />
       <module name="Docker-app" target="1.8" />
       <module name="docker-example" target="1.8" />
+      <module name="FBmanager" target="1.8" />
+      <module name="FbPoster" target="1.8" />
       <module name="intrum-agr-hw" target="11" />
       <module name="java servlet page" target="1.8" />
       <module name="JS, thymleaf, websockets" target="1.8" />
@@ -41,9 +42,10 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="#1002_SportBetCalculator" options="-parameters" />
-      <module name="#1006_FBmanager" options="-parameters" />
       <module name="#16_DockerSimpleApp" options="-parameters" />
       <module name="Docker-app" options="-parameters" />
+      <module name="FBmanager" options="-parameters" />
+      <module name="FbPoster" options="-parameters" />
       <module name="JS, thymleaf, websockets" options="-parameters" />
       <module name="JavaBasics" options="-parameters" />
       <module name="JavaBasics2" options="-parameters" />
