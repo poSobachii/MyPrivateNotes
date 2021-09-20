@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>PostMe</title>
+</head>
+<body>
+<h2>This is poster</h2>
+
+<form action="#" th:action="@{/home}" method="get">
+
+    <input type="submit" value="HOME"/>
+</form>
+<form action="#" th:action="@{/poster}" method="get">
+
+    <input type="submit" value="Poster"/>
+</form>
+<form action="#" th:action="@{/renamer}" method="get">
+
+    <input type="submit" value="Renamer"/>
+</form>
+<form action="#" th:action="@{/faq}" method="get">
+
+    <input type="submit" value="FAQ"/>
+</form>
+
+
+<h3> --------------------------- </h3>
+<form action="#" th:action="@{/poster}" th:object="${values}" method="post">
+    <p>
+        Login: <input type="text" th:field="*{login}">
+    </p>
+    <p>
+        Password: <input type="text" th:field="*{password}">
+    </p>
+    <p>
+        Page where to post: <input type="text" th:field="*{targetUrl}">
+    </p>
+    <p>
+        Where to take pics: <input type="text" th:field="*{targetFolder}">
+    </p>
+    <p>
+        Where to put posted pics: <input type="text" th:field="*{postedFolder}">
+    </p>
+    <h3>Date & time planner</h3>
+    <p>
+        Time between posts minutes:: <input type="text" th:field="*{timeGap}">
+    </p>
+    <p>
+        Time Amplitude minutes:: <input type="text" th:field="*{timeAmplitude}">
+    </p>
+    <p>
+        Day to Post: <input type="text" th:field="*{dayToPost}">
+    </p>
+    <p>
+        Month to Post: <input type="text" th:field="*{monthToPost}">
+    </p>
+    <p>
+        Year to Post: <input type="text" th:field="*{yearToPost}">
+    </p>
+    <p>
+        Hours to Post: <input type="text" th:field="*{hours}">
+    </p>
+    <p>
+        Minutes to Post: <input type="text" th:field="*{minutes}">
+    </p>
+    <p>
+        <input type="submit" value="Start Posting"/> <input type="reset" value="Reset values">
+    </p>
+</form>
+
+
+</body>
+</html>

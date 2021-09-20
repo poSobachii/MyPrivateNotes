@@ -15,6 +15,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="JavaBasics2" />
+        <module name="#1006_FBmanager" />
         <module name="JavaBasics" />
       </profile>
     </annotationProcessing>
@@ -40,6 +41,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="#1002_SportBetCalculator" options="-parameters" />
+      <module name="#1006_FBmanager" options="-parameters" />
       <module name="#16_DockerSimpleApp" options="-parameters" />
       <module name="Docker-app" options="-parameters" />
       <module name="JS, thymleaf, websockets" options="-parameters" />
