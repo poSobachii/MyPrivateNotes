@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/#1007_OOPpatterns/#1007_OOPpatterns.iml" filepath="$PROJECT_DIR$/#1007_OOPpatterns/#1007_OOPpatterns.iml" />
+      <module fileurl="file://$PROJECT_DIR$/#1008_GuessNumberGame/#1008_GuessNumberGame.iml" filepath="$PROJECT_DIR$/#1008_GuessNumberGame/#1008_GuessNumberGame.iml" />
+      <module fileurl="file://$PROJECT_DIR$/#1009_Notepad/#1009_Notepad.iml" filepath="$PROJECT_DIR$/#1009_Notepad/#1009_Notepad.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/MyNotes.iml" filepath="$PROJECT_DIR$/.idea/MyNotes.iml" />
     </modules>
   </component>
