@@ -28,6 +28,7 @@
       <module name="FbPoster" target="1.8" />
       <module name="intrum-agr-hw" target="11" />
       <module name="java servlet page" target="1.8" />
+      <module name="JavaFx_required" target="11" />
       <module name="JS, thymleaf, websockets" target="1.8" />
       <module name="MyShop" target="1.8" />
       <module name="QuarkusBasic" target="1.8" />
