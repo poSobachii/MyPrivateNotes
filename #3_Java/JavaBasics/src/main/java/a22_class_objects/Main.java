@@ -38,8 +38,8 @@ public class Main {
 
         System.out.println(x6.toString());
 
-        Car newBasiccar = new Audi();
-        System.out.println(((Audi) newBasiccar).name);
+        Car newBasicCar = new Audi();
+        System.out.println(((Audi) newBasicCar).name);
 
         Garage bmwGarageList = new Garage();
         Bmw bmw1 = new Bmw("e60", "red", 37000);

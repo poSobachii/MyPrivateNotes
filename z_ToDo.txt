@@ -1,0 +1,3 @@
+todo
+    java basics - data types / primitive / non-primitive
+    https://www.w3schools.com/java/java_data_types.asp
