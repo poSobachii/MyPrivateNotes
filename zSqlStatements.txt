@@ -1,0 +1,263 @@
+==============================================================================================================================
+-------------------- MYSQL TIMEZONE FIX --------------------
+
+// must be types in query console
+
+SET @@global.time_zone = '+00:00';
+SET @@session.time_zone = '+00:00';
+
+==============================================================================================================================
+
+drop database if exists dbo;
+create database dbo;
+use dbo;
+
+CREATE TABLE customers (
+    customer_id INT AUTO_INCREMENT PRIMARY KEY,
+    customer_name VARCHAR(100)
+);
+
+CREATE TABLE orders (
+    order_id INT AUTO_INCREMENT PRIMARY KEY,
+    customer_id INT,
+    amount DOUBLE,
+    FOREIGN KEY (customer_id) REFERENCES customers(customer_id)
+);
+
+INSERT INTO `customers` (`customer_id`, `customer_name`) VALUES
+(1, 'Adam'),
+(2, 'Andy'),
+(3, 'Joe'),
+(4, 'Sandy');
+
+INSERT INTO `orders` (`order_id`, `customer_id`, `amount`) VALUES
+(1, 1, 19.99),
+(2, 1, 35.15),
+(3, 3, 17.56),
+(4, 4, 12.34);
+==============================================================================================================================
+create database if not exists bookAplication;
+
+use bookAplication;
+
+drop table if exists BOOKSHELF;
+
+create table BOOKSHELF (
+	id MEDIUMINT NOT NULL AUTO_INCREMENT,
+   BOOKNAME varchar(255),
+   BOOKAUTHOR varchar(255),
+   BOOKPUB varchar(255),
+   PUBDATE varchar(255),
+   primary key (id),
+   unique (id)
+);
+
+TRUNCATE TABLE BOOKSHELF;            // to delete entities in table
+
+ALTER TABLE BOOKSHELF AUTO_INCREMENT=1001;
+
+insert into BOOKSHELF(BOOKNAME, BOOKAUTHOR, BOOKPUB, PUBDATE) values ('English','Vocabulary', 'PrintUK', '2010');
+insert into BOOKSHELF(BOOKNAME, BOOKAUTHOR, BOOKPUB, PUBDATE) values ('Thriller','St.King','California Inc', '2005');
+
+CREATE INDEX externalId ON state_exchange(externalId);
+==============================================================================================================================
+CREATE TABLE state_exchange (
+	id MEDIUMINT NOT NULL AUTO_INCREMENT,
+	externalId varchar(255),
+    stamp varchar(255),
+    index(stamp, externalId),
+    index(externalId, stamp),
+    primary key (id)
+    );
+==============================================================================================================================
+SELECT stamp FROM state_exchange WHERE externalId = '11' ;
+SELECT * FROM state_exchange WHERE externalId = '11' ;
+SELECT *, from_unixtime(updated/1000) FROM papi.paymentrequest where stamp = '9D2604C1CD4D462787CC';
+==============================================================================================================================
+    //update smth
+UPDATE STATE_EXCHANGE SET STATE='91392088-79c2-4c66-b22f-47c5cafb1a60' WHERE STAMP='E6E6B82CAED24FD8AA10'
+==============================================================================================================================
+SELECT archiveID, COUNT(*) c FROM papi.paymentrequest GROUP BY archiveID HAVING c > 1;
+    // first column what value, second column how many times
+==============================================================================================================================
+    //select by part of string
+SELECT *,LOCATE('0000208CEAAC4',id) FROM papi.paymentagreement WHERE locate('0000208CEAAC4',id)>0;
+==============================================================================================================================
+    // count how many of this archiveID is in a table
+SELECT archiveID, COUNT(*) c FROM papi.paymentrequest GROUP BY archiveID HAVING c > 1;
+==============================================================================================================================
+    // two search options
+SELECT * FROM papi.paymentrequest WHERE archiveID = '16082588INWX0000' AND accountid = 'f24d5dd2cd7641568bdc0fa1cb2713df';
+==============================================================================================================================
+    // fetch smth into var -> insert it into condition
+SET @var1 = (SELECT stamp FROM papi.paymentrequest WHERE agreementid = '6BA38A71F9164D118F1D');
+SELECT * FROM papi.paymentrequest_parameters where stamp = @var1;
+    // the same as ->
+SELECT value FROM papi.paymentrequest_parameters where  name = ‘brand’ AND stamp = (SELECT stamp FROM papi.paymentrequest WHERE agreementid = ‘F28109F64330429AA8F0’ LIMIT 1);
+==============================================================================================================================
+    // order by updated columns in descending
+SELECT * FROM papi.paymentrequest WHERE provider = 'st-c' order by updated desc;
+==============================================================================================================================
+    // select all values that have one of the value
+SELECT * FROM papi.paymentagreement where id in ('D8181B80EA074B8EA817','DF41EF6B14DC42778923');
+==============================================================================================================================
+    // new column in result tables
+SELECT id, created, 23 as externalId FROM papi.paymentagreement;
+==============================================================================================================================
+    // select with if statament
+SELECT id, provider, created, (case when (provider = 'p-mas')
+ THEN
+      1
+ ELSE
+      0
+ END) as SCAstatus FROM papi.paymentagreement;
+==============================================================================================================================
+    // return smth weird
+
+ CREATE TABLE Tablename	(`ID` int, `name` varchar(7), `email` varchar(14))
+ ;
+
+ INSERT INTO Tablename
+ 	(ID, name, email)
+ VALUES
+ 	(1, 'john', 'abc@abc.com'),
+ 	(2, 'john', 'abc@abc.com'),
+ 	(3, 'jim', 'eee@eee.com'),
+ 	(4, 'Michael', 'abec@awwbc.com'),
+     (5, 'jim', 'eee@eee.com'),
+     (6, 'dany', 'as@huk'),
+     (7, 'gold', 'as@huk'),
+     (8, 'gold', 'asdsd'),
+     (9, 'silver', 'asdsd'),
+     (10, 'silver', 'asdsd'),
+     (11, 'spoon', 'gek'),
+     (12, 'spoon', 'gek'),
+     (13, 'fork', 'abec@awwbc.com'),
+     (14, 'fork', 'asdadcvsd')
+
+ ;
+
+
+==============================================================================================================================
+
+ select b.*
+ from tablename b
+ where email in (
+ SELECT  email
+ FROM    tablename a
+ where (a.name, a.email)  not in (
+             SELECT  name, email
+             FROM    tableName
+             GROUP   BY name, email
+             HAVING  COUNT(*) > 1
+         )
+          group by email having count(email) > 1
+ )
+
+==============================================================================================================================
+    // some real shit
+select b.*
+from papi.paymentagreement b
+where status ='verified' and provider in ('p-vis', 'p-mas') and companyid in ('news','nelonen', 'smf', 'media')
+and panId in (
+SELECT  panId
+FROM    paymentagreement a
+where status ='verified' and provider in ('p-vis', 'p-mas') and companyid in ('news','nelonen', 'smf', 'media')
+and (a.accountid, a.panId)  not in (
+            SELECT  accountid, panId
+            FROM    paymentagreement
+            where status ='verified' and provider in ('p-vis', 'p-mas') and companyid in ('news','nelonen', 'smf', 'media')
+            GROUP   BY accountid, panId
+            HAVING  COUNT(*) > 1
+        )
+         group by panId having count(panId) > 1
+)
+==============================================================================================================================
+    // convert
+SELECT * , from_unixtime(created/1000) as times FROM papi.paymentagreement where panid = '000081b9-f3a2-4098-8fc8-7146b0188acf';
+==============================================================================================================================
+    // count table names or table rows
+SELECT
+    table_name,
+    table_rows
+FROM
+    information_schema.tables
+WHERE
+    table_schema = 'papi'
+        AND table_type = 'BASE TABLE';
+
+SELECT table_name
+FROM INFORMATION_SCHEMA.TABLES
+WHERE TABLE_SCHEMA = 'papi';
+==============================================================================================================================
+    // contains part of value
+SELECT * FROM papi.request where uriTemplate like '%sahkovertailu.fi%';
+
+==============================================================================================================================
+-------------------- SQL --------------------
+
+CREATE PROC SearchAllTables
+(
+    @SearchStr nvarchar(100)
+)
+AS
+BEGIN
+
+    DECLARE @Results TABLE(ColumnName nvarchar(370), ColumnValue nvarchar(3630))
+
+    SET NOCOUNT ON
+
+    DECLARE @TableName nvarchar(256), @ColumnName nvarchar(128), @SearchStr2 nvarchar(110)
+    SET  @TableName = ''
+    SET @SearchStr2 = QUOTENAME('%' + @SearchStr + '%','''')
+
+    WHILE @TableName IS NOT NULL
+        BEGIN
+            SET @ColumnName = ''
+            SET @TableName =
+                    (
+                        SELECT MIN(QUOTENAME(TABLE_SCHEMA) + '.' + QUOTENAME(TABLE_NAME))
+                        FROM    INFORMATION_SCHEMA.TABLES
+                        WHERE       TABLE_TYPE = 'BASE TABLE'
+                          AND QUOTENAME(TABLE_SCHEMA) + '.' + QUOTENAME(TABLE_NAME) > @TableName
+                          AND OBJECTPROPERTY(
+                                      OBJECT_ID(
+                                                  QUOTENAME(TABLE_SCHEMA) + '.' + QUOTENAME(TABLE_NAME)
+                                          ), 'IsMSShipped'
+                                  ) = 0
+                    )
+
+            WHILE (@TableName IS NOT NULL) AND (@ColumnName IS NOT NULL)
+                BEGIN
+                    SET @ColumnName =
+                            (
+                                SELECT MIN(QUOTENAME(COLUMN_NAME))
+                                FROM    INFORMATION_SCHEMA.COLUMNS
+                                WHERE       TABLE_SCHEMA    = PARSENAME(@TableName, 2)
+                                  AND TABLE_NAME  = PARSENAME(@TableName, 1)
+                                  AND DATA_TYPE IN ('char', 'varchar', 'nchar', 'nvarchar')
+                                  AND QUOTENAME(COLUMN_NAME) > @ColumnName
+                            )
+
+                    IF @ColumnName IS NOT NULL
+                        BEGIN
+                            INSERT INTO @Results
+                                EXEC
+                                    (
+                                    'SELECT ''' + @TableName + '.' + @ColumnName + ''', LEFT(' + @ColumnName + ', 3630)
+                FROM ' + @TableName + ' (NOLOCK) ' +
+                                    ' WHERE ' + @ColumnName + ' LIKE ' + @SearchStr2
+                                    )
+                        END
+                END
+        END
+
+    SELECT ColumnName, ColumnValue FROM @Results
+END
+
+
+теперь можно искать во всей таблице:
+
+EXEC SearchAllTables 'SearchingValue'
+GO
+==============================================================================================================================
