@@ -15,6 +15,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="JavaBasics2" />
+        <module name="SpringBootKafka" />
         <module name="JavaBasics" />
       </profile>
     </annotationProcessing>
@@ -52,6 +53,7 @@
       <module name="JavaBasics2" options="-parameters" />
       <module name="MyShop" options="-parameters" />
       <module name="QuarkusReactiveApp" options="-parameters" />
+      <module name="SpringBootKafka" options="-parameters" />
       <module name="docker-example" options="-parameters" />
       <module name="intrum-agr-hw" options="-parameters" />
       <module name="java servlet page" options="-parameters" />

@@ -18,6 +18,9 @@ curl --header "Content-Type: application/json" \
   --data '{"name":"peach"}' \
   http://localhost:8080/fruits
 
+
+telnet localhost 8080                   // to ping local host and check if its working
+
 ==============================================================================================================================
 -------------------- IDEA CONFIGURATION --------------------
 

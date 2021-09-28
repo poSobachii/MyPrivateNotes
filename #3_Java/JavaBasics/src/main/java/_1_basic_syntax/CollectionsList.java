@@ -1,4 +1,4 @@
-package a1_basic_syntax;
+package _1_basic_syntax;
 
 import java.util.Arrays;
 import java.util.List;
