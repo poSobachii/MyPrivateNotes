@@ -6,6 +6,7 @@ kafka-server-start /usr/local/etc/kafka/server.properties						// to start kafka
 
 kafka-topics --create --topic test --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1     // to start topic "test"
 kafka-topics --delete --topic test --bootstrap-server localhost:9092            // to delete topic
+kafka-topics --list --bootstrap-server localhost:9092                           // to list available topics
 
 kafka-console-producer --broker-list localhost:9092 --topic test                // create broker for topic "test"
 kafka-console-consumer --bootstrap-server localhost:9092 --topic test --from-beginning      // to create consumer for topic "test"
