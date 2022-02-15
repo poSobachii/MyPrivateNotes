@@ -1,3 +1,7 @@
 todo
     java basics - data types / primitive / non-primitive
     https://www.w3schools.com/java/java_data_types.asp
+    "instance of" examples
+    some simple arithmetics % ++ etc.
+    types of exceptions ? InputMismatchException
+    web3 - document.hiden visibility, track if tab is opened or not

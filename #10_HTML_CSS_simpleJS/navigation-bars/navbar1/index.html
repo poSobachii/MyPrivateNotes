@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>Navbar-1</title>
+</head>
+<body>
+<div class="nav-bar">
+    <ul>
+        <li class="menu active">
+            <a href="#">
+                <span class="ic">
+                    <ion-icon name="home-outline"></ion-icon>
+                </span>
+                <span class="text">Home</span>
+            </a>
+        </li>
+        <li class="menu">
+            <a href="#">
+                <span class="ic">
+                    <ion-icon name="information-circle-outline"></ion-icon>
+                </span>
+                <span class="text">About</span>
+            </a>
+        </li>
+        <li class="menu">
+            <a href="#">
+                <span class="ic">
+                    <ion-icon name="accessibility-outline"></ion-icon>
+                </span>
+                <span class="text">Portfolio</span>
+            </a>
+        </li>
+        <li class="menu">
+            <a href="#">
+                <span class="ic">
+                    <ion-icon name="grid-outline"></ion-icon>
+                </span>
+                <span class="text">Gallery</span>
+            </a>
+        </li>
+        <li class="menu">
+            <a href="#">
+                <span class="ic">
+                    <ion-icon name="call-outline"></ion-icon>
+                </span>
+                <span class="text">Contacts</span>
+            </a>
+        </li>
+        <div class="indicator"></div>
+    </ul>
+</div>
+
+<script>
+    const menu = document.querySelectorAll('.menu');
+    function activeLink(){
+        menu.forEach((item) =>
+        item.classList.remove('active'));
+        this.classList.add('active');
+    }
+    menu.forEach((item) =>
+    item.addEventListener('mouseover', activeLink));
+    // item.addEventListener('click', activeLink));
+</script>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>

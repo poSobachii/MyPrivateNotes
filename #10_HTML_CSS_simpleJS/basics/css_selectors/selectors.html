@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <link href="styles.css" rel="stylesheet">
+    <title>Selectors</title>
+</head>
+<body>
+<h1 class="priority">why this is blue ? Identical selectors -> by declaring order</h1>
+<a myattr>Attribute selector</a>
+
+<div id="myColor">
+    Div text
+    <h3 id="myColor">Tag with #ID color</h3>
+</div>
+
+<div id="myColor">
+    Div text
+    <h3>Tag without #ID color</h3>
+</div>
+
+<mytag>Its not a good idea to make your own tags</mytag>
+
+<div class="spacing main">
+    <div class="one">
+        Class one #1
+    </div>
+    <div class="two">
+        Class two #2
+    </div>
+    <div class="one two">
+        Class one & two #3
+    </div>
+</div>
+<div class="spacing">
+    <div class="one">
+        Class one #4
+    </div>
+    <div class="two">
+        Class two #5
+    </div>
+    <div class="one two">
+        Class one & two #6
+    </div>
+</div>
+<div class="spacing">
+    <p>
+        Paragraph inside divider is div child #1
+    </p>
+    <section>
+        <p>
+            Paragraph inside divider not div child #2
+        </p>
+    </section>
+</div>
+<p>
+    1st Paragraph outside divider #3
+</p>
+<p>
+    2nd Paragraph outside divider #4
+</p>
+<p class="siblings">
+    3nd Paragraph outside divider #5
+</p>
+<p class="siblings">
+    4nd Paragraph outside divider #6
+</p>
+
+<div class="link_manipulation">
+    <a href="selectors.html" target="_blank">This is a link</a><br>
+    a:hover MUST come after a:link and a:visited in the CSS definition in order to be effective.<br>
+    a:active MUST come after a:hover in the CSS definition in order to be effective.
+</div>
+
+<div class="text-manipulation">
+    <textarea cols="40" placeholder="some text to type" rows="2"></textarea>
+</div>
+
+<div class="childs">
+    <p>This is some text.</p>
+    <p>This is some text.</p>
+
+    <div>
+        <p>This is some text.</p>
+        <p>This is some text.</p>
+    </div>
+</div>
+<div>
+    <p class="caps">
+        You can use the ::first-line pseudo-element to add a special effect to the first line of a text. Some more text.
+        And even more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and
+        more, and more.
+    </p>
+</div>
+<div class="bef">
+    <p> Some text without before</p>
+</div>
+
+<div class="selected">
+    <p>
+        Some text to select
+    </p>
+</div>
+<div class="attribute">
+    <a> 1. some text</a> <br>
+    <a target="action"> 2. some text</a> <br>
+    <a target="default"> 3. some text</a>
+</div>
+
+<div class="attribute_2">
+    <a> 1. some text</a> <br>
+    <a target="action"> 2. some text</a> <br>
+    <a target="default"> 3. some text</a>
+</div>
+<div class="contains">
+    <a target="one example"> 1. some text</a> <br>
+    <a target="two example"> 2. some text</a> <br>
+    <a target="three"> 3. some text</a>
+</div>
+<div class="specific">
+    <form action="" method="get" name="input">
+        Firstname:<input name="Name" size="20" type="text" value="Peter">
+        Lastname:<input name="Name" size="20" type="text" value="Griffin">
+        <input type="button" value="Example Button">
+    </form>
+</div>
+</body>
+</html>

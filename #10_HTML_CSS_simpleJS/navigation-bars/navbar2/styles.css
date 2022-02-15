@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
+:root {
+    --clr: #222327;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courgette', cursive;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--clr);
+}
+
+.nav-bar {
+    position: relative;
+    width: 400px;
+    height: 70px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.nav-bar ul {
+    display: flex;
+    width: 350px;
+}
+
+.nav-bar ul li {
+    position: relative;
+    list-style: none;
+    width: 70px;
+    height: 60px;
+    z-index: 2;
+}
+
+.nav-bar ul li a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+}
+
+.nav-bar ul li a .ic {
+    position: relative;
+    display: block;
+    line-height: 65px;
+    font-size: 2em;
+    transition: 0.5s;
+    color: black;
+}
+
+.nav-bar ul li.active a .ic {
+    transform: translateY(-35px);
+    color: #52b27c;
+}
+
+.nav-bar ul li a .text {
+    position: absolute;
+    background-color: #52b27c;
+    color: white;
+    padding: 2px 7px;
+    border-radius: 12px;
+    font-weight: 400;
+    font-size: 0.75em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    opacity: 0;
+    transform: translateY(15px);
+}
+
+.nav-bar ul li.active a .text {
+    opacity: 1;
+    transform: translateY(-4px);
+}
+
+.indicator {
+    position: absolute;
+    top: -50%;
+    width: 70px;
+    height: 70px;
+    background: white;
+    border-radius: 50%;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.indicator::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: -28px;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 15px 18px white;
+}
+
+.indicator::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    right: -28px;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: -15px 18px white;
+}
+
+
+.nav-bar ul li:nth-child(1).active ~ .indicator {
+    transform: translateX(calc(70px * 0));
+}
+.nav-bar ul li:nth-child(2).active ~ .indicator {
+    transform: translateX(calc(70px * 1));
+}
+.nav-bar ul li:nth-child(3).active ~ .indicator {
+    transform: translateX(calc(70px * 2));
+}
+.nav-bar ul li:nth-child(4).active ~ .indicator {
+    transform: translateX(calc(70px * 3));
+}
+.nav-bar ul li:nth-child(5).active ~ .indicator {
+    transform: translateX(calc(70px * 4));
+}

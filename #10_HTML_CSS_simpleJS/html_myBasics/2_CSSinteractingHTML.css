@@ -1,0 +1,143 @@
+
+#corners1 {
+	background-image: url(IMAG0004.gif);
+	position:  absolute;
+    border-radius: 0.2em;
+	background-repeat: repeat-x;
+    
+    z-index: -1;
+	opacity: 1;
+    width: 265px;
+    height: 150px;    
+}
+
+p {
+	font-family:"Comic Sans MS";
+	text-indent: 1px;
+}
+a {
+	font-family:"Headliner No. 45";
+	color: red;
+	text-transform: none;
+}
+
+ body {
+   font-family:"Arial";
+   font-size: 1em;
+   color: orange;
+} /* распространяется на весь контент HTML body , по сути вся страница */
+h1 {
+   color: yellow;
+   background-color: blue;
+}
+p.kuj {
+	font-weight: bold;
+	font-weight: normal;
+	font-style: italic;
+	font-style: normal;
+	text-decoration: overline;
+	text-decoration: line-through;
+	text-decoration: underline;
+	text-transform: capitalize;
+	text-transform: uppercase;
+	text-transform: lowercase;
+	text-transform: none;
+}
+p.juk {
+	font-style: italic;
+}
+p.koj {
+	text-decoration: line-through;
+	text-transform: none;
+}
+p.raztext {
+   letter-spacing: 0.5em;
+   word-spacing: 2em;
+   line-height: 1.5;
+   text-align: center, left, right, justify;
+   text-indent: 2em;
+}
+p.otstupi {
+   font-size: 1.5em;
+   background-color: #ccc;
+   margin: 1em;
+   margin-top:
+   margin-bottom:
+   margin-left:
+   margin-right:
+   padding: 3em;
+   padding-top:
+   padding-bottom:
+   padding-left:
+   padding-right:
+}
+h2 {
+	margin-left: 300px;
+}
+.hero-image {
+  background-image: url("photographer.jpg"); /* The image used */
+  background-color: #cccccc; /* Used if the image is unavailable */
+  height: 500px; /* You must set a specified height */
+  background-position: top, center, bottom, left, right; /* Center the image */
+  background-repeat: repeat, repeat-x, repeat-y, no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+h3 {
+   display: inline;
+   font-size: 2em;
+}
+
+#header p {
+   display: inline;
+   font-size: 0.9em;
+   padding-left: 2em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

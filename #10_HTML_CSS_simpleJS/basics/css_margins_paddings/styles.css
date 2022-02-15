@@ -1,0 +1,32 @@
+span.content {
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    border: 3px solid blue;
+    background-color: orange;
+    text-align: center;
+    vertical-align: middle;
+    padding: 30px;
+    margin: 30px;
+}
+span.divider {
+    display: inline-block;
+    width: 1px;
+    height: 420px;
+    background-color: white;
+    vertical-align: middle;
+}
+
+div {
+    background-color: green;
+    width: max-content;
+}
+
+/*margin: top right bottom left*/
+/*margin: top right&left bottom*/
+/*margin: top&bottom right&left*/
+/*margin: auto - horizontally centered*/
+div.img_content {
+    /*margin-top: 30px;*/
+    margin: 30px 0px 0px 0px;
+}

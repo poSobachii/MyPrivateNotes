@@ -16,6 +16,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="JavaBasics2" />
         <module name="JavaBasics" />
+        <module name="aJavaForTesting" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -57,6 +58,7 @@
       <module name="MyShop" options="-parameters" />
       <module name="QuarkusReactiveApp" options="-parameters" />
       <module name="SpringBootKafka" options="-parameters" />
+      <module name="aJavaForTesting" options="-parameters" />
       <module name="docker-example" options="-parameters" />
       <module name="intrum-agr-hw" options="-parameters" />
       <module name="java servlet page" options="-parameters" />

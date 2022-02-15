@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet"/>
+    <link href="styles.css" rel="stylesheet">
+    <title>Card slider</title>
+</head>
+<body>
+<div class="container">
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <a href="https://www.google.com/" target="_blanck">
+                    <img src="../../zImages/parrot.jpeg"/>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <img src="../../zImages/fox.jpeg"/>
+            </div>
+            <div class="swiper-slide">
+                <img src="../../zImages/elephant.jpg"/>
+            </div>
+            <div class="swiper-slide">
+                <img src="../../zImages/bird.jpeg"/>
+            </div>
+            <div class="swiper-slide">
+                <img src="../../zImages/deer.jpeg"/>
+            </div>
+            <div class="swiper-slide">
+                <img src="../../zImages/lion.jpeg"/>
+            </div>
+            <div class="swiper-slide">
+                <img src="../../zImages/fish.jpeg"/>
+            </div>
+            <div class="swiper-slide">
+                <img src="../../zImages/baboon.jpeg"/>
+            </div>
+            <div class="swiper-slide">
+                <img src="../../zImages/cat.jpeg"/>
+            </div>
+            <div class="swiper-slide">
+                <img src="../../zImages/dogs.jpeg"/>
+            </div>
+            <div class="swiper-slide">
+                <img src="../../zImages/wolf.jpeg"/>
+            </div>
+            <div class="swiper-slide">
+                <img src="../../zImages/rabbit.jpeg"/>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+        },
+    });
+</script>
+
+</body>
+</html>

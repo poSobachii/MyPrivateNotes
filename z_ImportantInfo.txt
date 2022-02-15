@@ -4,6 +4,7 @@
 https://snap.berkeley.edu/                  // po_sobachii & безсимволов
 ?variable=input                        //post form QUERY
 netstat -ano                        // WINDOWS check your localhost PID to shut it down
+add blitz in github => githubblitz.com   // to go straight to online editor
 
 
 ansible-vault decrypt --vault-password-file ~/.ansible_vault            // ansible decrypt pass is written in 1 lane with no other characters
@@ -11,6 +12,9 @@ ansible-vault encrypt --vault-password-file ~/.ansible_vault            // ansib
 
 git tag -a 2.64.1 -m "2.64.1" 69e07e88f499b53476c04a3193d239cfeb6f5297              // to add git tag
 git push origin 2.64.1
+
+git tag -a 8.3.0 -m "version tag 8.3.0"
+git push origin master --follow-tags
 
 
 curl --header "Content-Type: application/json" \
@@ -77,6 +81,7 @@ Command+Shift+G             // Finder to go desired folder
 
 
 history | grep 'variable'         // to search for something in terminal  MAC
+                                  // complete history located in .zsh_history || .bash_history etc.
 
 /usr/libexec/java_home -V               // to check java versions
 ps -ef | grep java                  //to see all java processers MAC
@@ -87,6 +92,8 @@ sudo kill -9 <pid>           // to kill processor with ID MAC
 chsh -s /bin/bash           // to use bash as default shell
 chsh -s /bin/zsh            // default zsh shell
 cat /etc/shells             // will list the default shells available in the machine
+
+open -e filename            // open file in editor
 
 -------------------- BASH CONFIG FOR DIFFERENT JAVAS --------------------
 JAVA versions
