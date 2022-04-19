@@ -1,0 +1,139 @@
+body {
+    display: flex;
+    width: 100vw;
+    height: calc(100vw/10);
+    margin: 0;
+}
+
+.skybox {
+    width: 100vw;
+    height: calc(100vw/2);
+    background-image: url("img/sky-box.jpg");
+    background-repeat: no-repeat;
+    background-size: 100vw auto;
+    filter: contrast(200%);
+}
+
+
+
+.nuclear {
+    position: absolute;
+    width: 20vw;
+    top: calc(100vw/10);
+    left: 41vw;
+    filter: blur(2px) opacity(80%);
+}
+
+.nuclear_explosion {
+    position: absolute;
+    width: 18vw;
+    top:calc(100vw/5);
+    left:41.5vw;
+    filter: contrast(50%);
+}
+
+.tank_smoke {
+    position: absolute;
+    width: 12vw;
+    top: calc(100vw/6.7);
+    left: 80vw;
+    filter: contrast(50%) blur(2px);
+}
+
+.tank {
+    position: absolute;
+    width: 12vw;
+    top: calc(100vw/5.2);
+    left: 75vw;
+    filter: drop-shadow(0px 7px 4px #212020) contrast(60%) blur(0.5px)
+}
+
+.explosion_2 {
+    position: absolute;
+    width: 20vw;
+    left: 15vw;
+    top: calc(100vw/5.5);
+}
+
+.black_smoke_1 {
+    position: absolute;
+    width: 10vw;
+    top: calc(50vw/10);
+    left: 85vw;
+    filter: blur(1px);
+}
+
+.black_smoke_2 {
+    position: absolute;
+    width: 20vw;
+    top: calc(1vw/10);
+    left: 10vw;
+    filter: blur(2px);
+    transform: scaleX(-1) rotate(45deg);
+}
+
+.horizon {
+    position: absolute;
+    width: 100vw;
+}
+
+.white_smoke {
+    position: absolute;
+    width: 30vw;
+    top: calc(50vw/5);
+    left: -5vw;
+    filter: blur(1px) contrast(200%);
+}
+
+.hoomans {
+    position: absolute;
+    width: 20vw;
+    left: 40vw;
+    top: calc(100vw/4.13);
+}
+
+.particles_1 {
+    position: absolute;
+    width: 51vw;
+    left:40vw;
+    filter: contrast(80%) blur(1px);
+    opacity: 0.6;
+}
+
+.particles_2 {
+    position: absolute;
+    width: 47vw;
+    filter: contrast(80%) blur(1px);
+    transform: rotate(90deg);
+    opacity: 0.7;
+}
+
+.particles_3 {
+    position: absolute;
+    top: calc(30vw);
+    left: 35vw;
+    width: 15vw;
+    opacity: 0.7;
+}
+
+.particles_4 {
+    position: absolute;
+    width: 70vw;
+    left: 20vw;
+    top: calc(100vw/8);
+    filter: blur(10px) contrast(70%);
+
+
+}
+
+.playground {
+    position: absolute;
+    z-index: 10;
+    left:0;
+    background-color: transparent;
+    opacity: 0.4;
+    width: 100vw;
+    height: calc(100vw/1.78);
+}
+
+

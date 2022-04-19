@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
-    <file type="web" url="file://$PROJECT_DIR$/#1001_OnlineWebStore" />
+    <file type="web" url="file://$PROJECT_DIR$/1001_OnlineWebStore" />
     <type id="Spring" />
   </component>
   <component name="MavenProjectsManager">
@@ -17,6 +17,7 @@
         <option value="$PROJECT_DIR$/intrum-agr-hw/pom.xml" />
         <option value="$PROJECT_DIR$/MyShop/pom.xml" />
         <option value="$PROJECT_DIR$/#3_Java/aJavaForTesting/pom.xml" />
+        <option value="$PROJECT_DIR$/3_Java/JavaBasics/pom.xml" />
       </list>
     </option>
   </component>

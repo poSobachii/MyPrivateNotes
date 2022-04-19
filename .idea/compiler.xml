@@ -3,18 +3,10 @@
   <component name="CompilerConfiguration">
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true" />
-      <profile name="Gradle Imported" enabled="true">
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="false">
-          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.12/48e4e5d60309ebd833bc528dcf77668eab3cd72c/lombok-1.18.12.jar" />
-        </processorPath>
-        <module name="#1001_OnlineWebStore.main" />
-      </profile>
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="JavaBasics2" />
         <module name="JavaBasics" />
         <module name="aJavaForTesting" />
       </profile>
@@ -23,12 +15,17 @@
       <module name="#1001_OnlineWebShop" target="11" />
       <module name="#1001_OnlineWebShop.main" target="11" />
       <module name="#1001_OnlineWebShop.test" target="11" />
+      <module name="#1001_OnlineWebStore.main" target="1.8" />
+      <module name="#1001_OnlineWebStore.test" target="1.8" />
+      <module name="1001_OnlineWebStore" target="1.8" />
+      <module name="aJavaForTesting" target="11" />
       <module name="Docker-app" target="1.8" />
       <module name="docker-example" target="1.8" />
       <module name="FBmanager" target="1.8" />
       <module name="FbPoster" target="1.8" />
       <module name="intrum-agr-hw" target="11" />
       <module name="java servlet page" target="1.8" />
+      <module name="JavaBasics2" target="1.8" />
       <module name="JavaFx_required" target="11" />
       <module name="JS, thymleaf, websockets" target="1.8" />
       <module name="MyShop" target="1.8" />
@@ -39,6 +36,7 @@
       <module name="QuarkusReactiveApp" target="11" />
       <module name="spring-app" target="11" />
       <module name="SpringBootKafka" target="11" />
+      <module name="SpringElasticSearch" target="11" />
       <module name="swagger, rest-assured, rest-it-tests" target="11" />
       <module name="team_dog.main" target="1.8" />
       <module name="team_dog.test" target="1.8" />
@@ -58,6 +56,7 @@
       <module name="MyShop" options="-parameters" />
       <module name="QuarkusReactiveApp" options="-parameters" />
       <module name="SpringBootKafka" options="-parameters" />
+      <module name="SpringElasticSearch" options="" />
       <module name="aJavaForTesting" options="-parameters" />
       <module name="docker-example" options="-parameters" />
       <module name="intrum-agr-hw" options="-parameters" />

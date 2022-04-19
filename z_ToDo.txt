@@ -1,7 +1,89 @@
-todo
+todo java
     java basics - data types / primitive / non-primitive
     https://www.w3schools.com/java/java_data_types.asp
     "instance of" examples
     some simple arithmetics % ++ etc.
     types of exceptions ? InputMismatchException
-    web3 - document.hiden visibility, track if tab is opened or not
+    continue/break examples
+    seriazable & Path path example
+    thread safe - what is it / immutable dependens
+    .sinroinizedMap() / .flatMap    - stream foreach map.
+    if else - order of checking statements
+
+todo more java examples
+
+        // integer-type
+        System.out.println(10 == 20);
+
+        // char-type
+        System.out.println('a' == 'b');
+
+        // char and double type
+        System.out.println('a' == 97.0);
+
+        // boolean type
+        System.out.println(true == true);
+
+https://www.geeksforgeeks.org/difference-between-and-equals-method-in-java
+
+System design:
+    1 load balancer
+    2 caching
+    3 content delivery network
+    4 database replication
+    5 database partitioning
+    6 api's/services
+
+Algorithms:
+
+    BFS
+
+    Linear search
+    Binary search
+    Depth first search (DFS)
+    Breadth first search (BFS)
+
+    Insertion sort
+    Heap sort
+    Selection sort
+    Merge sort
+    Quick sort
+    Counting sort
+    Topological sort
+
+    Kruskal's algorithm
+    Dijkstra's algorithm
+    Bellman Ford algorithm
+    Floyd Warshall algorithm
+    Flood Fill algorithm
+    Lee algorithm
+
+    Kadane's algorithm
+    Floyd cycle detection algorithm
+    KMP algorithm
+    Quick Select algorithm
+    Boyer More Majority Vote algorithm
+
+    Huffman coding
+    Compression algorithm
+    Euclid's algorithm
+    Union Find algorithm
+
+todo swagger
+    check online swagger editor with OpenAPI specification
+
+
+
+
+
+
+
+
+
+
+
+todo javascript
+
+    web3 - document.hiden visibility,               // track if tab is opened or not
+    document.dispatchEvent()                    // top send
+    document.addEventListener()                 // to receive

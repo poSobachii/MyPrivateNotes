@@ -1,0 +1,54 @@
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+}
+
+.skybox {
+    width: 100%;
+    height: 100%;
+    background-image: url("img/sky-box.jpeg");
+    background-repeat: no-repeat;
+    background-size: 120%;
+    /*opacity: 0.65;*/
+    filter: contrast(200%);
+}
+
+.jet {
+    position: absolute;
+    width: 600px;
+    top: 55%;
+    left: 15%;
+    filter: grayscale(100%);
+}
+
+.missile {
+    position: absolute;
+    width: 900px;
+    top: 40%;
+    right: 0%;
+    filter: grayscale(100%);
+}
+
+.clouds_1 {
+    position: absolute;
+    width:50%;
+    left: 20%;
+    opacity: 0.9;
+}
+
+.clouds_2 {
+    position: absolute;
+    width:30%;
+    top: 70%;
+    left: 20%;
+    /*opacity: 0.9;*/
+}
+
+.playground {
+    position: absolute;
+    z-index: 10;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,15 @@
+Arrays vs Collections :
+Arrays
+1. Size is fixed
+2. Can hold both primitive types(boolean, byte, short, int, long …etc) and object types.
+3. There is no underlying data structures in arrays. The array itself used as data structure in java.
+4. There is no utility methods in arrays
+
+Collections
+1. Size is not fixed, size is growable
+2. Can hold only object types
+3. Every Collection class there is underlying data structure.
+4. Every Collection provides utility methods
+
+Operator precedence:
+https://docs.oracle.com/javase/tutorial/java/nutsandbolts/operators.html

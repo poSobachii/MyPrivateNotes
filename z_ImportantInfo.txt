@@ -15,15 +15,64 @@ git push origin 2.64.1
 
 git tag -a 8.3.0 -m "version tag 8.3.0"
 git push origin master --follow-tags
+git remote update origin --prune                    // update repos actual branches
+git remote show origin                              // check all repo branches
+git log                                             // to check branch from
 
+> curl --header "Content-Type: application/json" \
+    --request POST \
+    --data '{"name":"peach"}' \
+    http://localhost:8080/fruits
 
-curl --header "Content-Type: application/json" \
-  --request POST \
-  --data '{"name":"peach"}' \
-  http://localhost:8080/fruits
+  // use this CURL to insert new fruit
 
 
 telnet localhost 8080                   // to ping local host and check if its working
+
+==============================================================================================================================
+-------------------- PUNCTUATION TYPES -------------------
+
+slash                                       /
+backslash	                                \
+colon	                                    :
+semicolon	                                ;
+brackets	                                [ ]  ( )  { }  ⟨ ⟩
+guillemets	                                ‹ ›  « »
+quotation marks	                            ‘ ’  “ ”
+apostrophe	                                ’
+comma	                                    ,
+full stop, period	                        .
+ellipsis	                                …
+exclamation mark	                        !
+question mark	                            ?
+dash	                                    ‒
+hyphen	                                    ‐
+
+ampersand	                                &
+asterisk	                                *
+at sign	                                    @
+caret	                                    ^
+degree	                                    °
+double hyphen	                            =
+number sign, pound, hash	                #
+Division sign	                            ÷
+tilde	                                    ~
+underscore, understrike	                    _
+vertical bar, pipe, broken bar	            |  ‖  ¦
+
+==============================================================================================================================
+-------------------- GOOGLE SEARCH HACKS -------------------
+
+define:word                     // get explanation
+“Puppy Dog Sweaters”            // exactly this phrase to search
+Mustang -car                    // exclude word cars in search
+Sidney Crosby site:nhl.com      // use at speficic site
+link:nytimes.com                // linked pages to specific website
+“Come * right now * me”         // wildcard asterisk is any word possible
+related:amazon.com              // find website similar to specific
+chocolate OR white chocolate    // search for pages that have either chocolate or white chocolate
+teams have won the Stanley Cup ..2004       // exactly 2004 year is required
+41..43                          // range 41, 42, 43
 
 ==============================================================================================================================
 -------------------- IDEA CONFIGURATION --------------------
@@ -48,8 +97,8 @@ cp                           // to copy file
 vi hello.txt     // to edit file. press "i" for insert or "esc" for quiting insert mode
 ctrl + c , :x      // to save a file
 :q :q!          // to quit file, and quit unsaved
-nano hello.txt
-less hello.txt
+nano hello.txt                  //read
+less hello.txt                  //read
 rm hello.txt            // to delete file
 rm -r folder1           // to delete folder with conntent
 rm -rf folder1          // delete folder without annoying spam
@@ -72,6 +121,8 @@ ssh-add -l
 ssh-add ~/.ssh/id_rs            // your private public key
 scp ansiblePuppetKeys.pem ec2-user@13.48.85.115:/var/ansible       // to copy to remote server
 
+sh script.sh            // to execute sh script
+
 
 ==============================================================================================================================
 -------------------- MAC CONFIGS --------------------
@@ -89,11 +140,14 @@ netstat -anv | grep 8080            // to see if 8080 port is busy
 netstat -vanp tcp | grep 3000       // alternative
 sudo kill -9 <pid>           // to kill processor with ID MAC
 
+/bin/bash                   // to switch to bash for current session
+cat /etc/shells             // will list the default shells available in the machine
 chsh -s /bin/bash           // to use bash as default shell
 chsh -s /bin/zsh            // default zsh shell
-cat /etc/shells             // will list the default shells available in the machine
 
 open -e filename            // open file in editor
+
+source ~/.bash_profile       // to run reload bash commands and use them.
 
 -------------------- BASH CONFIG FOR DIFFERENT JAVAS --------------------
 JAVA versions
@@ -114,6 +168,13 @@ java11
 
 defaults write com.apple.finder AppleShowAllFiles TRUE          // to show hidden files in Finder
 defaults write com.apple.finder AppleShowAllFiles FALSE         // to show hide hidden files in Finder
+
+
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+nvm -v                      // to check nvm version
 
 ==============================================================================================================================
 -------------------- JAVA TERMINAL RUN --------------------
@@ -171,9 +232,14 @@ ng generate component heroes                    // to generate components
 ng generate service hero                            // to generate service
 npm install angular-in-memory-web-api --save            // install inbuilt memory
 
-==============================================================================================================================
---------------------TYPESCRIPT--------------------
 
-tsc greeter.ts                  // convert ts to js
+"strictPropertyInitialization": false in tsconfig.json      // ignores no intializer notification
+
+==============================================================================================================================
+--------------------CHROMEDRIVER--------------------
+
+repo of drivers  -> https://chromedriver.storage.googleapis.com/index.html
+
+mv chromedriver /usr/local/bin              // move executable to correct path (MAC)
 
 ==============================================================================================================================
