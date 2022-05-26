@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
+:root {
+    --nav_1_clr: #222327;
+}
+
+/* Snippet ===============================================================================================================================*/
+
+.nav-bar-bg {
+    box-sizing: border-box;
+    background-color: var(--nav_1_clr);
+}
+.nav-bar-1 {
+    position: relative;
+    width: 400px;
+    height: 70px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-family: 'Courgette', cursive;
+}
+
+.nav-bar-1 ul {
+    display: flex;
+    width: 350px;
+}
+
+.nav-bar-1 ul li {
+    position: relative;
+    list-style: none;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+}
+
+.nav-bar-1 ul li a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+}
+
+.nav-bar-1 ul li a .nav-bar-1-ic {
+    position: relative;
+    display: block;
+    line-height: 75px;
+    font-size: 1.5em;
+    text-align: center;
+    transition: 0.5s;
+    color: var(--nav_1_clr);
+}
+
+.nav-bar-1 ul li.nav-bar-1-active a .nav-bar-1-ic {
+    transform: translateY(-32px);
+}
+
+.nav-bar-1 ul li a .nav-bar-1-text {
+    position: absolute;
+    color: var(--nav_1_clr);
+    font-weight: 400;
+    font-size: 0.75em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.nav-bar-1 ul li.nav-bar-1-active a .nav-bar-1-text {
+    opacity: 1;
+    transform: translateY(10px);
+}
+
+.nav-bar-1-indicator {
+    position: absolute;
+    bottom: 50%;
+    width: 70px;
+    height: 70px;
+    background: #ffd631;
+    border-radius: 50%;
+    border: 6px solid var(--nav_1_clr);
+    transition: 0.5s;
+}
+
+.nav-bar-1-indicator::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -22px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-top-right-radius: 20px;
+    box-shadow: 0px -10px 0 0 var(--nav_1_clr);
+}
+
+.nav-bar-1-indicator::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -22px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-top-left-radius: 20px;
+    box-shadow: 0px -10px 0 0 var(--nav_1_clr);
+}
+
+.nav-bar-1 ul li:nth-child(1).nav-bar-1-active ~ .nav-bar-1-indicator {
+    transform: translateX(calc(70px * 0));
+    filter: hue-rotate(60deg);
+}
+.nav-bar-1 ul li:nth-child(2).nav-bar-1-active ~ .nav-bar-1-indicator {
+    transform: translateX(calc(70px * 1));
+    filter: hue-rotate(120deg);
+}
+.nav-bar-1 ul li:nth-child(3).nav-bar-1-active ~ .nav-bar-1-indicator {
+    transform: translateX(calc(70px * 2));
+    filter: hue-rotate(180deg);
+}
+.nav-bar-1 ul li:nth-child(4).nav-bar-1-active ~ .nav-bar-1-indicator {
+    transform: translateX(calc(70px * 3));
+    filter: hue-rotate(240deg);
+}
+.nav-bar-1 ul li:nth-child(5).nav-bar-1-active ~ .nav-bar-1-indicator {
+    transform: translateX(calc(70px * 4));
+    filter: hue-rotate(300deg);
+}
+
+/* Snippet ===============================================================================================================================*/
+
+.nav-bar-2 {
+    position: relative;
+    width: 400px;
+    height: 70px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.nav-bar-2 ul {
+    display: flex;
+    width: 350px;
+}
+
+.nav-bar-2 ul li {
+    position: relative;
+    list-style: none;
+    width: 70px;
+    height: 60px;
+    z-index: 2;
+}
+
+.nav-bar-2 ul li a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+}
+
+.nav-bar-2 ul li a .nav-bar-2-ic {
+    position: relative;
+    display: block;
+    line-height: 65px;
+    font-size: 2em;
+    transition: 0.5s;
+    color: black;
+}
+
+.nav-bar-2 ul li.nav-bar-2-active a .nav-bar-2-ic {
+    transform: translateY(-35px);
+    color: #52b27c;
+}
+
+.nav-bar-2 ul li a .nav-bar-2-text {
+    position: absolute;
+    background-color: #52b27c;
+    color: white;
+    padding: 2px 7px;
+    border-radius: 12px;
+    font-weight: 400;
+    font-size: 0.75em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    opacity: 0;
+    transform: translateY(15px);
+}
+
+.nav-bar-2 ul li.nav-bar-2-active a .nav-bar-2-text {
+    opacity: 1;
+    transform: translateY(-4px);
+}
+
+.nav-bar-2-indicator {
+    position: absolute;
+    top: -50%;
+    width: 70px;
+    height: 70px;
+    background: white;
+    border-radius: 50%;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.nav-bar-2-indicator::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: -28px;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 15px 18px white;
+}
+
+.nav-bar-2-indicator::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    right: -28px;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: -15px 18px white;
+}
+
+
+.nav-bar-2 ul li:nth-child(1).nav-bar-2-active ~ .nav-bar-2-indicator {
+    transform: translateX(calc(70px * 0));
+}
+.nav-bar-2 ul li:nth-child(2).nav-bar-2-active ~ .nav-bar-2-indicator {
+    transform: translateX(calc(70px * 1));
+}
+.nav-bar-2 ul li:nth-child(3).nav-bar-2-active ~ .nav-bar-2-indicator {
+    transform: translateX(calc(70px * 2));
+}
+.nav-bar-2 ul li:nth-child(4).nav-bar-2-active ~ .nav-bar-2-indicator {
+    transform: translateX(calc(70px * 3));
+}
+.nav-bar-2 ul li:nth-child(5).nav-bar-2-active ~ .nav-bar-2-indicator {
+    transform: translateX(calc(70px * 4));
+}
+
+/* Snippet ===============================================================================================================================*/
+/* Snippet ===============================================================================================================================*/
+/* Snippet ===============================================================================================================================*/
+/* Snippet ===============================================================================================================================*/
+/* Snippet ===============================================================================================================================*/
+/* Snippet ===============================================================================================================================*/
+/* Snippet ===============================================================================================================================*/
+/* Snippet ===============================================================================================================================*/
+/* Snippet ===============================================================================================================================*/
+/* Snippet ===============================================================================================================================*/

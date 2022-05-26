@@ -13,9 +13,11 @@
 1.3 - String , immutable - manipulation
         String conversion '.parseInt()'
 1.5 - Operators:
-        arithmetical
-        relational
-        logical
+        arithmetical / unary
+        relational / comparison
+        logical / conditional
+        assignment
+        ternary
 1.6 - Statements:
         if-then
         if-then-else

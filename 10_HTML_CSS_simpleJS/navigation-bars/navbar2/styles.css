@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
 
 :root {
-    --clr: #222327;
+    --nav_1_clr: #222327;
 }
 
 *{
@@ -16,7 +16,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: var(--clr);
+    background: var(--nav_1_clr);
 }
 
 .nav-bar {

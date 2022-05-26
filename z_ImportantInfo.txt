@@ -29,6 +29,8 @@ git log                                             // to check branch from
 
 telnet localhost 8080                   // to ping local host and check if its working
 
+document.designMode = 'on'
+
 ==============================================================================================================================
 -------------------- PUNCTUATION TYPES -------------------
 

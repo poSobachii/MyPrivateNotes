@@ -26,6 +26,13 @@ todo more java examples
 
 https://www.geeksforgeeks.org/difference-between-and-equals-method-in-java
 
+IT destinations ->
+clouds
+big data
+cyber security
+dev-ops
+machine learning
+
 System design:
     1 load balancer
     2 caching
@@ -33,6 +40,8 @@ System design:
     4 database replication
     5 database partitioning
     6 api's/services
+
+
 
 Algorithms:
 
@@ -87,3 +96,5 @@ todo javascript
     web3 - document.hiden visibility,               // track if tab is opened or not
     document.dispatchEvent()                    // top send
     document.addEventListener()                 // to receive
+
+    .onLoad() and other js functions

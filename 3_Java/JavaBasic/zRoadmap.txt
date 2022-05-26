@@ -1,0 +1,724 @@
+JAVA SYNTAX ============================================================================================
+
+    <h3>2. Работа с переменными, типа int и String</h3>
+    <ul>
+      <li>сохранение текста в переменную, ее вывод в консоль</li>
+      <li>объявление и инициализация переменных String</li>
+      <li>комментарии в коде</li>
+      <li>элементарные математические операции с переменными типа int</li>
+      <li>инкремент, декремент</li>
+      <li>конкатенация</li>
+      <li>Integer.parseInt(), String.valueOf()</li>
+    </ul>
+
+    <h3>3. Знакомство с типами и ввод с клавиатуры. Знакомство с IDEA</h3>
+    <ul>
+      <li>хранение примитивных переменных в памяти</li>
+      <li>хранения String переменных в памяти</li>
+      <li>byte, short, char, long, float, double</li>
+      <li>System.in, Scanner</li>
+      <li>методы Scanner</li>
+      <li>установка IDEA, скачивание проекта, скачивание JDK (версия 11)</li>
+      <li>установка плагина, рассказ о его функционале</li>
+    </ul>
+
+    <h3>4. Условный оператор</h3>
+    <ul>
+      <li>if, if-else, if-else-if</li>
+      <li>блоки команд</li>
+      <li>вложенные блоки команд (вложенные if-ы)</li>
+      <li>Тип boolean</li>
+      <li>операторы сравнения, в т.ч. double</li>
+      <li>логические И, ИЛИ, НЕ</li>
+      <li>тернарний оператор</li>
+      <li>сравнение примитивов и String</li>
+    </ul>
+
+    <h3>5. Факультатив</h3>
+    <ul>
+      <li>Подтягиваем новичков</li>
+      <li>Опытным рассказываем про фишки IDEA и т.п.</li>
+      <li>компиляция класса в байт-код из консоли, запуск программы</li>
+    </ul>
+
+    <h3>6. Циклы</h3>
+    <ul>
+      <li>проблематика на примере задачи сделать что-то много раз</li>
+      <li>while</li>
+      <li>break, continue</li>
+      <li>for</li>
+      <li>do-while</li>
+      <li>сравнение разных циклов, выявление где какой лучше использовать</li>
+    </ul>
+
+    <h3>7. Массивы</h3>
+    <ul>
+      <li>создание и заполнение массивов</li>
+      <li>обход массива</li>
+      <li>хранение массивов в памяти</li>
+    </ul>
+
+    <h3>8. Двумерные массивы</h3>
+    <ul>
+      <li>двумерные массивы</li>
+      <li>зубчатые массивы</li>
+      <li>n-мерные массивы</li>
+    </ul>
+
+    <h3>9. Функции</h3>
+    <ul>
+      <li>объявление и вызов методов</li>
+      <li>параметры</li>
+      <li>возвращаемое значение, void</li>
+      <li>модификаторы доступа</li>
+      <li>локальные переменные метода</li>
+      <li>модификаторы методов, метод main</li>
+    </ul>
+
+    <h3>10. Работа со строками и продолжение предыдущей темы</h3>
+    <ul>
+      <li>константы</li>
+      <li>сокрытие переменных (shadowing)</li>
+      <li>экранирование символов</li>
+      <li>основные методы класса String</li>
+    </ul>
+
+    <h3>11. Факультатив</h3>
+    <ul>
+      <li>литералы</li>
+      <li>кодировки</li>
+      <li>вспомогательные классы для работы со строками: StringBuilder, String.format</li>
+      <li>утилитный класс Arrays</li>
+    </ul>
+
+    <h3>12. Типы данных. Знакомство с ООП</h3>
+    <ul>
+      <li>примитивные типы</li>
+      <li>приведение типов данных</li>
+      <li>ссылочные типы</li>
+      <li>объекты</li>
+      <li>null</li>
+      <li>знакомство с ООП</li>
+      <li>наследование</li>
+    </ul>
+
+    <h3>13. Объекты</h3>
+    <ul>
+      <li>создание объектов (new)</li>
+      <li>конструктор, конструктор по умолчанию</li>
+      <li>конструктор с параметрами</li>
+      <li>порядок вызова конструкторов при наследовании</li>
+      <li>доступ к полям объекта (геттер, сеттер)</li>
+      <li>hashCode, equals</li>
+    </ul>
+
+    <h3>14. Классы и static</h3>
+    <ul>
+      <li>статические переменные</li>
+      <li>сравнение статических и нестатических переменных</li>
+      <li>статические методы</li>
+      <li>порядок инициализации при использовании конструкторов и статических блоков</li>
+      <li>внутренние классы</li>
+    </ul>
+
+    <h3>15. Факультатив</h3>
+    <ul>
+      <li>жизненный цикл объекта</li>
+      <li>загрузка класса</li>
+    </ul>
+
+    <h3>16. Списки и Generics</h3>
+    <ul>
+      <li>классы обертки</li>
+      <li>ArrayList</li>
+      <li>Array VS ArrayList</li>
+      <li>типизация ArrayList (дженерики)</li>
+    </ul>
+
+    <h3>17. Коллекции</h3>
+    <ul>
+      <li>иерархия коллекций</li>
+      <li>Set, HashSet</li>
+      <li>iterator, for-each</li>
+    </ul>
+
+    <h3>18. Коллекции</h3>
+    <ul>
+      <li>Map, HashMap</li>
+      <li>для каких задач лучше использовать какие коллекции</li>
+      <li>Collections</li>
+    </ul>
+
+    <h3>19. Факультатив</h3>
+    <ul>
+      <li>LinkedList</li>
+      <li>ArrayList VS LinkedList</li>
+      <li>Queue</li>
+      <li>SortedMap, TreeMap</li>
+    </ul>
+
+    <h3>20. Singleton, Enum, switch</h3>
+    <ul>
+      <li>зачем нужны перечисления</li>
+      <li>объявления Enum</li>
+      <li>Enum - лучший синглтон</li>
+      <li>switch</li>
+    </ul>
+
+    <h3>21. Исключения</h3>
+    <ul>
+      <li>нормальное выполнение кода и ошибки в рантайме</li>
+      <li>try-catch</li>
+      <li>иерархия исключений</li>
+      <li>multicatch</li>
+      <li>throw</li>
+      <li>checked и unchecked исключения</li>
+      <li>throws</li>
+    </ul>
+
+    <h3>22. Исключения</h3>
+    <ul>
+      <li>finally</li>
+      <li>создание своих исключений</li>
+      <li>Throwable</li>
+      <li>stack trace</li>
+      <li>try with resources</li>
+      <li>AutoCloseable</li>
+    </ul>
+
+    <h3>23. Факультатив</h3>
+    <ul>
+      <li>Оборачивание исключения</li>
+      <li>Error</li>
+    </ul>
+
+    <h3>24. Потоки ввода-вывода</h3>
+    <ul>
+      <li>InputStream</li>
+      <li>Reader</li>
+      <li>BufferedReader</li>
+      <li>OutputStream</li>
+      <li>Writer</li>
+      <li>BufferedWriter</li>
+    </ul>
+
+    <h3>25. Потоки ввода-вывода. Pattern Decorator</h3>
+    <ul>
+      <li>ByteArrayInputStream</li>
+      <li>ByteArrayOutputStream</li>
+      <li>комбинирование потоков</li>
+    </ul>
+
+    <h3>26. Потоки ввода-вывода. java.nio</h3>
+    <ul>
+      <li>io VS nio</li>
+      <li>FileChannel</li>
+      <li>Selector</li>
+      <li>Path</li>
+      <li>Paths</li>
+      <li>Files</li>
+    </ul>
+
+    <h3>27. Работа со временем и датой</h3>
+    <ul>
+      <li>Date</li>
+      <li>DateFormat</li>
+      <li>Calendar</li>
+      <li>LocalDate, LocalTime, LocalDateTime</li>
+      <li>Instant</li>
+      <li>ZonedDateTime</li>
+      <li>DateTimeFormatter</li>
+    </ul>
+
+
+JAVA CORE ============================================================================================
+
+      <h3>1. ООП: инкапсуляция, полиморфизм. Интерфейсы</h3>
+      <ul>
+        <li>инкапсуляция</li>
+        <li>полиморфизм</li>
+        <li>приведение типов</li>
+        <li>this, super</li>
+        <li>интерфейсы</li>
+      </ul>
+
+      <h3>2. ООП: Перегрузка, переопределение, Абстрактные классы</h3>
+      <ul>
+        <li>абстрактный класс</li>
+        <li>реализация абстрактных методов предка</li>
+        <li>перегрузка (overload) методов - одинаковые названия</li>
+        <li>переопределение (override) методов</li>
+      </ul>
+
+      <h3>3. Stream API</h3>
+      <ul>
+        <li>анонимный внутренний класс</li>
+        <li>реализация абстрактных методов предка</li>
+        <li>лямбда выражения</li>
+        <li>функциональные интерфейсы</li>
+        <li>method reference</li>
+        <li>Stream</li>
+        <li>промежуточные и терминальные методы Stream-а</li>
+        <li>map-reduce</li>
+      </ul>
+
+      <h3>4. ООП: композиция, агрегация, наследование</h3>
+      <ul>
+        <li>ассоциация: композиция и агрегация</li>
+        <li>наследование</li>
+      </ul>
+
+      <h3>5. Интерфейсы: сравнение с абстрактным классом, множественное наследование</h3>
+      <ul>
+        <li>объявление поведения</li>
+        <li>дефолтные методы</li>
+        <li>реализация нескольких интерфейсов</li>
+        <li>проблема “ромба”</li>
+        <li>сравнение абстрактных классов и интерфейсов</li>
+      </ul>
+
+      <h3>6. Приведение типов, instanceof switch-expression</h3>
+      <ul>
+        <li>instanceof</li>
+        <li>приведение типов (расширение и сужение)</li>
+        <li>switch-expression, Enum</li>
+      </ul>
+
+      <h3>7. Особенности вызова конструкторов. Блок static</h3>
+      <ul>
+        <li>процесс создание объекта</li>
+        <li>порядок вызова конструкторов</li>
+        <li>порядок инициализации переменных</li>
+      </ul>
+
+      <h3>8. Устройство Object: equals, hashCode, clone, toString(). Immutable objects</h3>
+      <ul>
+        <li>класс Object</li>
+        <li>методы класса Object</li>
+        <li>mutable &amp; immutable objects</li>
+      </ul>
+
+      <h3>9. Рекурсия</h3>
+      <ul>
+        <li>рекурсия</li>
+      </ul>
+
+      <h3>10. Знакомство с нитями: Thread, Runnable, start, sleep</h3>
+      <ul>
+        <li>Thread</li>
+        <li>Runnable</li>
+        <li>start</li>
+        <li>sleep</li>
+        <li>interrupt</li>
+      </ul>
+
+      <h3>11. Знакомство с нитями: synchronized, volatile, wait, notify.DeadLock</h3>
+      <ul>
+        <li>synchronized</li>
+        <li>volatile</li>
+        <li>join</li>
+        <li>wait, notify</li>
+        <li>проблема DeadLock</li>
+      </ul>
+
+      <h3>12. Executors</h3>
+      <ul>
+        <li>ExecutorService</li>
+        <li>паттерн “фабричный метод”</li>
+        <li>добавление задач в сервис</li>
+        <li>Callable</li>
+        <li>получение результата: Future</li>
+        <li>остановка ExecutorService</li>
+        <li>FixedThreadPool</li>
+        <li>CachedThreadPool</li>
+        <li>ScheduledExecutorService</li>
+      </ul>
+
+      <h3>13. ThreadLocal, Callable, Future</h3>
+      <ul>
+        <li>ThreadLocal контекст</li>
+        <li>ThreadLocalRandom</li>
+      </ul>
+
+      <h3>14. Внутренние/Вложенные классы, примеры: Map.Entry</h3>
+      <ul>
+        <li>вложенные классы</li>
+        <li>внутренние классы</li>
+        <li>внутренние статические классы</li>
+        <li>внутренние анонимные классы</li>
+        <li>примеры разных типов классов из JDK</li>
+      </ul>
+
+      <h3>15. Сериализация JSON/XML/YAML</h3>
+      <ul>
+        <li>java сериализация</li>
+        <li>форматы данных xml, json, yaml</li>
+        <li>jackson ObjectMapper</li>
+      </ul>
+
+      <h3>16. Reflection API</h3>
+      <ul>
+        <li>зачем нужен Reflection API</li>
+        <li>получение данных: класса, метода, конструктора, поля</li>
+        <li>создание объекта</li>
+        <li>изменение внутреннего состояния объекта</li>
+        <li>прокси</li>
+        <li>RMI</li>
+      </ul>
+
+      <h3>17. Аннотации в Java</h3>
+      <ul>
+        <li>декларативный и императивный подход написания кода</li>
+        <li>популярные аннотации: @Deprecated, @Override, @Nullable,...</li>
+        <li>создание аннотаций</li>
+        <li>обработка аннотаций в рантайме</li>
+      </ul>
+
+      <h3>18. Факультатив</h3>
+      <ul>
+        <li>работа с Swing</li>
+      </ul>
+
+      <h3>19. Sockets</h3>
+      <ul>
+        <li>Socket</li>
+        <li>ServerSocket</li>
+        <li>live coding: написание примитивного чата для группы</li>
+      </ul>
+
+JAVA PROFESSIONAL ============================================================================================
+
+      <h3>1. Сборка мусора и типы ссылок в Java</h3>
+      <ul>
+        <li>память JVM: stack и heap</li>
+        <li>CG: Serial, Parallel, CMS, G1, Shenandoah, ZGC</li>
+        <li>кеш</li>
+        <li>WeakReference, SoftReference, PhantomReference</li>
+      </ul>
+
+      <h3>2. Паттерны проектирования</h3>
+      <ul>
+        <li>поведенческие: цепочка ответственности, команда, итератор, интерпретатор, посредник, хранитель, наблюдатель, состояние, стратегия, посетитель, шаблонный метод</li>
+        <li>порождающие: прототип, строитель, синглтон, абстрактная фабрика, фабричный метод</li>
+        <li>декоратор, компоновщик, фасад, приспособленец, прокси</li>
+      </ul>
+
+      <h3>3. Методологии разработки</h3>
+      <ul>
+        <li>waterfall</li>
+        <li>v-model</li>
+        <li>incremental</li>
+        <li>RAD model</li>
+        <li>agile</li>
+        <li>iterative</li>
+        <li>spiral</li>
+      </ul>
+
+      <h3>4. Основы Maven. Установка Maven, управление зависимостями, виды Maven-репозиториев, сборка Java-проекта</h3>
+      <ul>
+        <li>скачивание, прописывание переменных окружения</li>
+        <li>создание maven-проекта</li>
+        <li>зависимости</li>
+        <li>плагины</li>
+        <li>фазы (lifecycle)</li>
+        <li>профили</li>
+        <li>билд артефактов</li>
+      </ul>
+
+      <h3>5. Опыт работы с Guava, Apache Commons Collections</h3>
+      <ul>
+        <li>Multimap, BiMap</li>
+        <li>Multiset</li>
+        <li>неизменяемые коллекции</li>
+        <li>Objects: hashCode, equals</li>
+        <li>Throwables</li>
+        <li>CollectionUtils</li>
+        <li>StringUtils</li>
+      </ul>
+
+      <h3>6. JUnit</h3>
+      <ul>
+        <li>зачем нужно тестирование</li>
+        <li>типы тестирования</li>
+        <li>@Test</li>
+        <li>@Before, @After</li>
+        <li>@BeforeClass, @AfterClass</li>
+        <li>параметризованные тесты</li>
+      </ul>
+
+      <h3>7. Mockito</h3>
+      <ul>
+        <li>моки</li>
+        <li>mock и spy</li>
+        <li>when и thenReturn</li>
+        <li>verify</li>
+        <li>any, once, times</li>
+      </ul>
+
+      <h3>8. Логирование</h3>
+      <ul>
+        <li>зачем нужны логи</li>
+        <li>уровни логирования</li>
+        <li>slf4j</li>
+        <li>реализации: log4j, JUL, logback, common-loggins</li>
+        <li>аппендеры</li>
+      </ul>
+
+      <h3>9. Устройство сети. Сетевая модель</h3>
+      <ul>
+        <li>топология сети</li>
+        <li>модель OSI</li>
+        <li>DNS</li>
+      </ul>
+
+      <h3>10. Архитектура ПО. Клиент-серверная архитектура и ее составляющие, трехуровневая архитектура, архитектурные шаблоны</h3>
+      <ul>
+        <li>клиент-серверная архитектура</li>
+        <li>трехуровневая архитектура (клиент-сервер-БД)</li>
+        <li>критерии хорошей архитектуры: эффективность, гибкость, расширяемость, масштабируемость, удобство тестирования, читаемый и понятный код</li>
+        <li>модульная архитектура. декомпозиция</li>
+      </ul>
+
+      <h3>11. Протоколы HTTP/HTTPS. Протокол передачи данных, HTTP-запросы и ответы, отличия HTTP и HTTPS. Cookies, Session</h3>
+      <ul>
+        <li>протоколы передачи данных в сети</li>
+        <li>http методы (GET, POST, PUT, …)</li>
+        <li>параметры запросов</li>
+        <li>тело запроса</li>
+        <li>хедеры</li>
+        <li>коды ответов</li>
+        <li>http VS https</li>
+        <li>http сессии</li>
+        <li>куки</li>
+        <li>http/2</li>
+      </ul>
+
+      <h3>12. HttpClient</h3>
+      <ul>
+        <li>AJAX</li>
+        <li>java http client</li>
+        <li>синхронные и асинхронные запросы</li>
+        <li>задача на получение данных с нета, например погода</li>
+      </ul>
+
+      <h3>13. Сервлеты, Java servlet API. Пишем простое веб-приложение</h3>
+      <ul>
+        <li>что такое сервлет</li>
+        <li>жизненный цикл</li>
+        <li>сервлет-контейнер Tomcat</li>
+        <li>doGet, doPost</li>
+        <li>redirect VS forward</li>
+        <li>фильтры</li>
+      </ul>
+
+      <h3>14. Контейнеры сервлетов: Tomcat, развертывание приложения, настройка сервера</h3>
+      <ul>
+        <li>практика по предыдущей лекции</li>
+      </ul>
+
+      <h3>15. Знакомство с MVC (Model-View-Controller). JSP</h3>
+      <ul>
+        <li>набор архитектурных принципов и идей MVC</li>
+        <li>схемы MVC</li>
+        <li>MVC в вебе</li>
+        <li>типичная ошибка: бизнес-логика в контроллере</li>
+        <li>MVC на примере задачи</li>
+        <li>JSP</li>
+      </ul>
+
+      <h3>16. Веб-сервисы</h3>
+      <ul>
+        <li>что такое веб-сервис</li>
+        <li>протоколы http, jms, ftp,...</li>
+        <li>синхронные и асинхронные запросы</li>
+        <li>облачные сервисы: IaaS, PaaS, SaaS (что угодно as a service)</li>
+      </ul>
+
+      <h3>17. HTML-факультатив</h3>
+      <ul>
+        <li>что такое HTML</li>
+        <li>структура HTML документа</li>
+        <li>теги и их атрибуты</li>
+        <li>CSS, его синтаксис</li>
+        <li>классы и идентификаторы</li>
+        <li>селекторы</li>
+      </ul>
+
+
+DB, HIBERNATE ============================================================================================
+
+            <h3>1. Введение в базы данных. Установка СУБД (MySQL). ddl,&nbsp;dml</h3>
+            <ul>
+              <li>зачем нужны БД</li>
+              <li>реляционные и нереляционные БД</li>
+              <li>реляционная модель</li>
+              <li>CAP теорема</li>
+              <li>установка MySQL developer</li>
+              <li>группы SQL (ddl, dml, dcl, tcl)</li>
+            </ul>
+
+            <h3>2. Типы данных. Создание таблицы. Написание insert, select, update, delete</h3>
+            <ul>
+              <li>создание схемы</li>
+              <li>создание таблиц</li>
+              <li>изменение структуры таблиц</li>
+              <li>insert</li>
+              <li>select</li>
+              <li>update</li>
+              <li>delete</li>
+            </ul>
+
+            <h3>3. Выбор данных</h3>
+            <ul>
+              <li>select с условием</li>
+              <li>перечень выбираемых данных</li>
+              <li>subselect</li>
+              <li>join: left, right, inner, cross</li>
+              <li>group by и агрегатные функции</li>
+              <li>index</li>
+            </ul>
+
+            <h3>4. Транзакции БД</h3>
+            <ul>
+              <li>концепции ACID (Atomicity, Consistency, Isolation, Durability)</li>
+              <li>управление транзакциями</li>
+              <li>уровни изоляции данных</li>
+            </ul>
+
+            <h3>5. Проектирование баз данных</h3>
+            <ul>
+              <li>первая нормальная форма</li>
+              <li>вторая нормальная форма</li>
+              <li>третья нормальная форма</li>
+              <li>ключи (foreign key)</li>
+              <li>отношения: one to …, many to...</li>
+            </ul>
+
+            <h3>6. JDBC 1</h3>
+            <ul>
+              <li>зачем нужен</li>
+              <li>основные интерфейсы</li>
+              <li>получение данных в приложении из БД</li>
+              <li>обновление и удаление данных в приложении из БДа</li>
+            </ul>
+
+            <h3>7. JDBC 2</h3>
+            <ul>
+              <li>транзакции</li>
+              <li>уровни изоляции</li>
+              <li>обработка checker исключений</li>
+            </ul>
+
+            <h3>8. ORM. Hibernate</h3>
+            <ul>
+              <li>нестыковки объектной и реляционной моделей данных</li>
+              <li>ORM (Hibernate), JPA</li>
+              <li>архитектура hibernate</li>
+              <li>конфигурация, основные аннотации</li>
+              <li>получение данных в приложении из БД</li>
+              <li>обновление и удаление данных в приложении из БД</li>
+              <li>Hibernate VS JDBC</li>
+            </ul>
+
+            <h3>9. Hibernate. OneTo…, ManyTo..</h3>
+            <ul>
+              <li>отношения (работа с коллекциями)</li>
+            </ul>
+
+            <h3>10. Наследование Entity for ORM</h3>
+            <ul>
+              <li>одна таблица для каждого класса</li>
+              <li>одна таблица для каждого класса с предками</li>
+              <li>единая таблица для всей иерархии классов</li>
+              <li>одна таблица для каждого класса с использованием соединений (join)</li>
+            </ul>
+
+            <h3>11. Итоговый проект</h3>
+            <ul>
+              <li>hash for passwords</li>
+            </ul>
+          </div>
+
+JAVA PROFESSIONAL ============================================================================================
+
+      <h3>1. IoC, DI. Spring. Components. Beans</h3>
+      <ul>
+        <li>почему Spring стал де-факто стандартом отрасли (преимущества)</li>
+        <li>принципы IoC и DI</li>
+        <li>бин</li>
+        <li>контекст (ApplicationContext)</li>
+        <li>AOP</li>
+      </ul>
+
+      <h3>2. Spring modules general. Spring Web MVC</h3>
+      <ul>
+        <li>core (beans, core, context, SpEL)</li>
+        <li>data access</li>
+        <li>testing</li>
+        <li>web</li>
+        <li>integration</li>
+        <li>web mvc</li>
+      </ul>
+
+      <h3>3. Проектирование REST API</h3>
+      <ul>
+        <li>оперирование ресурсами, а не методами</li>
+        <li>http методы</li>
+        <li>http коды ответов</li>
+        <li>ошибки</li>
+        <li>запрос коллекции</li>
+        <li>запрос количества объектов в коллекции</li>
+        <li>запрос объекта коллекции</li>
+        <li>добавление данных в коллекцию</li>
+        <li>редактирование</li>
+        <li>удаление</li>
+        <li>д.з. спроектировать 2-ранговый REST API</li>
+      </ul>
+
+      <h3>4. App controller-service-dao</h3>
+      <ul>
+        <li>иерархия контекстов</li>
+        <li>servlet config</li>
+        <li>контроллер - прием запроса</li>
+        <li>сервис - бизнес логика</li>
+        <li>dao - хранение состояния</li>
+      </ul>
+
+      <h3>5. Spring ORM. @Transaction</h3>
+      <ul>
+        <li>абстракция “транзакция”</li>
+        <li>декларативные транзакции</li>
+        <li>transaction propagation</li>
+        <li>преимущества ORM + Spring</li>
+        <li>настройка hibernate SessionFactory</li>
+        <li>live coding example</li>
+      </ul>
+
+      <h3>6. Spring Test. AOP (logging)</h3>
+      <ul>
+        <li>unit testing</li>
+        <li>integration testing</li>
+        <li>основные аннотации</li>
+        <li>TestContext</li>
+        <li>live coding example (тестирование API-метода или пары методов)</li>
+        <li>spring commons logging bridge</li>
+      </ul>
+
+      <h3>7. Spring Security (memory, DB)</h3>
+      <ul>
+        <li>ключевые объекты контекста spring security: SecurityContextHolder, Authentication, UserDetails, GrantedAuthority</li>
+        <li>авторизация и аутентификация</li>
+        <li>OAuth2</li>
+        <li>сессии в памяти</li>
+        <li>сессии в БД</li>
+      </ul>
+
+      <h3>8. Spring Boot. Spring JPA</h3>
+      <ul>
+        <li>стартеры</li>
+        <li>автоконфигурация</li>
+        <li>встроенные tomcat</li>
+        <li>аннотации конфигурации</li>
+        <li>демонстрация spring data jpa (генерация запроса по названию метода в рантайме)</li>
+      </ul>
+    </div>
