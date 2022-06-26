@@ -3,9 +3,32 @@ package JavaBasics.a1_BasicSyntax;
 public class a16_Statements {
 
     public static void main(String[] args) {
-        ifElseStatement();
-        ternaryOperators();
-        switchStatement();
+//        ifElseStatement();
+//        ternaryOperators();
+//        switchStatement();
+        operatorPrecedence();
+    }
+
+    private static void operatorPrecedence() {
+        boolean statement1 = true;
+        boolean statement2 = true;
+        boolean statement3 = false;
+        boolean statement4 = false;
+        if (statement1 && statement2 || statement3) {
+            System.out.println("hello world - 1");
+        }
+        if ((statement1 && statement2) || statement3) {
+            System.out.println("hello world - 2");
+        }
+        if (statement1 && (statement2 || statement3)) {
+            System.out.println("hello world - 3");
+        }
+        if (statement1 && statement2 || statement3 && statement4) {
+            System.out.println("hello world - 4");
+        }
+        if (statement1 && (statement2 || statement3) && statement4) {
+            System.out.println("hello world - 5");
+        }
     }
 
     static void ifElseStatement() {

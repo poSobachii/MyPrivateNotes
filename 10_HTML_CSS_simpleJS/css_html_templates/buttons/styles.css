@@ -1,0 +1,212 @@
+
+
+
+
+
+
+/* Snippet ===============================================================================================================================*/
+
+.neon_buttons a {
+    position: relative;
+    display: inline-block;
+    padding: 20px;
+    margin:0;
+    color: #03e9f4;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    margin-right: 2px;
+}
+
+.neon_buttons a:hover{
+    background:#03e9f4;
+    color:#050801;
+    box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e964, 0 0 50px #03e9f4, 0 0 200px #03e9f4;
+    -webkit-box-reflect:below 1px linear-gradient(transparent,#0005);
+}
+
+.neon_buttons a:nth-child(1){
+    filter:hue-rotate(270deg);
+}
+
+.neon_buttons a:nth-child(2){
+    filter:hue-rotate(110deg);
+}
+
+.neon_buttons a span{
+    position:absolute;
+    display:block;
+}
+
+.neon_buttons a span:nth-child(1){
+    top:0;
+    left:0;
+    width:100%;
+    height:2px;
+    background:linear-gradient(90deg, transparent, #03e9f4);
+    animation:neon_animate_1 1s linear infinite;
+}
+
+@keyframes neon_animate_1 {
+    0%{
+        left:-100%;
+    }
+    50%,100%{
+        left:100%;
+    }
+}
+
+.neon_buttons a span:nth-child(2){
+    top:-100%;
+    right:0;
+    width:2px;
+    height:100%;
+    background:linear-gradient(180deg,transparent, #03e9f4);
+    animation:neon_animate_2 1s linear infinite;
+    animation-delay:0.25s;
+}
+@keyframes neon_animate_2 {
+    0%{
+        top:-100%;
+    }
+    50%,100%{
+        top:100%;
+    }
+}
+.neon_buttons a span:nth-child(3) {
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #03e9f4);
+    animation: neon_animate_3 1s linear infinite;
+    animation-delay: 0.50s;
+}
+
+@keyframes neon_animate_3 {
+    0%{
+        right:-100%;
+    }
+    50%,100%{
+        right:100%;
+    }
+}
+.neon_buttons a span:nth-child(4){
+    bottom:-100%;
+    left:0;
+    width:2px;
+    height:100%;
+    background:linear-gradient(360deg, transparent, #03e9f4);
+    animation:neon_animate_4 1s linear infinite;
+    animation-delay:0.75s;
+}
+@keyframes neon_animate_4 {
+    0%{
+        bottom:-100%;
+    }
+    50%,100%{
+        bottom:100%;
+    }
+}
+
+/* Snippet ===============================================================================================================================*/
+
+div.button_1 > .button {
+    text-decoration: none;
+    font-size: 25px;
+    color: green;
+    padding: 10px;
+    border: 3px solid green;
+    position: relative;
+}
+
+div.button_1 > .button::before,
+div.button_1 > .button::after {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: inherit;
+    transition: all .5s;
+}
+
+div.button_1 > .button::before {
+    top: -15px;
+    left: -15px;
+    border-width: 3px 0 0 3px;
+}
+
+div.button_1 > .button::after {
+    bottom: -15px;
+    right: -15px;
+    border-width: 0 3px 3px 0;
+}
+
+div.button_1 > .button:hover::before,
+div.button_1 > .button:hover::after {
+    width: calc(100% + 27px);
+    height: calc(100% + 27px);
+}
+
+/* Snippet ===============================================================================================================================*/
+
+.waves-button {
+    position: relative;
+    display: inline-grid;
+    place-items: center;
+    appearance: none;
+    isolation: isolate;
+    cursor: pointer;
+    font-size: 2rem;
+    width: 90%;
+    height: 50%;
+    text-transform: uppercase;
+    border: 5px solid hsl(180, 100%, 30%);
+    border-radius: 20px;
+    color: hsl(180, 100%, 30%);
+    background-color: transparent;
+    overflow: hidden;
+
+}
+
+.waves-button::before {
+    content: '';
+    position: absolute;
+    top: var(--y);
+    left: var(--x);
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 500ms;
+    background-color: green;
+    width: 70%;
+    aspect-ratio: 1/1;
+    opacity: 0.5;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+/*.waves-button:active::before {*/
+/*    transform: translate(-50%, -50%) scale(1);*/
+/*}*/
+
+.pulse::before {
+    animation: pulse 500ms;
+}
+
+@keyframes pulse {
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0;
+    }
+
+}
+/* Snippet ===============================================================================================================================*/
+/* Snippet ===============================================================================================================================*/
+/* Snippet ===============================================================================================================================*/
+/* Snippet ===============================================================================================================================*/
+/* Snippet ===============================================================================================================================*/
+/* Snippet ===============================================================================================================================*/
+/* Snippet ===============================================================================================================================*/
+/* Snippet ===============================================================================================================================*/
+/* Snippet ===============================================================================================================================*/

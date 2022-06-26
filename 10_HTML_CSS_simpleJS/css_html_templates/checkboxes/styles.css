@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* Snippet ===============================================================================================================================*/
+
+.container {
+    font-family: 'Poppins', sans-serif;
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.container .box {
+    width: 180px;
+    height: 180px;
+    font-size: 30px;
+    position: relative;
+    margin: 20px;
+}
+
+.container .box input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    z-index: 20;
+}
+
+.boxContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.boxContent::before,
+.boxContent::after {
+    content: '';
+    position: absolute;
+    border-radius: 10px;
+}
+
+.boxContent::before {
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.075);
+    z-index: -1;
+}
+
+.boxContent::after {
+    width: 115%;
+    height: 115%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.050);
+    z-index: -2;
+}
+
+.box input:checked ~ .boxContent::after {
+    background: linear-gradient(to right, #7f00ff, #el00ff);
+}
+
+.box input:checked ~ .boxContent i, .box input:checked ~ .boxContent p {
+    background: linear-gradient(to right, #7f00ff,
+    #e100ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Snippet ===============================================================================================================================*/
+
+label {
+    position: relative;
+    width: 150px;
+    height: 75px;
+    background-color: green;
+    border-radius: 10px;
+    pointer-events: none;
+}
+
+label input {
+    position: relative;
+    appearance: none;
+}
+
+label span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 75px;
+    height: 75px;
+    background-color: red;
+    border: 6px solid green;
+    border-radius: 14px;
+    cursor: grab;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+}
+
+.text {
+    width: 300px;
+    margin: 10px;
+    padding: 10px;
+    background-color: yellow;
+    border-radius: 20px;
+    font-size: 2em;
+    font-weight: 600;
+}
+
+label input:checked ~ span {
+    left: 75px;
+}
+
+label span i {
+    color: #02ff02;
+    filter: drop-shadow(0 0 5px black);
+    font-size: 3em;
+}
+label input:checked ~ span i {
+    color: white;
+    filter: drop-shadow(0 0 5px black) drop-shadow(0 0 10px black) drop-shadow(0 0 15px black)
+}
+
+/* Snippet ===============================================================================================================================*/
+/* Snippet ===============================================================================================================================*/
+/* Snippet ===============================================================================================================================*/
+/* Snippet ===============================================================================================================================*/
+/* Snippet ===============================================================================================================================*/
+/* Snippet ===============================================================================================================================*/
+/* Snippet ===============================================================================================================================*/
+/* Snippet ===============================================================================================================================*/
+/* Snippet ===============================================================================================================================*/
+/* Snippet ===============================================================================================================================*/

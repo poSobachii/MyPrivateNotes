@@ -17,11 +17,11 @@
         relational / comparison
         logical / conditional
         assignment
-        ternary
 1.6 - Statements:
         if-then
         if-then-else
         switch
+        ternary
 1.7 - Loop controls:
         FOR foreach, fori
         while
@@ -110,7 +110,7 @@
 8.6 - High level concurrency/ lock / cyclicBarrier
 
 #Advanced language features
-9.1 - VARARGS Arbitrary number of arguments in methods parameters method(String... inputSting)
+9.1 - VARARGS Arbitrary number of arguments in methods parameters method(String... inputString)
 9.2 - Ternary operators
 9.3 - Enums
 9.4 - Static imports.

@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="../../zAssets/styles/snippet-grid.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <title>Selectors</title>
+</head>
+<body>
+
+<snippet class="small">
+    <content>
+        <heading>&lt;tag&gt; .class #id</heading>
+        <scene class="p-5">
+            class="one two three" classes to inject to tag; <br>
+            .one, .two, .three {} to add same styles to all classes; <br>
+            priority: #id -> .class -> &lt;tag&gt;;
+        </scene>
+    </content>
+</snippet>
+<snippet class="small">
+    <content>
+        <heading>[myattr] { }</heading>
+        <scene class="p-5">
+            <a myattr>&lt;a myatrr&gt;Attribute selector&lt;/a&gt;</a>
+            <a myattr="myvalue">&lt;a myatrr&gt;Attribute selector&lt;/a&gt;</a>
+        </scene>
+    </content>
+</snippet>
+<snippet class="small">
+    <content>
+        <heading>h3 , h4</heading>
+        <scene class="p-5">
+            h3 and h4 will be affected
+        </scene>
+    </content>
+</snippet>
+<snippet class="small">
+    <content>
+        <heading>mytag { }</heading>
+        <scene class="p-5">
+            &lt;mytag&gt;Its not a good idea to make your own tags&lt;/mytag&gt;
+        </scene>
+    </content>
+</snippet>
+<snippet class="small">
+    <content>
+        <heading>div.spacing</heading>
+        <scene class="p-5">
+            <div class="spacing">
+                div tags with class="spacing" will be affected
+            </div>
+        </scene>
+    </content>
+</snippet>
+<snippet class="small">
+    <content>
+        <heading>.main .one</heading>
+        <scene class="p-5">
+            <div class="main">
+                <div class="one">
+                    div with class="one" inside div with class="main" will be affected
+                </div>
+            </div>
+        </scene>
+    </content>
+</snippet>
+<snippet class="small">
+    <content>
+        <heading>.main.one</heading>
+        <scene class="p-5">
+            <div class="main one">
+                tag with both class="main one" are affected
+            </div>
+        </scene>
+    </content>
+</snippet>
+<snippet class="small">
+    <content>
+        <heading>div a</heading>
+        <scene class="p-5">
+            <div>
+                <p>
+                    <a class="affected">tag A inside tag DIV will be affected</a>
+                </p>
+            </div>
+        </scene>
+    </content>
+</snippet>
+<snippet class="small">
+    <content>
+        <heading>div.directparent > .directchild</heading>
+        <scene class="p-5">
+            <div>
+                <div class="directparent">
+                    <p class="directchild">direct child</p>
+                    <p class="directchild">direct child</p>
+                    <a>
+                        <p class="directchild">not direct Child is inside another tag</p>
+                    </a>
+                    <p class="directchild">direct child</p>
+                </div>
+                <p class="directchild">outside div</p>
+            </div>
+        </scene>
+    </content>
+</snippet>
+<snippet class="small">
+    <content>
+        <heading>div.firstsibling + p</heading>
+        <scene class="p-5">
+            <div>
+                <div class="firstsibling"> div with class .firstsibling have ended</div>
+                <p>first tag P immediately AFTER DIV will be affected</p>
+                <div class="firstsibling"> div with class .firstsibling have ended</div>
+                <a>random A tag</a>
+                <p>this P tag is not right after div</p>
+            </div>
+        </scene>
+    </content>
+</snippet>
+<snippet class="small">
+    <content>
+        <heading>div.allsiblings ~ .siblings</heading>
+        <scene class="p-5">
+            <div>
+                <div class="allsiblings"> div with class .allsiblings have ended</div>
+                <p class="siblings"> .sibling AFTER DIV affected</p>
+                <p> no class P is not affected</p>
+                <p class="siblings"> .sibling AFTER DIV affected</p>
+                <p class="siblings"> .sibling AFTER DIV affected</p>
+            </div>
+        </scene>
+    </content>
+</snippet>
+<snippet class="small">
+    <content>
+        <heading>:link :visited :hover :active</heading>
+        <scene class="p-5">
+            <div class="link_manipulation">
+                <a href="selectors.html" target="_blank">This is a link</a><br>
+                a:hover MUST come after a:link and a:visited in the CSS definition in order to be effective.<br>
+                a:active MUST come after a:hover in the CSS definition in order to be effective.
+            </div>
+        </scene>
+    </content>
+</snippet>
+<snippet class="small">
+    <content>
+        <heading>.text-manipulation textarea:focus</heading>
+        <scene class="p-5">
+            <div class="text-manipulation">
+                <label>
+                    <textarea cols="20" placeholder="click here to see effect" rows="2"></textarea>
+                </label>
+            </div>
+        </scene>
+    </content>
+</snippet>
+<snippet class="small">
+    <content>
+        <heading>div.anyparent p.firstchild:first-child</heading>
+        <scene class="p-5">
+            <div class="anyparent">
+                <p class="firstchild">first child in each tag</p>
+                <p class="firstchild">first child in each tag</p>
+                <div>
+                    <p class="firstchild">new div first child in each tag</p>
+                    <p class="firstchild">new div first child in each tag</p>
+                </div>
+            </div>
+        </scene>
+    </content>
+</snippet>
+<snippet class="small">
+    <content>
+        <heading> p.caps::first-line</heading>
+        <scene class="p-5">
+            <div>
+                <p class="caps">
+                    You can use the ::first-line pseudo-element to add a special effect to the first line of a text.
+                    Some more text.
+                    And even more, and more, and more, and more, and more,
+                </p>
+            </div>
+        </scene>
+    </content>
+</snippet>
+<snippet class="small">
+    <content>
+        <heading>div.bef p::before / div.bef p::after</heading>
+        <scene class="p-5">
+            <div class="bef">
+                <p> Some text without before and after inf HTML. == & ++ added through css content </p>
+            </div>
+        </scene>
+    </content>
+</snippet>
+<snippet class="small">
+    <content>
+        <heading> div.selected p::selection</heading>
+        <scene class="p-5">
+            <div class="selected">
+                <p>
+                    Select this text to see effect
+                </p>
+            </div>
+        </scene>
+    </content>
+</snippet>
+<snippet class="small">
+    <content>
+        <heading>div.attribute a[target]</heading>
+        <scene class="p-5">
+            <div class="attribute">
+                <a> tag A with no attribute [target] </a> <br>
+                <a target="action"> tag A with added attribute [target] </a> <br>
+                <a target="default"> tag A with no added attribute [target] </a> <br>
+                <a target="example"> tag A with no added attribute [target] </a> <br>
+            </div>
+        </scene>
+    </content>
+</snippet>
+<snippet class="small">
+    <content>
+        <heading>div.contains a[target~=example]</heading>
+        <scene class="p-5">
+            <div class="contains">
+                <a target="example"> tag A have [target] attribute added with "example" value</a> <br>
+                <a target="one example"> tag A have [target] attribute multiple values contains "example</a> <br>
+                <a target="three"> tag A [target] attribue doesnt have "example" value added</a>
+            </div>
+        </scene>
+    </content>
+</snippet>
+<snippet class="small">
+    <content>
+        <heading>div.specific input[type="text"] div.specific input[type="button"]</heading>
+        <scene class="p-5">
+            <div class="specific">
+                <form action="" method="get" name="input">
+                    Firstname:<input name="Name" size="20" type="text" value="Peter">
+                    Lastname:<input name="Name" size="20" type="text" value="Griffin">
+                    <input type="button" value="Example Button">
+                </form>
+            </div>
+        </scene>
+    </content>
+</snippet>
+<snippet class="small">
+    <content>
+        <heading>:is selector</heading>
+        <scene class="p-5">
+            <div>
+                <div class="red_color">
+                    <h1>Red color text</h1>
+                </div>
+                <div class="green_color">
+                    <h1>Green color text</h1>
+                </div>
+                <div class="blue_color">
+                    <h1>Blue color text</h1>
+                </div>
+                <div class="yellow_color">
+                    <h1>Yellow color text</h1>
+                </div>
+            </div>
+        </scene>
+    </content>
+</snippet>
+<snippet class="small">
+    <content>
+        <heading>if @Supports some style</heading>
+        <scene class="p-5">
+            @supports (display: grid) {} </br>
+            @supports not (display: grid) {}
+        </scene>
+    </content>
+</snippet>
+<snippet class="small">
+    <content>
+        <heading>@media 2000px condition</heading>
+        <scene class="p-5">
+            <div>
+                <div class="media_1">This is affected with @media</div>
+                <div class="media_2">This is affected with @media</div>
+            </div>
+        </scene>
+    </content>
+</snippet>
+<snippet class="small">
+    <content>
+        <heading>css functions min/max/clamp(min, pref, max)</heading>
+        <scene class="p-5">
+               <div class="functions">
+                   Box size depends on functions
+               </div>
+        </scene>
+    </content>
+</snippet>
+<snippet class="small">
+    <content>
+        <heading> [attribute] with parameter, works only for content:</heading>
+        <scene class="p-5">
+            <div class="color-attributes">
+                <li id="attribute_1" data-color_attr="red"></li>
+                <li id="attribute_2" data-color_attr="green"></li>
+                <li id="attribute_3" data-color_attr="blue"></li>
+            </div>
+        </scene>
+    </content>
+</snippet>
+<snippet class="small">
+    <content>
+        <heading></heading>
+        <scene class="p-5"></scene>
+    </content>
+</snippet>
+<snippet class="small">
+    <content>
+        <heading></heading>
+        <scene class="p-5"></scene>
+    </content>
+</snippet>
+<snippet class="small">
+    <content>
+        <heading></heading>
+        <scene class="p-5"></scene>
+    </content>
+</snippet>
+<snippet class="small">
+    <content>
+        <heading></heading>
+        <scene class="p-5"></scene>
+    </content>
+</snippet>
+<snippet class="small">
+    <content>
+        <heading></heading>
+        <scene class="p-5"></scene>
+    </content>
+</snippet>
+<snippet class="small">
+    <content>
+        <heading></heading>
+        <scene class="p-5"></scene>
+    </content>
+</snippet>
+<snippet class="small">
+    <content>
+        <heading></heading>
+        <scene class="p-5"></scene>
+    </content>
+</snippet>
+
+
+<table class="selectors">
+    <tbody>
+    <tr>
+        <th>Selector</th>
+        <th>Example</th>
+        <th>Example description</th>
+    </tr>
+    <tr>
+        <td>.<i>class</i></td>
+        <td>.intro</td>
+        <td>Selects all elements with class="intro"</td>
+    </tr>
+    <tr>
+        <td><em>.class1.class2</em></td>
+        <td>.name1.name2</td>
+        <td>Selects all elements with both <em>name1</em> and <em>name2</em> set
+            within its class attribute
+        </td>
+    </tr>
+    <tr>
+        <td><em>.class1 .class2</em></td>
+        <td>.name1 .name2</td>
+        <td>Selects all elements with <em>name2</em> that is a descendant of an
+            element with <em>name1</em></td>
+    </tr>
+    <tr>
+        <td>#<i>id</i></td>
+        <td>#firstname</td>
+        <td>Selects the element with id="firstname"</td>
+    </tr>
+    <tr>
+        <td>*</td>
+        <td>*</td>
+        <td>Selects all elements</td>
+    </tr>
+    <tr>
+        <td><i>element</i></td>
+        <td>p</td>
+        <td>Selects all &lt;p&gt; elements</td>
+    </tr>
+    <tr>
+        <td><i>element.class</i></td>
+        <td>p.intro</td>
+        <td>Selects all &lt;p&gt; elements with class="intro"</td>
+    </tr>
+    <tr>
+        <td><i>element,element</i></td>
+        <td>div, p</td>
+        <td>Selects all &lt;div&gt; elements and all &lt;p&gt; elements</td>
+    </tr>
+    <tr>
+        <td><i>element</i> <i>element</i></td>
+        <td>div p</td>
+        <td>Selects all &lt;p&gt; elements inside &lt;div&gt; elements</td>
+    </tr>
+    <tr>
+        <td><i>element</i>&gt;<i>element</i></td>
+        <td>div &gt; p</td>
+        <td>Selects all &lt;p&gt; elements where the parent is a &lt;div&gt; element</td>
+    </tr>
+    <tr>
+        <td><i>element</i>+<i>element</i></td>
+        <td>div + p</td>
+        <td>Selects the first &lt;p&gt; element that is placed immediately after &lt;div&gt; elements</td>
+    </tr>
+    <tr>
+        <td><i>element1</i>~<i>element2</i></td>
+        <td>p ~ ul</td>
+        <td>Selects every &lt;ul&gt; element that is preceded by a &lt;p&gt; element</td>
+    </tr>
+    <tr>
+        <td>[<i>attribute</i>]</td>
+        <td>[target]</td>
+        <td>Selects all elements with a target attribute</td>
+    </tr>
+    <tr>
+        <td>[<i>attribute</i>=<i>value</i>]</td>
+        <td>[target=_blank]</td>
+        <td>Selects all elements with target="_blank"</td>
+    </tr>
+    <tr>
+        <td>[<i>attribute</i>~=<i>value</i>]</td>
+        <td>[title~=flower]</td>
+        <td>Selects all elements with a title attribute containing the word "flower"</td>
+    </tr>
+    <tr>
+        <td>[<i>attribute</i>|=<i>value</i>]</td>
+        <td>[lang|=en]</td>
+        <td>Selects all elements with a lang attribute value equal to "en" or
+            starting with "en-"
+        </td>
+    </tr>
+    <tr>
+        <td>[<i>attribute</i>^=<i>value</i>]</td>
+        <td>a[href^="https"]</td>
+        <td>Selects every &lt;a&gt; element whose href attribute value begins with "https"</td>
+    </tr>
+    <tr>
+        <td>[<i>attribute</i>$=<i>value</i>]</td>
+        <td>a[href$=".pdf"]</td>
+        <td>Selects every &lt;a&gt; element whose href attribute value ends with ".pdf"</td>
+    </tr>
+    <tr>
+        <td>[<i>attribute</i>*=<i>value</i>]</td>
+        <td>a[href*="w3schools"]</td>
+        <td>Selects every &lt;a&gt; element whose href attribute value contains the substring "w3schools"</td>
+    </tr>
+    <tr>
+        <td>:active</td>
+        <td>a:active</td>
+        <td>Selects the active link</td>
+    </tr>
+    <tr>
+        <td>::after</td>
+        <td>p::after</td>
+        <td>Insert something after the content of each &lt;p&gt; element</td>
+    </tr>
+    <tr>
+        <td>::before</td>
+        <td>p::before</td>
+        <td>Insert something before&nbsp;the content of each &lt;p&gt; element</td>
+    </tr>
+    <tr>
+        <td>:checked</td>
+        <td>input:checked</td>
+        <td>Selects every checked &lt;input&gt; element</td>
+    </tr>
+    <tr>
+        <td>:default</td>
+        <td>input:default</td>
+        <td>Selects the default &lt;input&gt; element</td>
+    </tr>
+    <tr>
+        <td>:disabled</td>
+        <td>input:disabled</td>
+        <td>Selects every disabled &lt;input&gt; element</td>
+    </tr>
+    <tr>
+        <td>:empty</td>
+        <td>p:empty</td>
+        <td>Selects every &lt;p&gt; element that has no children (including text nodes)</td>
+    </tr>
+    <tr>
+        <td>:enabled</td>
+        <td>input:enabled</td>
+        <td>Selects every enabled &lt;input&gt; element</td>
+    </tr>
+    <tr>
+        <td>:first-child</td>
+        <td>p:first-child</td>
+        <td>Selects every &lt;p&gt; element that is the first child of its parent</td>
+    </tr>
+    <tr>
+        <td>::first-letter</td>
+        <td>p::first-letter</td>
+        <td>Selects the first letter of every &lt;p&gt; element</td>
+    </tr>
+    <tr>
+        <td>::first-line</td>
+        <td>p::first-line</td>
+        <td>Selects the first line of every &lt;p&gt; element</td>
+    </tr>
+    <tr>
+        <td>:first-of-type</td>
+        <td>p:first-of-type</td>
+        <td>Selects every &lt;p&gt; element that is the first &lt;p&gt; element of its parent</td>
+    </tr>
+    <tr>
+        <td>:focus</td>
+        <td>input:focus</td>
+        <td>Selects the input element which has focus</td>
+    </tr>
+    <tr>
+        <td>:fullscreen</td>
+        <td>:fullscreen</td>
+        <td>Selects the element that is in full-screen mode</td>
+    </tr>
+    <tr>
+        <td>:hover</td>
+        <td>a:hover</td>
+        <td>Selects links on mouse over</td>
+    </tr>
+    <tr>
+        <td>:in-range</td>
+        <td>input:in-range</td>
+        <td>Selects input elements with a value within a specified range</td>
+    </tr>
+    <tr>
+        <td>:indeterminate</td>
+        <td>input:indeterminate</td>
+        <td>Selects input elements that are in an indeterminate state</td>
+    </tr>
+    <tr>
+        <td>:invalid</td>
+        <td>input:invalid</td>
+        <td>Selects all input elements with an invalid value</td>
+    </tr>
+    <tr>
+        <td>:lang(<i>language</i>)</td>
+        <td>p:lang(it)</td>
+        <td>Selects every &lt;p&gt; element with a lang attribute equal to "it" (Italian)</td>
+    </tr>
+    <tr>
+        <td>:last-child</td>
+        <td>p:last-child</td>
+        <td>Selects every &lt;p&gt; element that is the last child of its parent</td>
+    </tr>
+    <tr>
+        <td>:last-of-type</td>
+        <td>p:last-of-type</td>
+        <td>Selects every &lt;p&gt; element that is the last &lt;p&gt; element of its parent</td>
+    </tr>
+    <tr>
+        <td>:link</td>
+        <td>a:link</td>
+        <td>Selects all unvisited links</td>
+    </tr>
+    <tr>
+        <td>::marker</td>
+        <td>::marker</td>
+        <td>Selects the markers of list items</td>
+    </tr>
+    <tr>
+        <td>:not(<i>selector</i>)</td>
+        <td>:not(p)</td>
+        <td>Selects every element that is not a &lt;p&gt; element</td>
+    </tr>
+    <tr>
+        <td>:nth-child(<i>n</i>)</td>
+        <td>p:nth-child(2)</td>
+        <td>Selects every &lt;p&gt; element that is the second child of its parent</td>
+    </tr>
+    <tr>
+        <td>:nth-last-child(<i>n</i>)</td>
+        <td>p:nth-last-child(2)</td>
+        <td>Selects every &lt;p&gt; element that is the second child of its parent, counting from the last child</td>
+    </tr>
+    <tr>
+        <td>:nth-last-of-type(<i>n</i>)</td>
+        <td>p:nth-last-of-type(2)</td>
+        <td>Selects every &lt;p&gt; element that is the second &lt;p&gt; element of its parent, counting from the last
+            child
+        </td>
+    </tr>
+    <tr>
+        <td>:nth-of-type(<i>n</i>)</td>
+        <td>p:nth-of-type(2)</td>
+        <td>Selects every &lt;p&gt; element that is the second &lt;p&gt; element of its parent</td>
+    </tr>
+    <tr>
+        <td>:only-of-type</td>
+        <td>p:only-of-type</td>
+        <td>Selects every &lt;p&gt; element that is the only &lt;p&gt; element of its parent</td>
+    </tr>
+    <tr>
+        <td>:only-child</td>
+        <td>p:only-child</td>
+        <td>Selects every &lt;p&gt; element that is the only child of its parent</td>
+    </tr>
+    <tr>
+        <td>:optional</td>
+        <td>input:optional</td>
+        <td>Selects input elements with no "required" attribute</td>
+    </tr>
+    <tr>
+        <td>:out-of-range</td>
+        <td>input:out-of-range</td>
+        <td>Selects input elements with a value outside a specified range</td>
+    </tr>
+    <tr>
+        <td>::placeholder</td>
+        <td>input::placeholder</td>
+        <td>Selects input elements with the "placeholder" attribute specified</td>
+    </tr>
+    <tr>
+        <td>:read-only</td>
+        <td>input:read-only</td>
+        <td>Selects input elements with the "readonly" attribute specified</td>
+    </tr>
+    <tr>
+        <td>:read-write</td>
+        <td>input:read-write</td>
+        <td>Selects input elements with the "readonly" attribute NOT specified</td>
+    </tr>
+    <tr>
+        <td>:required</td>
+        <td>input:required</td>
+        <td>Selects input elements with the "required" attribute specified</td>
+    </tr>
+    <tr>
+        <td>:root</td>
+        <td>:root</td>
+        <td>Selects the document's root element</td>
+    </tr>
+    <tr>
+        <td>::selection</td>
+        <td>::selection</td>
+        <td>Selects the portion of an element that is selected by a user</td>
+    </tr>
+    <tr>
+        <td>:target</td>
+        <td>#news:target</td>
+        <td>Selects the current active #news element (clicked on a URL containing that anchor name)</td>
+    </tr>
+    <tr>
+        <td>:valid</td>
+        <td>input:valid</td>
+        <td>Selects all input elements with a valid value</td>
+    </tr>
+    <tr>
+        <td>:visited</td>
+        <td>a:visited</td>
+        <td>Selects all visited links</td>
+    </tr>
+    </tbody>
+</table>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

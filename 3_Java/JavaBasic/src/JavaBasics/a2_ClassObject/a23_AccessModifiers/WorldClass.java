@@ -1,5 +1,6 @@
 package JavaBasics.a2_ClassObject.a23_AccessModifiers;
 
+import JavaBasics.a2_ClassObject.a23_AccessModifiers.packageOne.ProtectedField;
 import JavaBasics.a2_ClassObject.a23_AccessModifiers.packageTwo.RegularClass;
 
 public class WorldClass {

@@ -1,0 +1,151 @@
+
+
+
+
+/* Snippet ===============================================================================================================================*/
+
+.card-1 {
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    border-radius: 10px;
+    outline: 1px solid rgba(255, 255, 255, .5);
+    outline-offset: -8px;
+    box-shadow: Зрх Зрх 10 рх rgba(0, 0, 0, .1);
+    position: relative;
+    overflow: hidden;
+}
+
+.card-1-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: .6;
+    transition: transform .75s;
+}
+
+.card-1:hover .card-1-image {
+    transform: scale(1.15);
+}
+
+.card-1-title {
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+    font-size: 20px;
+    text-shadow: 0 0 1px rgba(0, 0, 0, .5);
+}
+
+/* Snippet ===============================================================================================================================*/
+
+.card-swipper-1 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+.card-swipper-1 .card {
+    position: relative;
+    max-width: 25%;
+    height: 150px;
+    background: #fff;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0px 10px white;
+    transition: 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+.card-swipper-1 .card:hover {
+    height: 320px;
+}
+
+.card-swipper-1 .card .imgBx {
+    position: relative;
+    width: 280px;
+    height: 185px;
+    top: -40px;
+
+    z-index: 1;
+    box-shadow:0 5px 20px rgb(47, 51, 61);
+}
+
+.card-swipper-1 .card .imgBx img {
+    max-width: 100%;
+    border-radius: 4px;
+}
+
+.card-swipper-1 .card .content {
+    position: relative;
+    margin-top: -140px;
+    text-align: center;
+    padding: 10px 15px;
+    color: #111;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.card-swipper-1 .card:hover .content {
+    visibility: visible;
+    opacity: 1;
+    margin-top: -40px;
+    transition-delay: 0.3s;
+}
+
+/* Snippet ===============================================================================================================================*/
+
+.card-swiper-2 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-swiper-2 .swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-swiper-2 .swiper .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 250px;
+    /*height: 50px;*/
+}
+
+.card-swiper-2 .swiper .swiper-slide img {
+    display: block;
+    box-shadow: 0 0px 10px white;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.card-swiper-2 .swiper .swiper-pagination {
+    width: auto;
+    left: auto;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+/* Snippet ===============================================================================================================================*/
+/* Snippet ===============================================================================================================================*/
+/* Snippet ===============================================================================================================================*/
+/* Snippet ===============================================================================================================================*/
+/* Snippet ===============================================================================================================================*/
+/* Snippet ===============================================================================================================================*/
+/* Snippet ===============================================================================================================================*/
+/* Snippet ===============================================================================================================================*/
+/* Snippet ===============================================================================================================================*/

@@ -10,30 +10,6 @@ public class a15_Operators {
 //        decimalDivide();
 //        shiftOperators();
 //        precedence();         // BITWISE operators
-        operatorPrecedence();
-    }
-
-
-    private static void operatorPrecedence() {
-        boolean statement1 = true;
-        boolean statement2 = true;
-        boolean statement3 = false;
-        boolean statement4 = false;
-        if (statement1 && statement2 || statement3) {
-            System.out.println("hello world - 1");
-        }
-        if ((statement1 && statement2) || statement3) {
-            System.out.println("hello world - 2");
-        }
-        if (statement1 && (statement2 || statement3)) {
-            System.out.println("hello world - 3");
-        }
-        if (statement1 && statement2 || statement3 && statement4) {
-            System.out.println("hello world - 4");
-        }
-        if (statement1 && (statement2 || statement3) && statement4) {
-            System.out.println("hello world - 5");
-        }
     }
 
     private static void precedence() {
@@ -88,7 +64,6 @@ public class a15_Operators {
                 % (Modulus) Divides left hand operand by right hand operand and returns remainder
                 ++ (Increment) Increases the value of operand by 1
                 -- ( Decrement ) Decreases the value of operand by 1
-                ! inverts the value of boolean
         */
     }
 

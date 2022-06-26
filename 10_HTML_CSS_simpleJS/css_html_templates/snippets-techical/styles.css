@@ -1,0 +1,99 @@
+div.s-between{
+    width: 90%;
+    display: block;
+    justify-content: space-between;
+}
+
+
+
+
+/* Snippet ===============================================================================================================================*/
+
+.ellipsis_test {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Snippet ===============================================================================================================================*/
+
+.text-div {
+    display: flex;
+    justify-content: space-between;
+    background-image: linear-gradient(to right, rgb(0, 0, 0) 10%, white 0%);
+    background-position: 0 20px;
+    background-size: 10px 1px;
+    background-repeat: repeat-x;
+}
+
+/* Snippet ===============================================================================================================================*/
+div.appearing-text > .title {
+    padding: 1rem;
+    color: black;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+}
+
+div.appearing-text .title-content {
+    display: block;
+    opacity: 0;
+    animation: revealText .5s forwards;
+}
+
+div.appearing-text .title-second {
+    animation-delay: .25s;
+}
+
+div.appearing-text .title-third {
+    animation-delay: .75s;
+}
+
+div.appearing-text .title-fourth {
+    animation-delay: 1.25s;
+}
+
+@keyframes revealText {
+    from {
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* Snippet ===============================================================================================================================*/
+
+.videoInsert {
+    overflow: hidden;
+}
+
+/* Snippet ===============================================================================================================================*/
+
+.cubic-bezier-area {
+    width: 100%;
+}
+.cubic-bezier-ball {
+    width: 3vw;
+    height: 3vw;
+    border-radius: 50%;
+    background: #FF7A59;
+    position: relative;
+    left: 0;
+    animation: bezier-test 4s infinite cubic-bezier(.5, .8, .1, .95);
+}
+
+@keyframes bezier-test {
+    0%   {left: 0;}
+    100%  {left: calc(100% - 3vw);}
+}
+
+/* Snippet ===============================================================================================================================*/
+/* Snippet ===============================================================================================================================*/
+/* Snippet ===============================================================================================================================*/
+/* Snippet ===============================================================================================================================*/
+/* Snippet ===============================================================================================================================*/
+/* Snippet ===============================================================================================================================*/
+/* Snippet ===============================================================================================================================*/
+/* Snippet ===============================================================================================================================*/

@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
+* {
+    font-style: italic;
+    font-family: 'Inconsolata', monospace;
+}
+
+heading {
+    min-height: 10%;
+    background-color: #212121;
+    color: #ffffff;
+    font-size: 2.5rem;
+}
+
+div.horizontal-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+
+div.vertical-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.row {
+    box-sizing: border-box;
+    background-color: #565656;
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    min-width: 10%;
+    flex-grow: 1;
+    position: relative;
+    padding: 0 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    max-height: 100%;
+}
+
+.vertical-container .row {
+    flex-direction: column;
+}
+
+.vertical-container .row name {
+    transform-origin: 0 0;
+    transform: rotate(90deg);
+}
+
+.row name {
+    color: #ffffff;
+    font-size: 2rem;
+    position: absolute;
+    top: calc(50% - 1rem);
+    left: 5%;
+}
+
+.row description {
+    color: #ffffff;
+    position: absolute;
+    top: 60%;
+    left: 1%;
+    width: 60%;
+}
+
+.row circle {
+    width: 3rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+
+.row square {
+    width: 4rem;
+    height: 90%;
+    margin: 2px;
+    padding: 0;
+}
+
+.row circle, .row square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #da0000;
+}
+
+.row circle.small {
+    width: 2rem;
+}
+
+.row circle.big {
+    width: 4rem;
+}
+
+.row circle.yellow, .row square.yellow {
+    box-shadow: 0 0 40px #ffff00;
+    background-color: #ffff00;
+
+}
+
+.row circle.green, .row square.green {
+    box-shadow: 0 0 40px #1aff00;
+    background-color: #1aff00;
+
+}
+
+.row circle.cyan, .row square.cyan  {
+    box-shadow: 0 0 40px #00ffea;
+    background-color: #00ffea;
+}
+
+circle_cluster {
+    display: flex;
+    width: 40%;
+    height: 40%;
+}
+
+.shrinkrow {
+    flex-grow: 4;
+}
+
+/* Snippet ===============================================================================================================================*/
+
+div.jcstart {
+    justify-content: flex-start;
+}
+
+div.jcstart name {
+    left: 50%;
+}
+
+div.jcend {
+    justify-content: flex-end;
+}
+
+div.jcend name {
+    left: 20%;
+}
+
+div.jccenter {
+    justify-content: center;
+}
+
+div.jccenter name {
+    left: 10%;
+}
+
+div.jcbetween {
+    justify-content: space-between;
+}
+
+div.jcbetween name {
+    left: 12%;
+}
+
+div.jcaround {
+    justify-content: space-around;
+}
+
+div.jcaround name {
+    left: 25%;
+}
+
+/* Snippet ===============================================================================================================================*/
+
+div.aistart {
+    align-items: flex-start;
+}
+
+div.aiend {
+    align-items: flex-end;
+}
+
+div.aicenter {
+    align-items: center;
+}
+
+div.aibaseline {
+    align-items: baseline;
+}
+
+div.aistretch {
+    align-items: stretch;
+}
+
+/* Snippet ===============================================================================================================================*/
+
+div.row_reversed {
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+}
+
+div.column_default {
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+div.column_reverse {
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+
+/* Snippet ===============================================================================================================================*/
+
+circle.ordered_1 {
+    order: 2;
+}
+
+circle.ordered_2 {
+    order: 3;
+}
+
+circle.ordered_3 {
+    order: 1;
+}
+
+/* Snippet ===============================================================================================================================*/
+
+circle.asstretch {
+    align-self: stretch;
+}
+
+circle.ascenter {
+    align-self: center;
+}
+
+circle.asstart {
+    align-self: start;
+}
+
+circle.asend {
+    align-self: end;
+}
+
+/* Snippet ===============================================================================================================================*/
+
+circle_cluster.wrapped{
+    flex-wrap: wrap;
+}
+
+circle_cluster.wrapped_reversed {
+    flex-wrap: wrap-reverse;
+}
+
+
+/* Snippet ===============================================================================================================================*/
+
+circle_cluster.ff_column_wrap {
+    flex-flow: column wrap;
+    height: 70%;
+}
+
+/* Snippet ===============================================================================================================================*/
+
+div.row_small {
+    max-height: 45%;
+}
+
+div.row_small name {
+    font-size: 1.75rem;
+    left: 2%;
+}
+
+circle_cluster.ai_centered {
+    background-color: #fa6d6d;
+    border-radius: 10px;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+}
+
+circle_cluster.ac_centered {
+    background-color: #fa6d6d;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: center;
+    height: 90%;
+}
+
+/* Snippet ===============================================================================================================================*/
+
+square.growth_1 {
+    flex-grow: 1;
+}
+
+square.growth_2 {
+    flex-grow: 2;
+}
+
+square.growth_3 {
+    flex-grow: 10;
+}
+
+/* Snippet ===============================================================================================================================*/
+
+square.shrink_0 {
+    flex-shrink: 0;
+}
+
+square.shrink_7 {
+    flex-shrink: 7;
+}
+
+/* Snippet ===============================================================================================================================*/
+
+square.basis_0 {
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+square.basis_200 {
+    flex-grow: 1;
+    flex-basis: 200px;
+}
+
+/* Snippet ===============================================================================================================================*/
+
+square.flex_yellow {
+    flex: 1 0 0;
+}
+square.flex_green {
+    flex: 1 0 40%;
+}
+
+square.flex_cyan {
+    flex: 0 0 4rem;
+}
+
+
+

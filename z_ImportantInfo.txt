@@ -150,6 +150,7 @@ chsh -s /bin/zsh            // default zsh shell
 open -e filename            // open file in editor
 
 source ~/.bash_profile       // to run reload bash commands and use them.
+sudo nano /etc/hosts         // to check mac hosts list
 
 -------------------- BASH CONFIG FOR DIFFERENT JAVAS --------------------
 JAVA versions
