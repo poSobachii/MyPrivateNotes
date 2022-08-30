@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
+* {
+    font-style: italic;
+    font-family: 'Inconsolata', monospace;
+    box-sizing: border-box;
+}
+
+heading {
+    color: #ffffff;
+    font-size: 2.5rem;
+    /*box-sizing: border-box;*/
+}
+
+heading {
+    background-color: #212121;
+    min-height: 10%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.75);
+}
+
+scene {
+    background-color: #565656;
+}
+
+div.horizontal-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+
+.row {
+    box-sizing: border-box;
+    background-color: #565656;
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    min-width: 10%;
+    flex-grow: 1;
+    position: relative;
+    padding: 2px 0.5rem 2px 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    max-height: 100%;
+}
+
+.row name {
+    color: #ffffff;
+    width: 40%;
+    font-size: 1rem;
+    position: absolute;
+    top: calc(50% - 1rem);
+    left: 1px;
+}
+
+name.left {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+grid {
+    width: 60%;
+    height: 100%;
+    display: grid;
+}
+
+grid.default {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+grid.small-col {
+    grid-template-columns: 20% 20% 20%;
+}
+
+grid.inline {
+    display: inline-grid;
+}
+
+grid.gaps {
+    grid-gap: 10px;
+}
+
+grid.bgd {
+    background-color: #838282;
+    outline: 1px red solid;
+}
+
+grid.bgd * {
+    outline: 1px red solid;
+}
+
+
+square {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 0.8rem;
+    border-radius: 3%;
+}
+
+square.small {
+    height: 70px;
+    width: 70px;
+}
+
+square.yellow {
+    box-shadow: 0 0 40px #ffff00;
+    background-color: #ffff00;
+}
+
+square.green {
+    box-shadow: 0 0 40px #1aff00;
+    background-color: #1aff00;
+}
+
+square.cyan {
+    box-shadow: 0 0 40px #00ffea;
+    background-color: #00ffea;
+}
+
+square.red {
+    box-shadow: 0 0 40px #fa0909;
+    background-color: #fa0909;
+}
+
+/* Snippet ===============================================================================================================================*/
+
+.columns-1 {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.columns-2 {
+    grid-template-columns: repeat(3, 100px)
+}
+
+.columns-3 {
+    grid-template-columns: minmax(20px, auto) 2fr 1fr;
+}
+
+/* Snippet ===============================================================================================================================*/
+
+.rows-1 {
+    grid-template-rows: 10% 1fr 1fr;
+}
+
+.rows-2 {
+    grid-template-rows: minmax(10px, 1fr) minmax(10px, 60px) minmax(10px, 70px)
+}
+
+/* Snippet ===============================================================================================================================*/
+
+.auto-rows-1 {
+    grid-auto-rows: 25%;
+}
+
+.auto-rows-2 {
+    grid-auto-rows: 25%;
+    grid-template-rows: 40px 15px;
+}
+
+.auto-rows-3 {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 30%;
+}
+
+.auto-rows-defined {
+    grid-row: 2/4;
+    grid-column: 3;
+}
+
+/* Snippet ===============================================================================================================================*/
+
+.grid-flow {
+    grid-auto-flow: row dense;
+}
+
+.grid-flow-columns {
+    grid-template-columns: 10% 10%;
+    grid-template-rows: 50% 50%;
+    grid-auto-flow: column;
+}
+
+.grid-flow-defined {
+    grid-column: span 2
+}
+
+/* Snippet ===============================================================================================================================*/
+
+.gaps-1 {
+    grid-row-gap: 5%;
+}
+
+.gaps-2 {
+    grid-column-gap: 5%;
+}
+
+.gaps-3 {
+    grid-gap: 5%;
+}
+
+/* Snippet ===============================================================================================================================*/
+
+.area-templates {
+    grid-template-areas:
+    "header header header"
+    "main . sidebar"
+    "foo foo-2 foo-2";
+}
+
+.area-1 {
+    grid-area: header;
+}
+
+.area-2 {
+    grid-area: main;
+}
+
+.area-3 {
+    grid-area: sidebar;
+}
+
+.area-4 {
+    grid-area: foo;
+}
+
+.area-5 {
+    grid-area: foo-2;
+}
+
+/* Snippet ===============================================================================================================================*/
+
+.columns-start-1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.columns-start-2 {
+    grid-column-start: 1;
+    grid-column-end: -1;
+}
+
+.columns-start-3 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.columns-start-4 {
+    grid-column-start: 1;
+    grid-column-end: 8;
+}
+
+/* Snippet ===============================================================================================================================*/
+
+.grid-columns-1 {
+    grid-column: 1/3;
+}
+
+.grid-columns-2 {
+    grid-column: 1/-1;
+}
+
+.grid-columns-3 {
+    grid-column: 1/ span 3;
+}
+
+.grid-columns-4 {
+    grid-column: 1/ span 6;
+}
+
+/* Snippet ===============================================================================================================================*/
+
+.rows-start-1 {
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.rows-start-2 {
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+
+/* Snippet ===============================================================================================================================*/
+
+.grid-rows-1 {
+    grid-row: 1/3;
+}
+
+.grid-rows-2 {
+    grid-row: 1/4;
+}
+
+.grid-rows-3 {
+    grid-row: 2/ span 2;
+}
+
+/* Snippet ===============================================================================================================================*/
+
+.auto-columns {
+    grid-auto-columns: 60px;
+}
+
+.auto-columns-defined {
+    grid-column: 5/6;
+}
+
+
+/* Snippet ===============================================================================================================================*/
+
+.aligned-cnt {
+    align-content: end;
+}
+
+.justified-cnt {
+    justify-content: end;
+}
+
+/* Snippet ===============================================================================================================================*/
+
+.aligned-itms {
+    align-items: end;
+}
+
+.justified-itms {
+    justify-items: end;
+}
+
+/* Snippet ===============================================================================================================================*/
+
+.aligned-self {
+    align-self: end;
+}
+
+.justified-self {
+    justify-self: end;
+}
+
+.stretched-self {
+    place-self: end end;
+}
+
+/* Snippet ===============================================================================================================================*/
+/* Snippet ===============================================================================================================================*/
+/* Snippet ===============================================================================================================================*/
+/* Snippet ===============================================================================================================================*/
+/* Snippet ===============================================================================================================================*/
+/* Snippet ===============================================================================================================================*/
+/* Snippet ===============================================================================================================================*/
+
+.self-placed-1 {
+
+}

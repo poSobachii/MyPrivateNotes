@@ -2,200 +2,27 @@
     /*outline: 1px red solid;*/
 }
 
-body {
-    margin: 0px;
-    padding: 0px;
-    display: flex;
-    flex-wrap: wrap;
-}
+/* Snippet ===============================================================================================================================*/
 
-div.snippet-area {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: calc(100%/6);
-    /*height: calc(100vw /6);*/
+div.circle-rainbow {
+    width: 90%;
     aspect-ratio: 1/1;
-    border-radius: 20px;
-    overflow: hidden;
-    margin: 0px;
-    padding: 0px;
-    outline: 1px #999 solid;
-    /*background: linear-gradient(to right top,*/
-    /*#ff0091, #ec47b7, #d269d4, #b582e5, #9a95ec, #9da3ee, #a3b0ee, #acbced, #c5cbf1, #dadcf5, #eeedfa, #ffffff);*/
-}
-
-div.dark {
-    background: rgba(0, 0, 0, 0.45);
-}
-
-div.s-between{
-    width: 90%;
-    display: block;
-    justify-content: space-between;
-}
-
-
-/* Snippet ===============================================================================================================================*/
-.loader-wrapper {
-    width: 100%;
-    height: 100%;
-}
-
-.loader {
-    box-sizing: border-box;
-    width: 100%;
-    height: 100%;
-    border: 30px solid #162534;
-    border-top-color: #4bc8eb;
-    border-bottom-color: #f13a8f;
-    border-radius: 50%;
-    /*animation: rotate 5s linear infinite;*/
-    animation: rotate 2.5s alternate infinite;
-}
-
-.loader-inner {
-    border-top-color: #36f372;
-    border-bottom-color: #fff;
-    animation-duration: 1.25s;
-}
-
-/*@keyframes rotate {*/
-/*    0% {*/
-/*        transform: scale(1) rotate(360deg);*/
-/*    }*/
-/*    50% {*/
-/*        transform: scale(.8) rotate(-360deg);*/
-/*    }*/
-/*    100% {*/
-/*        transform: scale(1) rotate(360deg);*/
-/*    }*/
-/*}*/
-
-@keyframes rotate {
-    0% {
-        transform: scale(1) rotate(360deg);
-    }
-    100% {
-        transform: scale(.8) rotate(-360deg);
-    }
+    background: conic-gradient(
+            hsl(360, 100%, 50%),
+            hsl(315, 100%, 50%),
+            hsl(270, 100%, 50%),
+            hsl(225, 100%, 50%),
+            hsl(180, 100%, 50%),
+            hsl(135, 100%, 50%),
+            hsl(90, 100%, 50%),
+            hsl(45, 100%, 50%),
+            hsl(0, 100%, 50%)
+    );
+    clip-path: circle(closest-side);
 }
 
 /* Snippet ===============================================================================================================================*/
 
-.spinner {
-    position: relative;
-    width: 90%;
-    height: 90%;
-    border-radius: 50%;
-}
-
-.spinner::before,
-.spinner:after {
-    content: "";
-    position: absolute;
-    border-radius: inherit;
-}
-
-.spinner::before {
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(0deg, #ff00cc 0%, #333399 100%);
-    animation: spin .5s infinite linear;
-}
-
-.spinner::after {
-    width: 75%;
-    height: 75%;
-    background-color: white;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-@keyframes spin {
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-
-/* Snippet ===============================================================================================================================*/
-
-.card {
-    width: 100%;
-    height: 100%;
-    background-color: #333;
-    border-radius: 10px;
-    outline: 1px solid rgba(255, 255, 255, .5);
-    outline-offset: -8px;
-    box-shadow: Зрх Зрх 10 рх rgba(0, 0, 0, .1);
-    position: relative;
-    overflow: hidden;
-}
-
-.card-image {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: .6;
-    transition: transform .75s;
-}
-
-.card:hover .card-image {
-    transform: scale(1.15);
-}
-
-.card-title {
-    position: absolute;
-    left: 15px;
-    bottom: 15px;
-    font-size: 20px;
-    text-shadow: 0 0 1px rgba(0, 0, 0, .5);
-}
-
-/* Snippet ===============================================================================================================================*/
-
-div.button_1 > .button {
-    text-decoration: none;
-    font-size: 25px;
-    color: green;
-    padding: 10px;
-    border: 3px solid green;
-    position: relative;
-}
-
-div.button_1 > .button::before,
-div.button_1 > .button::after {
-    content: "";
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    border: inherit;
-    transition: all .5s;
-}
-
-div.button_1 > .button::before {
-    top: -15px;
-    left: -15px;
-    border-width: 3px 0 0 3px;
-}
-
-div.button_1 > .button::after {
-    bottom: -15px;
-    right: -15px;
-    border-width: 0 3px 3px 0;
-}
-
-div.button_1 > .button:hover::before,
-div.button_1 > .button:hover::after {
-    width: calc(100% + 27px);
-    height: calc(100% + 27px);
-}
-
-/* Snippet ===============================================================================================================================*/
 div.blop_1 {
     width: 100%;
     height: 100%;
@@ -232,66 +59,9 @@ div.blop_1 > .blob {
     }
 }
 
-/* Snippet ===============================================================================================================================*/
-
-.ellipsis_test {
-    font-size: 30px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
 
 /* Snippet ===============================================================================================================================*/
 
-.pie-chart {
-    width: 340px;
-    height: 340px;
-    background: conic-gradient(red 0% 30%, blue 30% 65%, green 65% 100%);
-    border-radius: 50%;
-
-}
-
-/* Snippet ===============================================================================================================================*/
-
-.list {
-    list-style: none;
-    text-align: center;
-    font-size: 3rem;
-}
-
-.link {
-    display: inline-block;
-    margin-block: 2px;
-    text-decoration: none;
-    color: black;
-    position: relative;
-}
-
-.link::after {
-    content: '';
-    width: 100%;
-    height: 5px;
-    background-color: red;
-    border-radius: 5px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform .75s ease;
-}
-
-.link:hover::after {
-    transform: scalex(1);
-}
-
-/* Snippet ===============================================================================================================================*/
-
-.details-test {
-    font-size: 2rem;
-}
-
-/* Snippet ===============================================================================================================================*/
 
 .icon-wrapper {
     position: relative;
@@ -345,15 +115,45 @@ div.blop_1 > .blob {
     }
 }
 
+
+/* Snippet ===============================================================================================================================*/
+
+.list {
+    list-style: none;
+}
+
+.link {
+    display: inline-block;
+    margin-block: 2px;
+    text-decoration: none;
+    color: black;
+    position: relative;
+    font-size: 2rem;
+}
+
+.link::after {
+    content: '';
+    width: 100%;
+    height: 5px;
+    background-color: red;
+    border-radius: 5px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .75s ease;
+}
+
+.link:hover::after {
+    transform: scalex(1);
+}
 /* Snippet ===============================================================================================================================*/
 
 .video-nat {
     width: 100%;
     height: 100%;
     position: relative;
-    /*display: flex;*/
-    /*align-items: center;*/
-    /*justify-content: center;*/
 }
 .video-nat video {
     width: 100%;
@@ -371,71 +171,68 @@ div.blop_1 > .blob {
     width: 100%;
     height: 100%;
     background-color: black;
-    font-size: 3rem;
+    font-size: 2.6rem;
     color: white;
-    /*opacity: 0.5;*/
+    opacity: 0.82;
     mix-blend-mode: multiply;
     /*mix-blend-mode: screen;*/
     text-align: center;
-    line-height: 50vh;
-}
-
-/* Snippet ===============================================================================================================================*/
-.text-div {
-    font-size: 18px;
-    display: flex;
-    justify-content: space-between;
-    background-image: linear-gradient(to right, rgb(0, 0, 0) 10%, white 0%);
-    background-position: 0 15px;
-    background-size: 10px 1px;
-    background-repeat: repeat-x;
+    line-height: 40vh;
 }
 
 /* Snippet ===============================================================================================================================*/
 
-
-.glass-card{
-    width: 150px;
-    height: 200px;
+div.battery_animation {
+    box-sizing: border-box;
+    width: 60%;
+    height: 35%;
+    border: 5px solid #333;
+    border-radius: 15px;
     position: relative;
 }
-.glass-card-inner{
-    width: inherit;
-    height: inherit;
-    background-color: rgba(255, 255, 255, .05);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(10px);
-    border-radius: 8px;
-}
-.circle{
-    width: 100px;
-    height: 100px;
-    background: radial-gradient(#b0e633, #53ef7d);
-    border-radius: 50%;
+
+div.battery_animation::before {
+    content: '';
     position: absolute;
-    animation: move-up 2s ease-in
-    infinite alternate-reverse;
-}
-.circle:nth-child(1){
-    top: -25px;
-    left: -25px;
-}
-.circle:nth-child(2){
-    bottom: -25px;
-    right: -25px;
-    animation-name: move-down;
+    height: 50%;
+    width: 8%;
+    background-color: #333;
+    top: 25%;
+    left: 100%;
+    border-radius: 0 10px 10px 0;
 }
 
-@keyframes move-up{
-    to{
-        transform: translateY(-10px);
+div.battery_animation::after {
+    content: '';
+    position: absolute;
+    height: 90%;
+    width: 10%;
+    top: 5%;
+    left: 2%;
+    background-color: #ab0000;
+    border-radius: 10px;
+    animation: battery-load 3s ease-out infinite;
+}
+
+@keyframes battery-load {
+    50% {
+        background-color: #ffcb00;
+    }
+    85% {
+        background-color: #6def20;
+    }
+    100% {
+        background-color: #2df6d7;
+        width: 96%;
     }
 }
-@keyframes move-down{
-    to{
-        transform: translateY(10px);
-    }
-}
+
+/*@keyframes battery-load {*/
+/*    100% {*/
+/*        filter: hue-rotate(360deg);*/
+/*        width: 96%;*/
+/*    }*/
+/*}*/
 
 /* Snippet ===============================================================================================================================*/
 
@@ -485,68 +282,56 @@ div.blop_1 > .blob {
 
 /* Snippet ===============================================================================================================================*/
 
-div.circle-rainbow {
-    width: 90%;
-    aspect-ratio: 1/1;
-    background: conic-gradient(
-            hsl(360, 100%, 50%),
-            hsl(315, 100%, 50%),
-            hsl(270, 100%, 50%),
-            hsl(225, 100%, 50%),
-            hsl(180, 100%, 50%),
-            hsl(135, 100%, 50%),
-            hsl(90, 100%, 50%),
-            hsl(45, 100%, 50%),
-            hsl(0, 100%, 50%)
-    );
-    clip-path: circle(closest-side);
-}
 /* Snippet ===============================================================================================================================*/
 
-div.battery_animation {
-    box-sizing: border-box;
-    width: 60%;
-    height: 35%;
-    border: 5px solid #333;
-    border-radius: 15px;
-    position: relative;
-}
+/* Snippet ===============================================================================================================================*/
 
-div.battery_animation::before {
-    content: '';
-    position: absolute;
-    height: 50%;
-    width: 8%;
-    background-color: #333;
-    top: 25%;
-    left: 100%;
-    border-radius: 0 10px 10px 0;
-}
+/* Snippet ===============================================================================================================================*/
 
-div.battery_animation::after {
-    content: '';
-    position: absolute;
-    height: 90%;
-    width: 10%;
-    top: 5%;
-    left: 2%;
-    background-color: #ab0000;
-    border-radius: 10px;
-    animation: battery-load 3s ease-out infinite;
-}
+/* Snippet ===============================================================================================================================*/
 
-@keyframes battery-load {
-    50% {
-        background-color: #ffcb00;
-    }
-    85% {
-        background-color: #6def20;
-    }
-    100% {
-        background-color: #2df6d7;
-        width: 96%;
-    }
-}
+/* Snippet ===============================================================================================================================*/
+
+/* Snippet ===============================================================================================================================*/
+
+/* Snippet ===============================================================================================================================*/
+
+/* Snippet ===============================================================================================================================*/
+
+/* Snippet ===============================================================================================================================*/
+
+/* Snippet ===============================================================================================================================*/
+
+/* Snippet ===============================================================================================================================*/
+
+/* Snippet ===============================================================================================================================*/
+
+/* Snippet ===============================================================================================================================*/
+
+
+
+/* Snippet ===============================================================================================================================*/
+
+/* Snippet ===============================================================================================================================*/
+
+
+/* Snippet ===============================================================================================================================*/
+
+/* Snippet ===============================================================================================================================*/
+
+/* Snippet ===============================================================================================================================*/
+
+
+/* Snippet ===============================================================================================================================*/
+
+
+/* Snippet ===============================================================================================================================*/
+
+
+/* Snippet ===============================================================================================================================*/
+
+/* Snippet ===============================================================================================================================*/
+
 
 /* Snippet ===============================================================================================================================*/
 /* Snippet ===============================================================================================================================*/

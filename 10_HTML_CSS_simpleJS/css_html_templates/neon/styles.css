@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css?family=Vibur:400');
+@import url('https://fonts.googleapis.com/css?family=Yellowtail:400');
+@import url('https://fonts.googleapis.com/css?family=Sacramento:400');
+
+:root {
+    --green-neon: #32ff00;
+    --blue-neon: #164bfc;
+    --pink-neon: #fc16dd;
+    --yellow-neon: #f4fc16;
+    --orange-neon: #fc7e16;
+}
+
+snippet {
+    font-size: clamp(8px, 3vw, 90px);
+}
+
+/* Snippet ===============================================================================================================================*/
+
+.neon-text-1 {
+    color: #fff;
+}
+
+.neon-text-1:hover {
+    text-shadow: 0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 25px #fff,
+    0 0 42px var(--green-neon),
+    0 0 82px var(--green-neon),
+    0 0 92px var(--green-neon),
+    0 0 102px var(--green-neon),
+    0 0 151px var(--green-neon);
+}
+
+
+/* Snippet ===============================================================================================================================*/
+
+.neon-text-2 {
+    color: #fff;
+}
+
+.neon-text-2:hover {
+    animation: flicker 1.5s infinite alternate;
+}
+
+@keyframes flicker {
+
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+
+        text-shadow: 0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 25px #fff,
+        0 0 42px var(--blue-neon),
+        0 0 82px var(--blue-neon),
+        0 0 92px var(--blue-neon),
+        0 0 102px var(--blue-neon),
+        0 0 151px var(--blue-neon);
+    }
+    20%, 24%, 55% {
+        text-shadow: none;
+    }
+}
+
+/* Snippet ===============================================================================================================================*/
+
+.neon-text-3 {
+    font-family: "Vibur", sans-serif;
+    color: #fff;
+    text-shadow: 0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px var(--pink-neon),
+    0 0 82px var(--pink-neon),
+    0 0 92px var(--pink-neon),
+    0 0 102px var(--pink-neon),
+    0 0 151px var(--pink-neon),
+}
+
+.neon-text-3:hover {
+    animation: pulsate 500ms linear infinite alternate;
+}
+
+@keyframes pulsate {
+
+    100% {
+
+        text-shadow: 0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 26px #fff,
+        0 0 40px var(--pink-neon),
+        0 0 80px var(--pink-neon),
+        0 0 90px var(--pink-neon),
+        0 0 100px var(--pink-neon),
+        0 0 150px var(--pink-neon);
+
+    }
+
+    0% {
+
+        text-shadow: 0 0 4px #fff,
+        0 0 9px #fff,
+        0 0 17px #fff,
+        0 0 19px #fff,
+        0 0 27px #fff,
+        0 0 36px var(--pink-neon),
+        0 0 73px var(--pink-neon),
+        0 0 80px var(--pink-neon),
+        0 0 94px var(--pink-neon),
+        0 0 140px var(--pink-neon);
+
+    }
+}
+
+/* Snippet ===============================================================================================================================*/
+
+.neon-text-4 {
+    position: relative;
+    color: #fff;
+    font-family: "Yellowtail", sans-serif;
+    /*background-image: url("../../zAssets/images/brick_wall_small.png");*/
+    background-image: url("../../zAssets/images/brick_wall.png");
+    background-size: cover;
+}
+
+.neon-text-4::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 250, 0, 0.1);
+}
+
+.neon-text-4:hover {
+    text-shadow: 0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px var(--yellow-neon),
+    0 0 82px var(--yellow-neon),
+    0 0 92px var(--yellow-neon),
+    0 0 102px var(--yellow-neon),
+    0 0 151px var(--yellow-neon);
+}
+
+/* Snippet ===============================================================================================================================*/
+
+.neon-text-5 {
+    color: #fff;
+    font-family: "Sacramento", sans-serif;
+}
+
+.neon-border {
+    display: flex;
+    flex-direction: column;
+    border: 5px solid white;
+    border-radius: 1rem;
+    width: 70%;
+    height: 70%;
+    align-items: center;
+    justify-content: center;
+}
+
+.neon-text-5:hover {
+    text-shadow: 0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px var(--orange-neon),
+    0 0 82px var(--orange-neon),
+    0 0 92px var(--orange-neon),
+    0 0 102px var(--orange-neon),
+    0 0 151px var(--orange-neon);
+}
+
+.neon-text-5:hover .neon-border {
+    box-shadow: 0 0 7px #fff,
+    0 0 9px #fff,
+    0 0 12px #fff,
+    0 0 16px #fff,
+    0 0 21px #fff,
+    0 0 42px var(--orange-neon),
+    0 0 82px var(--orange-neon),
+    0 0 92px var(--orange-neon),
+    0 0 102px var(--orange-neon),
+    0 0 151px var(--orange-neon);
+
+}
+
+/* Snippet ===============================================================================================================================*/
+
+.neon-bg-6 {
+    width: 80%;
+    height: 60%;
+    /*background: linear-gradient(45deg, #05fff7, #e600fc);*/
+    position: relative;
+    overflow: hidden;
+    /*mix-blend-mode: exclusion;*/
+}
+
+.neon-text-6-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, red, blue);
+}
+
+.neon-text-6-text {
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+    text-transform: uppercase;
+    position: absolute;
+    line-height: 150%;
+    background-color: black;
+    mix-blend-mode: multiply;
+}
+
+.neon-text-6-bubbles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, #ffd202, transparent 25%);
+    left: -50%;
+}
+
+@keyframes light-6 {
+    100% {
+        transform: translate(100%, 0);
+    }
+}
+
+
+.neon-text-6:hover .neon-text-6-bubbles {
+    animation: light-6 2s infinite linear alternate;
+}
+
+/* Snippet ===============================================================================================================================*/
+
+.neon-text-7 {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    filter: contrast(110%) brightness(190%);
+}
+
+.neon-text-7-text {
+    height: 100%;
+    position: relative;
+    background: black;
+    color: transparent;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 5rem;
+    line-height: 200%;
+    margin: 0;
+}
+
+.neon-text-7-text::before, .neon-text-7-text::after {
+    content: attr(data-text);
+    color: white;
+    filter: blur(0.02em);
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.neon-text-7-text::after {
+    mix-blend-mode: difference;
+}
+
+.neon-text-7-gradient, .neon-text-7-spotlight {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.neon-text-7-gradient {
+    background: linear-gradient(45deg, red, blue);
+    mix-blend-mode: multiply;
+}
+
+.neon-text-7-spotlight {
+    background: radial-gradient(circle, white, transparent 25%) 0 0 / 25% 25%, radial-gradient(circle, white, black 25%) 50% 50% / 12.5% 12.5%;
+    top: -100%;
+    left: -100%;
+    mix-blend-mode: color-dodge;
+}
+
+@keyframes light-7 {
+    100% {
+        transform: translate3d(50%, 50%, 0);
+    }
+}
+
+.neon-text-7:hover .neon-text-7-spotlight {
+    animation: light-7 5s infinite linear;
+}
+
+/* Snippet ===============================================================================================================================*/
+/* Snippet ===============================================================================================================================*/
+/* Snippet ===============================================================================================================================*/
+/* Snippet ===============================================================================================================================*/
+/* Snippet ===============================================================================================================================*/

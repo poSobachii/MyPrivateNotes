@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="../../zAssets/styles/snippet-grid.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+
+    <title>Display Flex</title>
+</head>
+<body>
+
+
+<snippet class="medium">
+    <content>
+        <heading>justify-content</heading>
+        <scene>
+            <div class="horizontal-container">
+                <div class="row jcstart">
+                    <name>flex-start</name>
+                    <circle class="yellow"></circle>
+                    <circle class="green"></circle>
+                    <circle class="cyan"></circle>
+                </div>
+                <div class="row jcend">
+                    <name>flex-end</name>
+                    <circle class="yellow"></circle>
+                    <circle class="green"></circle>
+                    <circle class="cyan"></circle>
+                </div>
+                <div class="row jccenter">
+                    <name>center</name>
+                    <circle class="yellow"></circle>
+                    <circle class="green"></circle>
+                    <circle class="cyan"></circle>
+                </div>
+                <div class="row jcbetween">
+                    <name>space-between</name>
+                    <circle class="yellow"></circle>
+                    <circle class="green"></circle>
+                    <circle class="cyan"></circle>
+                </div>
+                <div class="row jcaround">
+                    <name>space-around</name>
+                    <circle class="yellow"></circle>
+                    <circle class="green"></circle>
+                    <circle class="cyan"></circle>
+                </div>
+            </div>
+        </scene>
+    </content>
+</snippet>
+<snippet class="medium">
+    <content>
+        <heading>align-items</heading>
+        <scene>
+            <div class="horizontal-container">
+                <div class="row aistart">
+                    <name>flex-start</name>
+                    <circle class="yellow small"></circle>
+                    <circle class="green"></circle>
+                    <circle class="cyan big"></circle>
+                </div>
+                <div class="row aiend">
+                    <name>flex-end</name>
+                    <circle class="yellow small"></circle>
+                    <circle class="green"></circle>
+                    <circle class="cyan big"></circle>
+                </div>
+                <div class="row aicenter">
+                    <name>center</name>
+                    <circle class="yellow small"></circle>
+                    <circle class="green"></circle>
+                    <circle class="cyan big"></circle>
+                </div>
+                <div class="row aibaseline">
+                    <name>baseline</name>
+                    <circle class="yellow small"></circle>
+                    <circle class="green"></circle>
+                    <circle class="cyan big"></circle>
+                </div>
+                <div class="row aistretch">
+                    <name>stretch</name>
+                    <circle class="yellow small"></circle>
+                    <circle class="green"></circle>
+                    <circle class="cyan big"></circle>
+                </div>
+            </div>
+        </scene>
+    </content>
+</snippet>
+<snippet class="medium">
+    <content>
+        <heading>flex-direction</heading>
+        <scene>
+            <div class="horizontal-container">
+                <div class="row row_default">
+                    <name>row (default)</name>
+                    <circle class="yellow">1</circle>
+                    <circle class="green">2</circle>
+                    <circle class="cyan">3</circle>
+                </div>
+                <div class="row row-reversed">
+                    <name>row-reverse</name>
+                    <circle class="yellow">1</circle>
+                    <circle class="green">2</circle>
+                    <circle class="cyan">3</circle>
+                </div>
+                <div class="row column-default">
+                    <name>column</name>
+                    <circle class="yellow">1</circle>
+                    <circle class="green">2</circle>
+                    <circle class="cyan">3</circle>
+                </div>
+                <div class="row column-reverse">
+                    <name>column-reverse</name>
+                    <circle class="yellow">1</circle>
+                    <circle class="green">2</circle>
+                    <circle class="cyan">3</circle>
+                </div>
+            </div>
+        </scene>
+    </content>
+</snippet>
+<snippet class="medium">
+    <content>
+        <heading>order / align-self</heading>
+        <scene>
+            <div class="horizontal-container">
+                <div class="row">
+                    <name>order</name>
+                    <circle class="yellow ordered-1">1</circle>
+                    <circle class="yellow ordered-2">2</circle>
+                    <circle class="yellow ordered-3">3</circle>
+                    <circle class="green">4</circle>
+                    <circle class="green">5</circle>
+                    <circle class="green">6</circle>
+                </div>
+                <div class="row">
+                    <name>a-s: stretch</name>
+                    <circle class="yellow asstretch">1</circle>
+                    <circle class="green">2</circle>
+                    <circle class="cyan">3</circle>
+                </div>
+                <div class="row aiend">
+                    <name>a-s: center</name>
+                    <circle class="yellow ascenter">1</circle>
+                    <circle class="green">2</circle>
+                    <circle class="cyan">3</circle>
+                </div>
+                <div class="row">
+                    <name>a-s: start</name>
+                    <circle class="yellow asstart">1</circle>
+                    <circle class="green">2</circle>
+                    <circle class="cyan">3</circle>
+                </div>
+                <div class="row">
+                    <name>a-s: end</name>
+                    <circle class="yellow asend">1</circle>
+                    <circle class="green">2</circle>
+                    <circle class="cyan">3</circle>
+                </div>
+            </div>
+        </scene>
+    </content>
+</snippet>
+<snippet class="medium">
+    <content>
+        <heading>flex-wrap</heading>
+        <scene>
+            <div class="horizontal-container">
+                <div class="row">
+                    <name>nowrap</name>
+                    <circle-cluster>
+                        <circle class="yellow"></circle>
+                        <circle class="green"></circle>
+                        <circle class="cyan"></circle>
+                        <circle class="yellow"></circle>
+                        <circle class="green"></circle>
+                        <circle class="cyan"></circle>
+                        <circle class="yellow"></circle>
+                        <circle class="green"></circle>
+                        <circle class="cyan"></circle>
+                    </circle-cluster>
+                </div>
+                <div class="row">
+                    <name>wrap</name>
+                    <circle-cluster class="wrapped">
+                        <circle class="yellow">1</circle>
+                        <circle class="yellow">2</circle>
+                        <circle class="yellow">3</circle>
+                        <circle class="green">4</circle>
+                        <circle class="green">5</circle>
+                        <circle class="cyan">6</circle>
+                    </circle-cluster>
+                </div>
+                <div class="row">
+                    <name>wrap-reverse</name>
+                    <circle-cluster class="wrapped-reversed">
+                        <circle class="yellow">1</circle>
+                        <circle class="yellow">2</circle>
+                        <circle class="yellow">3</circle>
+                        <circle class="green">4</circle>
+                        <circle class="green">5</circle>
+                        <circle class="cyan">6</circle>
+                    </circle-cluster>
+                </div>
+            </div>
+        </scene>
+    </content>
+</snippet>
+<snippet class="medium">
+    <content>
+        <heading>flex-flow</heading>
+        <scene>
+            <div class="horizontal-container">
+                <div class="row wrap-row">
+                    <name>column wrap
+                    </name>
+                    <description>
+                        combines flex-direction, flex-wrap properties
+                    </description>
+                    <circle-cluster class="ff-column-wrap">
+                        <circle class="yellow"></circle>
+                        <circle class="green"></circle>
+                        <circle class="cyan"></circle>
+                        <circle class="yellow"></circle>
+                        <circle class="green"></circle>
+                        <circle class="cyan"></circle>
+                        <circle class="yellow"></circle>
+                        <circle class="green"></circle>
+                        <circle class="cyan"></circle>
+                        <circle class="yellow"></circle>
+                        <circle class="green"></circle>
+                        <circle class="cyan"></circle>
+                        <circle class="yellow"></circle>
+                        <circle class="green"></circle>
+                        <circle class="cyan"></circle>
+                        <circle class="yellow"></circle>
+                        <circle class="green"></circle>
+                        <circle class="cyan"></circle>
+                        <circle class="yellow"></circle>
+                        <circle class="green"></circle>
+                        <circle class="cyan"></circle>
+                        <circle class="yellow"></circle>
+                        <circle class="green"></circle>
+                        <circle class="cyan"></circle>
+
+                    </circle-cluster>
+                </div>
+            </div>
+        </scene>
+    </content>
+</snippet>
+<snippet class="medium">
+    <content>
+        <heading>align-content</heading>
+        <scene>
+            <div class="horizontal-container">
+                <div class="row row_small">
+                    <name>align-items: center</name>
+                    <circle-cluster class="ai-centered">
+                        <circle class="yellow"></circle>
+                        <circle class="green"></circle>
+                        <circle class="cyan"></circle>
+                        <circle class="yellow"></circle>
+                        <circle class="green"></circle>
+                        <circle class="cyan"></circle>
+                        <circle class="yellow"></circle>
+                        <circle class="green"></circle>
+                        <circle class="cyan"></circle>
+                    </circle-cluster>
+                </div>
+                <div class="row row_small">
+                    <name>align-content: center</name>
+                    <description>
+                        flex-start, flex-end, center, space-around, space-between, stretch
+                    </description>
+                    <circle-cluster class="ac-centered">
+                        <circle class="yellow"></circle>
+                        <circle class="green"></circle>
+                        <circle class="cyan"></circle>
+                        <circle class="yellow"></circle>
+                        <circle class="green"></circle>
+                        <circle class="cyan"></circle>
+                        <circle class="yellow"></circle>
+                        <circle class="green"></circle>
+                        <circle class="cyan"></circle>
+                    </circle-cluster>
+                </div>
+            </div>
+        </scene>
+    </content>
+</snippet>
+<snippet class="medium">
+    <content>
+        <heading>flex-grow</heading>
+        <scene>
+            <div class="horizontal-container">
+                <div class="row">
+                    <name>fill empty space</name>
+                    <square class="yellow"></square>
+                    <square class="green"></square>
+                    <square class="cyan"></square>
+                </div>
+                <div class="row">
+                    <square class="yellow growth-1">flex-growth: 1</square>
+                    <square class="green"></square>
+                    <square class="cyan"></square>
+                </div>
+                <div class="row">
+                    <square class="yellow growth-1">flex-growth: 1</square>
+                    <square class="green growth-2">flex-growth: 2</square>
+                    <square class="cyan growth-3">flex-growth: 10 <br> divides empty space by 13 and spreads accordingly
+                    </square>
+                </div>
+            </div>
+        </scene>
+    </content>
+</snippet>
+<snippet class="medium">
+    <content>
+        <heading>flex-shrink</heading>
+        <scene>
+            <div class="horizontal-container">
+                <div class="row">
+                    <description>
+                        flex-shrink: 1 default, 0 will not shrink, 'number' times to shrink
+                    </description>
+                </div>
+                <div class="row row-grow-more">
+                    <square class="yellow">1</square>
+                    <square class="green shrink-0">0</square>
+                    <square class="cyan shrink-7">7</square>
+                    <square class="yellow">1</square>
+                    <square class="green shrink-0">0</square>
+                    <square class="cyan shrink-7">7</square>
+                    <square class="yellow">1</square>
+                    <square class="green shrink-0">0</square>
+                    <square class="cyan shrink-7">7</square>
+                    <square class="yellow">1</square>
+                    <square class="green shrink-0">0</square>
+                    <square class="cyan shrink-7">7</square>
+                </div>
+            </div>
+        </scene>
+    </content>
+</snippet>
+<snippet class="medium">
+    <content>
+        <heading>flex-basis</heading>
+        <scene>
+            <div class="horizontal-container">
+                <div class="row">
+                    <description>flex-basis defines starting point for flex-grow</description>
+                    <square class="yellow basis"></square>
+                    <square class="green"></square>
+                    <square class="cyan"></square>
+                </div>
+                <div class="row">
+                    <square class="yellow growth-1"></square>
+                    <square class="green growth-1"></square>
+                    <square class="cyan"></square>
+                </div>
+                <div class="row">
+                    <square class="yellow basis-0">flex-basis: 0</square>
+                    <square class="green basis-200">flex-basis: 200px</square>
+                    <square class="cyan"></square>
+                </div>
+            </div>
+        </scene>
+    </content>
+</snippet>
+<snippet class="medium">
+    <content>
+        <heading>flex</heading>
+        <scene>
+            <div class="horizontal-container">
+                <div class="row">
+                    <description>
+                        flex: flex-grow flex-shrink flex-basis
+                    </description>
+                </div>
+                <div class="row row-grow-more">
+                    <square class="yellow flex-yellow">flex: 1 0 0;</square>
+                    <square class="green flex-green">flex: 1 0 50%;</square>
+                    <square class="cyan flex-cyan">flex: 0 0 4rem;</square>
+                </div>
+            </div>
+        </scene>
+    </content>
+</snippet>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

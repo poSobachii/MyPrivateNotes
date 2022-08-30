@@ -109,13 +109,13 @@ div.vertical-container {
     background-color: #00ffea;
 }
 
-circle_cluster {
+circle-cluster {
     display: flex;
     width: 40%;
     height: 40%;
 }
 
-.shrinkrow {
+.row-grow-more {
     flex-grow: 4;
 }
 
@@ -185,18 +185,18 @@ div.aistretch {
 
 /* Snippet ===============================================================================================================================*/
 
-div.row_reversed {
+div.row-reversed {
     flex-direction: row-reverse;
     justify-content: flex-start;
 }
 
-div.column_default {
+div.column-default {
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
 }
 
-div.column_reverse {
+div.column-reverse {
     flex-direction: column-reverse;
     align-items: flex-end;
     justify-content: center;
@@ -205,15 +205,15 @@ div.column_reverse {
 
 /* Snippet ===============================================================================================================================*/
 
-circle.ordered_1 {
+circle.ordered-1 {
     order: 2;
 }
 
-circle.ordered_2 {
+circle.ordered-2 {
     order: 3;
 }
 
-circle.ordered_3 {
+circle.ordered-3 {
     order: 1;
 }
 
@@ -237,18 +237,18 @@ circle.asend {
 
 /* Snippet ===============================================================================================================================*/
 
-circle_cluster.wrapped{
+circle-cluster.wrapped{
     flex-wrap: wrap;
 }
 
-circle_cluster.wrapped_reversed {
+circle-cluster.wrapped-reversed {
     flex-wrap: wrap-reverse;
 }
 
 
 /* Snippet ===============================================================================================================================*/
 
-circle_cluster.ff_column_wrap {
+circle-cluster.ff-column-wrap {
     flex-flow: column wrap;
     height: 70%;
 }
@@ -264,7 +264,7 @@ div.row_small name {
     left: 2%;
 }
 
-circle_cluster.ai_centered {
+circle-cluster.ai-centered {
     background-color: #fa6d6d;
     border-radius: 10px;
     flex-flow: column wrap;
@@ -273,7 +273,7 @@ circle_cluster.ai_centered {
     height: 90%;
 }
 
-circle_cluster.ac_centered {
+circle-cluster.ac-centered {
     background-color: #fa6d6d;
     flex-flow: column wrap;
     justify-content: center;
@@ -283,50 +283,50 @@ circle_cluster.ac_centered {
 
 /* Snippet ===============================================================================================================================*/
 
-square.growth_1 {
+square.growth-1 {
     flex-grow: 1;
 }
 
-square.growth_2 {
+square.growth-2 {
     flex-grow: 2;
 }
 
-square.growth_3 {
+square.growth-3 {
     flex-grow: 10;
 }
 
 /* Snippet ===============================================================================================================================*/
 
-square.shrink_0 {
+square.shrink-0 {
     flex-shrink: 0;
 }
 
-square.shrink_7 {
+square.shrink-7 {
     flex-shrink: 7;
 }
 
 /* Snippet ===============================================================================================================================*/
 
-square.basis_0 {
+square.basis-0 {
     flex-grow: 1;
     flex-basis: 0;
 }
 
-square.basis_200 {
+square.basis-200 {
     flex-grow: 1;
     flex-basis: 200px;
 }
 
 /* Snippet ===============================================================================================================================*/
 
-square.flex_yellow {
+square.flex-yellow {
     flex: 1 0 0;
 }
-square.flex_green {
+square.flex-green {
     flex: 1 0 40%;
 }
 
-square.flex_cyan {
+square.flex-cyan {
     flex: 0 0 4rem;
 }
 

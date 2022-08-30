@@ -188,7 +188,7 @@ div.contains a[target~=example]{
 
 div.specific input[type="text"] {
     color: white;
-    width: 350px;
+    width: 100%;
     display: block;
     margin-bottom: 10px;
     background-color: #fd5f5f;
@@ -196,8 +196,7 @@ div.specific input[type="text"] {
 
 div.specific input[type="button"] {
     color: black;
-    width: 300px;
-    margin-left: 35px;
+    width: 100%;
     background-color: #7bff00;
     display: block;
 }
@@ -234,13 +233,13 @@ div.specific input[type="button"] {
     background-color: #ff0000;
 }
 
-@media screen and (max-width: 2000px) {
+@media screen and (max-width: 1800px) {
     .media_1 {
         background-color: #ff0000;
     }
 }
 
-@media screen and (min-width: 2000px) {
+@media screen and (min-width: 1800px) {
     .media_2 {
         background-color: transparent;
     }
@@ -302,6 +301,11 @@ div.specific input[type="button"] {
 }
 
 /* Snippet ===============================================================================================================================*/
+
+.focused *:focus {
+    outline: 2px solid red;
+}
+
 /* Snippet ===============================================================================================================================*/
 /* Snippet ===============================================================================================================================*/
 /* Snippet ===============================================================================================================================*/
