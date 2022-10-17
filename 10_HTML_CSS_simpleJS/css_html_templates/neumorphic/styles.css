@@ -1,14 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
 :root {
-    --dark-grey: #9baacf;
+    --dark-gray: #9baacf;
     --soft-gray: #e4ebf5;
+    --simple-white: #ffffff;
+    --shadow-gray: #c8d0e7;
 }
 snippet {
     outline: none;
 }
 
 snippet.neumorphic-bg {
-    background-color: #e4ebf5;
-    outline: 1px solid #9baacf;
+    background-color: var(--soft-gray);
+    outline: 1px solid var(--dark-gray);
 }
 
 /* Snippet ===============================================================================================================================*/
@@ -17,17 +21,17 @@ snippet.neumorphic-bg {
     border-radius: 20px;
     width: 40%;
     height: 40%;
-    background: #e4ebf5;
-    box-shadow: 0.2rem 0.2rem 0.4rem #c8d0e7, -0.2rem -0.2rem 0.5rem #ffffff;
+    background: var(--soft-gray);
+    box-shadow: 0.2rem 0.2rem 0.4rem var(--shadow-gray), -0.2rem -0.2rem 0.5rem var(--simple-white);
     transition: 500ms;
 }
 
 .morph-1:hover .simple-neum-1 {
-    background: #e4ebf5;
-    box-shadow: 0 0 0 #cccccc,
-    0 0 0 #ffffff,
-    0.2rem 0.2rem 0.4rem #c8d0e7 inset,
-    -0.2rem -0.2rem 0.5rem #ffffff inset;
+    background: var(--soft-gray);
+    box-shadow: 0 0 0 var(--shadow-gray),
+    0 0 0 var(--simple-white),
+    0.2rem 0.2rem 0.4rem var(--shadow-gray) inset,
+    -0.2rem -0.2rem 0.5rem var(--simple-white) inset;
 }
 
 /* Snippet ===============================================================================================================================*/
@@ -36,17 +40,79 @@ snippet.neumorphic-bg {
     border-radius: 20px;
     width: 40%;
     height: 40%;
-    background: #e4ebf5;
+    background: var(--soft-gray);
     transition: 500ms;
-    box-shadow: 0 0 0 #cccccc,
-    0 0 0 #ffffff,
-    5px 5px 10px #cccccc inset,
-    -5px -5px 10px #ffffff inset;
+    box-shadow: 0 0 0 var(--shadow-gray),
+    0 0 0 var(--simple-white),
+    5px 5px 10px var(--shadow-gray) inset,
+    -5px -5px 10px var(--simple-white) inset;
 }
 
 .morph-2:hover .simple-neum-2 {
-    background: #e4ebf5;
-    box-shadow: 0.2rem 0.2rem 0.4rem #c8d0e7, -0.2rem -0.2rem 0.5rem #ffffff;
+    background: var(--soft-gray);
+    box-shadow: 0.2rem 0.2rem 0.4rem var(--shadow-gray), -0.2rem -0.2rem 0.5rem var(--simple-white);
+}
+
+/* Snippet ===============================================================================================================================*/
+
+.simple-neum-3 {
+    border-radius: 20px;
+    width: 60%;
+    height: 30%;
+    background: var(--soft-gray);
+    box-shadow: inset 0.2rem 0.2rem 0.5rem var(--simple-white),
+    inset -0.2rem -0.2rem 0.5rem var(--shadow-gray),
+    0.3rem 0.3rem 0.5rem var(--shadow-gray),
+    -0.2rem -0.2rem 0.4rem var(--simple-white);
+}
+
+/* Snippet ===============================================================================================================================*/
+
+.simple-neum-4 {
+    border-radius: 20px;
+    width: 60%;
+    height: 30%;
+    background: var(--soft-gray);
+    box-shadow: -0.2rem -0.2rem 0.3rem var(--shadow-gray),
+    -0.3rem -0.3rem 0.8rem var(--shadow-gray),
+    0.1rem 0.1rem 0.3rem var(--simple-white),
+    0.2rem 0.2rem 0.8rem var(--simple-white);
+}
+
+/* Snippet ===============================================================================================================================*/
+
+.simple-neum-5 {
+    border-radius: 20px;
+    width: 60%;
+    height: 30%;
+    background: var(--soft-gray);
+    box-shadow: inset 0.2rem 0.2rem 0.5rem var(--shadow-gray),
+    inset -0.2rem -0.2rem 0.5rem var(--simple-white),
+    0.3rem 0.3rem 0.5rem var(--shadow-gray),
+    -0.2rem -0.2rem 0.4rem var(--simple-white);
+}
+
+/* Snippet ===============================================================================================================================*/
+
+.engrave-tile {
+    border-radius: 20px;
+    width: 85%;
+    height: 50%;
+    background: var(--soft-gray);
+    box-shadow: 0.2rem 0.2rem 0.4rem var(--shadow-gray), -0.2rem -0.2rem 0.5rem var(--simple-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.engrave-tile .engrave-text {
+    font-size: 4rem;
+    font-weight: 900;
+    background: var(--shadow-gray);
+    /*background: red;*/
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: rgba(255, 255, 255, 0.5) 2px 3px 5px;
 }
 
 /* Snippet ===============================================================================================================================*/
@@ -55,7 +121,7 @@ snippet.neumorphic-bg {
     appearance: none;
     position: relative;
     background: transparent;
-    box-shadow: 0.3rem 0.3rem 0.6rem #c8d0e7, -0.2rem -0.2rem 0.5rem #ffffff;
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--shadow-gray), -0.2rem -0.2rem 0.5rem var(--simple-white);
     width: 50%;
     aspect-ratio: 3/1.5;
     margin: 0px;
@@ -69,7 +135,7 @@ snippet.neumorphic-bg {
     width: 100%;
     height: 100%;
     border-radius: inherit;
-    background: #9baacf;
+    background: var(--dark-gray);
     opacity: 0;
     transition: all 300ms linear;
 }
@@ -82,7 +148,7 @@ snippet.neumorphic-bg {
     border-radius: 50%;
     top: 7.5%;
     left: 3%;
-    background: #9baacf;
+    background: var(--dark-gray);
     transition: all 300ms linear;
 }
 
@@ -108,16 +174,14 @@ snippet.neumorphic-bg {
     background-image: url("data:image/svg+xml,%3Csvg id='check-mark-square-2' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' class='icon line' %3E%3Cpath id='primary' d='M21 11v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4A1 1 0 0 1 4 3H16' style='fill: none%3B stroke: rgb(155, 170, 207)%3B stroke-linecap: round%3B stroke-linejoin: round%3B stroke-width: 1.5%3B'%3E%3C/path%3E%3Cpolyline id='primary-2' data-name='primary' points='21 5 12 14 8 10' style='fill: none%3B stroke: rgb(155, 170, 207)%3B stroke-linecap: round%3B stroke-linejoin: round%3B stroke-width: 1.5%3B'%3E%3C/polyline%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-size: 70% 70%;
-    /*background-color: #9baacf;*/
-    background-color: transparent;
     background-position: 50% 50%;
     cursor: pointer;
-    box-shadow: 0.2rem 0.2rem 0.4rem #c8d0e7, -0.2rem -0.2rem 0.5rem #ffffff;
+    box-shadow: 0.2rem 0.2rem 0.4rem var(--shadow-gray), -0.2rem -0.2rem 0.5rem var(--simple-white);
 }
 
 .square-chbx:checked {
     background-image: url("data:image/svg+xml,%3Csvg id='check-mark-square-2' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' class='icon line' %3E%3Cpath id='primary' d='M21 11v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4A1 1 0 0 1 4 3H16' style='fill: none%3B stroke: rgb(200, 208, 231)%3B stroke-linecap: round%3B stroke-linejoin: round%3B stroke-width: 1.5%3B'%3E%3C/path%3E%3Cpolyline id='primary-2' data-name='primary' points='21 5 12 14 8 10' style='fill: none%3B stroke: rgb(200, 208, 231)%3B stroke-linecap: round%3B stroke-linejoin: round%3B stroke-width: 1.5%3B'%3E%3C/polyline%3E%3C/svg%3E");
-    background-color: #9baacf;
+    background-color: var(--dark-gray);
 }
 
 /* Snippet ===============================================================================================================================*/
@@ -129,7 +193,7 @@ snippet.neumorphic-bg {
     aspect-ratio: 1/1;
     border-radius: 50%;
     background-color: transparent;
-    box-shadow: 0.2rem 0.2rem 0.4rem #c8d0e7, -0.2rem -0.2rem 0.5rem #ffffff;
+    box-shadow: 0.2rem 0.2rem 0.4rem var(--shadow-gray), -0.2rem -0.2rem 0.5rem var(--simple-white);
 }
 
 .radio-chbx:checked {
@@ -143,7 +207,7 @@ snippet.neumorphic-bg {
     grid-row: 1 / 2;
     width: 90%;
     height: 19%;
-    box-shadow: .3rem .3rem .6rem #c8d0e7, -.2rem -.2rem .5rem #ffffff;
+    box-shadow: .3rem .3rem .6rem var(--shadow-gray), -.2rem -.2rem .5rem var(--simple-white);
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -166,7 +230,7 @@ snippet.neumorphic-bg {
 .bar-section::after {
     content: 'Tab';
     position: absolute;
-    color: var(--dark-grey);
+    color: var(--dark-gray);
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -179,7 +243,7 @@ snippet.neumorphic-bg {
     left: 0;
     background-color: transparent;
     border-radius: 10px;
-    box-shadow: inset .2rem .2rem .5rem #c8d0e7, inset -.2rem -.2rem .5rem #ffffff;
+    box-shadow: inset .2rem .2rem .5rem var(--shadow-gray), inset -.2rem -.2rem .5rem var(--simple-white);
     transition: all 800ms ease;
 
 }
@@ -204,7 +268,7 @@ snippet.neumorphic-bg {
     border-radius: 10px;
     background: none;
     border: none;
-    box-shadow: .15rem  .15rem .4rem #c8d0e7 inset, -.2rem -.2rem .4rem #ffffff inset;
+    box-shadow: .15rem  .15rem .4rem var(--shadow-gray) inset, -.2rem -.2rem .4rem var(--simple-white) inset;
 }
 
 .fill-form[type=text] {
@@ -222,13 +286,312 @@ snippet.neumorphic-bg {
 
 .fill-form:focus {
     outline: none;
-    box-shadow: .15rem  .15rem .4rem #c8d0e7, -.2rem -.2rem .4rem #ffffff;
+    box-shadow: .15rem .15rem .4rem var(--shadow-gray), -.2rem -.2rem .4rem var(--simple-white);
 }
 
 /* Snippet ===============================================================================================================================*/
+
+.pulsing-circle {
+    height: 40%;
+    width: 40%;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    position: relative;
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--shadow-gray), -0.2rem -0.2rem 0.5rem var(--simple-white),
+        inset 0.2rem 0.2rem 0.5rem var(--shadow-gray), inset -0.2rem -0.2rem 0.5rem var(--simple-white);
+    cursor: pointer;
+}
+
+.pulsing-circle.paused {
+
+}
+
+.pulsing-circle-wave {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 3px solid transparent;
+    box-shadow: 0.4rem 0.4rem 0.8rem var(--shadow-gray), -0.4rem -0.4rem 0.8rem var(--simple-white),
+        inset 0.2rem 0.2rem 0.5rem var(--shadow-gray), inset -0.2rem -0.2rem 0.5rem var(--simple-white);
+    background: linear-gradient(to bottom right, rgba(200, 208, 231, 0.3) 0%, rgba(255, 255, 255, 0.3) 100%);
+    animation: waves 4s linear infinite;
+}
+
+.pulsing-circle-wave.paused {
+    animation-play-state: paused;
+}
+
+
+.pulsing-circle-wave.offset-wave-1 {
+    animation-delay: 2s;
+}
+
+@keyframes waves {
+    50%{
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(2.3);
+        opacity: 0;
+    }
+}
+
 /* Snippet ===============================================================================================================================*/
+
+.clock {
+    width: 80%;
+    height: 80%;
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--shadow-gray), -0.2rem -0.2rem 0.5rem var(--simple-white),
+        inset 0.2rem 0.2rem 0.5rem var(--shadow-gray), inset -0.2rem -0.2rem 0.5rem var(--simple-white);
+    border: 0.3rem solid transparent;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.clock .center {
+    position: absolute;
+    width: 60%;
+    height: 60%;
+    border-radius: 50%;
+    box-shadow: inset 0.1rem 0.1rem 0.2rem var(--shadow-gray), inset -0.1rem -0.1rem 0.2rem var(--simple-white);
+}
+
+.clock .point {
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--dark-gray);
+    box-shadow: 0.15rem 0.15rem 0.3rem var(--shadow-gray), -0.1rem -0.1rem 0.25rem var(--simple-white);
+    border-radius: 50%;
+    position: absolute;
+    z-index: 100;
+}
+
+.clock .hand {
+    position: absolute;
+    bottom: 50%;
+    transform-origin: bottom;
+}
+
+.clock .hours {
+    width: .4rem;
+    height: 20%;
+    background: var(--dark-gray);
+    border-radius: 20px;
+}
+
+.clock .minutes {
+    width: .4rem;
+    height: 35%;
+    background: var(--dark-gray);
+    border-radius: 20px;
+}
+
+.clock .seconds {
+    width: .3rem;
+    height: 33%;
+    background: var(--shadow-gray);
+    border-radius: 30px;
+}
+
+.clock .mark {
+    width: 0.2rem;
+    height: 45%;
+    transform: rotate(calc(var(--n) * 30deg));
+    background: linear-gradient(to top, transparent 80%, var(--shadow-gray) 90%);
+    border-radius: 20px;
+}
+
 /* Snippet ===============================================================================================================================*/
+
+.hand-loader {
+    position: relative;
+    height: 80%;
+    width: 80%;
+    border-radius: 50%;
+    /*box-shadow:inset #d1d9e6 20px 20px 40px, inset rgb(255 255 255) -15px -15px 10px;*/
+
+    box-shadow: inset 0.2rem 0.2rem 1rem var(--shadow-gray), inset -0.3rem -0.3rem 0.3rem var(--simple-white);
+    /*background: red;*/
+}
+
+.hand-loader .hand-loader-inside {
+    position: absolute;
+    width: 65%;
+    height: 65%;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    /*box-shadow:rgba(255,255,255,0.5) -20px -20px 10px, rgb(255 255 255) -6px -6px 8px, rgb(209 217 230 / 90%) 10px 10px 20px;*/
+    /*background: red;*/
+    box-shadow: 0.4rem 0.4rem 1rem var(--shadow-gray), -0.3rem -0.2rem 0.8rem var(--simple-white);
+}
+
+.hand-loader .hand-loader-number {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    color: var(--dark-gray);
+    text-shadow: 0.2rem 0.1rem 0.1rem var(--shadow-gray), -0.2rem -0.1rem 0.2rem var(--simple-white);
+}
+
+.hand-loader .hand-loader-ball {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    transition: 3s;
+    transition-timing-function: linear;
+    cursor: grab;
+}
+
+.hand-loader:hover .hand-loader-ball {
+    transform: rotate(360deg);
+    cursor: grabbed;
+}
+
+.hand-loader .hand-loader-ball:before {
+    content: '';
+    position: absolute;
+    width: 16%;
+    height: 16%;
+    top: 0.5%;
+    border-radius: 50%;
+    background-color: var(--soft-gray);
+    box-shadow: 0.1rem 0.1rem 0.1rem var(--shadow-gray), -0.1rem -0.1rem 0.1rem var(--simple-white);
+    /*box-shadow: inset 0.2rem 0.2rem 0.5rem var(--simple-white),*/
+    /*inset -0.2rem -0.2rem 0.5rem var(--shadow-gray),*/
+    /*0.3rem 0.3rem 0.5rem var(--shadow-gray),*/
+    /*-0.2rem -0.2rem 0.4rem var(--simple-white);*/
+}
+
 /* Snippet ===============================================================================================================================*/
+
+.dot {
+    width: 2.5rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background: var(--soft-gray);
+}
+.dot.raised {
+    background: rgba(255, 1,1,0);
+}
+
+.dot.ridge {
+    box-shadow: inset 0.2rem 0.2rem 0.5rem var(--shadow-gray),
+    inset -0.2rem -0.2rem 0.5rem var(--simple-white),
+    0.3rem 0.3rem 0.5rem var(--shadow-gray),
+    -0.2rem -0.2rem 0.4rem var(--simple-white);
+}
+
+.neum-loader {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.neum-loader-1 .dot, .neum-loader-3 .dot {
+    animation: loader-pulsing 0.6s linear infinite alternate;
+}
+
+.neum-loader-1 .dot:nth-child(1) {
+    animation-delay: -0.4s;
+}
+
+.neum-loader-1 .dot:nth-child(2) {
+    animation-delay: -0.2s;
+}
+
+.neum-loader-1 .dot:nth-child(3) {
+    animation-delay: 0s;
+}
+
+.neum-loader-3 .dot:nth-child(2) {
+    animation-delay: -0.3s;
+}
+
+.neum-loader-2 .dot {
+    animation: loader-jumping 1s linear infinite;
+}
+
+.neum-loader-2 .dot:nth-child(1) {
+    animation-delay: -0.6s;
+}
+
+.neum-loader-2 .dot:nth-child(2) {
+    animation-delay: -0.3s;
+}
+
+.neum-loader-2 .dot:nth-child(3) {
+    animation-delay: 0s;
+}
+
+.neum-loader-4 .dot:nth-child(1) {
+    animation: loader-move-left 2s infinite;
+    animation-delay: -1s;
+}
+
+.neum-loader-4 .dot:nth-child(3) {
+    animation: loader-move-right 2s infinite;
+    animation-delay: 0s;
+}
+
+@keyframes loader-pulsing {
+    0% {
+        box-shadow: 0 0 0 var(--shadow-gray),
+        0 0 0 var(--simple-white),
+        0.2rem 0.2rem 1rem var(--shadow-gray) inset,
+        -0.2rem -0.2rem 1rem var(--simple-white) inset;
+    }
+    100% {
+        box-shadow: 0.2rem 0.2rem 1rem var(--shadow-gray),
+        -0.2rem -0.2rem 1rem var(--simple-white);
+    }
+}
+
+@keyframes loader-jumping {
+    0%, 50%, 100% {
+        transform: translatey(0);
+    }
+    25% {
+        transform: translatey(-1rem);
+    }
+    75% {
+        transform: translatey(1rem);
+    }
+}
+
+@keyframes loader-move-left {
+    0%, 25%, 75%, 100% {
+        transform: translatex(0);
+    }
+    50% {
+        transform: translatex(-2rem);
+    }
+}
+
+@keyframes loader-move-right {
+    0%, 25%, 75%, 100%  {
+        transform: translatex(0);
+    }
+    50% {
+        transform: translatex(2rem);
+    }
+}
+
+
+
 /* Snippet ===============================================================================================================================*/
 /* Snippet ===============================================================================================================================*/
 /* Snippet ===============================================================================================================================*/

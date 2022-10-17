@@ -36,6 +36,10 @@ transition(properties): <property> <duration> <timing-function> <delay>;
     /*margin: 10px;*/
 }
 
+h1 {
+    font-size: 1.5rem;
+}
+
 h1.priority {
     color: green;
 }
@@ -175,7 +179,7 @@ div.attribute a[target] {
     background-color: yellow;
 }
 
-div.attribute_2 a[target=action]{
+div.attribute a[target=action]{
     background-color: green;
 }
 
@@ -202,25 +206,42 @@ div.specific input[type="button"] {
 }
 /* Snippet ===============================================================================================================================*/
 
-.red_color {
+.red-color {
     color: #ff0000;
 }
 
-.green_color {
+.green-color {
     color: #007c00;
 }
 
-.blue_color {
+.blue-color {
     color: #0000ff;
 }
 
-.yellow_color {
+.yellow-color {
     color: #d0d000;
 }
 
-:is(.red_color, .blue_color, .green_color, .yellow_color) h1:hover {
+div.is-selector :is(.red-color, .blue-color, .green-color, .yellow-color) h1:hover {
     color: #000;
     resolution: 50dpi;
+}
+
+/* Snippet ===============================================================================================================================*/
+
+div.has-selector:has(.red-color):hover {
+    background-color: green;
+}
+
+/* Snippet ===============================================================================================================================*/
+
+div.where-selector :where(.red-color, .green-color):hover {
+    color: #c4c4c4;
+}
+/* Snippet ===============================================================================================================================*/
+
+div.not-selector div:not(.red-color):hover {
+    color: #c4c4c4;
 }
 
 /* Snippet ===============================================================================================================================*/
@@ -307,6 +328,10 @@ div.specific input[type="button"] {
 }
 
 /* Snippet ===============================================================================================================================*/
+
+.focused-within:focus-within * {
+    outline: 2px solid red;
+}
 /* Snippet ===============================================================================================================================*/
 /* Snippet ===============================================================================================================================*/
 /* Snippet ===============================================================================================================================*/

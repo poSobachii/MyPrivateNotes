@@ -161,6 +161,14 @@ div.jcaround name {
     left: 25%;
 }
 
+div.jcevenly {
+    justify-content: space-evenly;
+}
+
+div.jcevenly name {
+    left: 35%;
+}
+
 /* Snippet ===============================================================================================================================*/
 
 div.aistart {

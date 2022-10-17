@@ -214,9 +214,9 @@
         <scene class="p-5">
             <div class="attribute">
                 <a> tag A with no attribute [target] </a> <br>
-                <a target="action"> tag A with added attribute [target] </a> <br>
-                <a target="default"> tag A with no added attribute [target] </a> <br>
-                <a target="example"> tag A with no added attribute [target] </a> <br>
+                <a target="action"> tag A with target="action" </a> <br>
+                <a target="default"> tag A with target="default" </a> <br>
+                <a target="example"> tag A with no target="example" </a> <br>
             </div>
         </scene>
     </content>
@@ -251,18 +251,83 @@
     <content>
         <heading>:is selector</heading>
         <scene class="p-5">
-            <div>
-                <div class="red_color">
-                    <h1>Red color text</h1>
+            <div class="is-selector">
+                <div class="red-color">
+                    <h1>Red color HOVER</h1>
                 </div>
-                <div class="green_color">
-                    <h1>Green color text</h1>
+                <div class="green-color">
+                    <h1>Green color HOVER</h1>
                 </div>
-                <div class="blue_color">
-                    <h1>Blue color text</h1>
+                <div class="blue-color">
+                    <h1>Blue color HOVER</h1>
                 </div>
-                <div class="yellow_color">
-                    <h1>Yellow color text</h1>
+                <div class="yellow-color">
+                    <h1>Yellow color HOVER</h1>
+                </div>
+            </div>
+        </scene>
+    </content>
+</snippet>
+<snippet class="small">
+    <content>
+        <heading>:has selector</heading>
+        <scene class="p-5">
+            <div class="has-selector">
+                <div class="red-color">
+                    <h1>Red color HOVER</h1>
+                </div>
+                <div class="blue-color">
+                    <h1>Blue color HOVER</h1>
+                </div>
+            </div>
+            <div class="has-selector">
+                <div class="green-color">
+                    <h1>Red color HOVER</h1>
+                </div>
+                <div class="yellow-color">
+                    <h1>Blue color HOVER</h1>
+                </div>
+            </div>
+        </scene>
+    </content>
+</snippet>
+<snippet class="small">
+    <content>
+        <heading>:where selector</heading>
+        <scene class="p-5">
+            <div class="where-selector">
+                <div class="red-color">
+                    <h1>Red color HOVER</h1>
+                </div>
+                <div class="green-color">
+                    <h1>Green color HOVER</h1>
+                </div>
+                <div class="blue-color">
+                    <h1>Blue color HOVER</h1>
+                </div>
+                <div class="yellow-color">
+                    <h1>Yellow color HOVER</h1>
+                </div>
+            </div>
+        </scene>
+    </content>
+</snippet>
+<snippet class="small">
+    <content>
+        <heading>:not selector</heading>
+        <scene class="p-5">
+            <div class="not-selector">
+                <div class="red-color">
+                    <h1>Red color HOVER</h1>
+                </div>
+                <div class="green-color">
+                    <h1>Green color HOVER</h1>
+                </div>
+                <div class="blue-color">
+                    <h1>Blue color HOVER</h1>
+                </div>
+                <div class="yellow-color">
+                    <h1>Yellow color HOVER</h1>
                 </div>
             </div>
         </scene>
@@ -324,8 +389,14 @@
 </snippet>
 <snippet class="small">
     <content>
-        <heading></heading>
-        <scene class="p-5"></scene>
+        <heading>:focus-within</heading>
+        <scene class="p-5">
+            <div class="focused-within">
+                <input name="firstName" type="text">
+                <input name="firstName" type="text">
+                <input name="firstName" type="text">
+            </div>
+        </scene>
     </content>
 </snippet>
 <snippet class="small">

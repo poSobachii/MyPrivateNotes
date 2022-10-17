@@ -138,6 +138,10 @@ square.red {
     grid-template-columns: minmax(20px, auto) 2fr 1fr;
 }
 
+.columns-4 {
+    grid-template-columns: repeat(auto-fit, 50px);
+}
+
 /* Snippet ===============================================================================================================================*/
 
 .rows-1 {

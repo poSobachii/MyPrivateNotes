@@ -113,6 +113,10 @@ snippet content.flex {
     text-align: center;
 }
 
+scene.flex.column {
+    flex-direction: column;
+}
+
 snippet scene.grided {
     width: 100%;
     height: 100%;

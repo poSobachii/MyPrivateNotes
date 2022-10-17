@@ -282,6 +282,31 @@ div.battery_animation::after {
 
 /* Snippet ===============================================================================================================================*/
 
+.typing-effect {
+    font-size: 2rem;
+    height: 2.5rem;
+    width: 90%;
+    background-color: red;
+    animation: typing 2s steps(22), effect .5s step-end infinite alternate ;
+    white-space: nowrap ;
+    overflow: hidden ;
+    box-sizing: border-box;
+    border-right: 3px solid;
+    text-align: left;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes effect {
+    50% {
+        border-right: transparent;
+    }
+}
+
 /* Snippet ===============================================================================================================================*/
 
 /* Snippet ===============================================================================================================================*/
