@@ -76,6 +76,11 @@ chocolate OR white chocolate    // search for pages that have either chocolate o
 teams have won the Stanley Cup ..2004       // exactly 2004 year is required
 41..43                          // range 41, 42, 43
 
+-------------------- GOOGLE GMAIL TRICKS -------------------
+
+smartdoggydog+elephant@gmail.com
+smart.doggy.dog@gmail.com
+
 ==============================================================================================================================
 -------------------- IDEA CONFIGURATION --------------------
 

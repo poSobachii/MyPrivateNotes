@@ -41,7 +41,7 @@ gte Greater than or equal to.
 lt Less than.
 lte Less than or equal to.
 
-
+curl -X GET http://localhost:9200/_cat/indices?pretty
 
 
 
