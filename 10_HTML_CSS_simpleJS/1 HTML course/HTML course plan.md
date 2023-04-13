@@ -18,7 +18,7 @@
 <dt>14 HTML favicon</dt>
 <dt>15 HTML tables</dt>
 <dt>16 HTML lists</dt>
-<dt>17 HTML block & inline elements < p>< div> & < span></dt>
+<dt>17 HTML block & inline elements < p >< div > & < span ></dt>
 <dt>18 HTML iframes</dt>
 <dt>19 HTML character entities</dt>
 <dt>20 HTML audio & video media elements</dt>
@@ -45,13 +45,13 @@ an HTML document includes the following elements:
   title bar or tab. It also contains links to CSS and JavaScript files.
 * \<body>: This contains the content of the web page, such as text, images, and links. This is where the majority of the HTML code
   is written.
-* \<h1>, \<p>, \<a>, \<img>:These are some examples of common HTML tags that are used to structure the content of the web page\
+* \<h1>, \<p>, \<a>, \<img>:These are some examples of common HTML tags that are used to structure the content of the web page
 
-The structure of an HTML document starts with <!DOCTYPE> declaration, then <html> element which wraps all other elements, including the \<head> and \<body> elements. The \<head>
-contains information about the document and the \<body> contains the content that is visible on the web page. It's important to
-keep in mind that the structure is hierarchical, meaning that some elements are nested within other elements. For example, a \<p>
-tag would be nested within the \<body> element and the \<img> tag would be nested within an \<a>
-tag.
+The structure of an HTML document starts with <!DOCTYPE> declaration, then \<html> element which wraps all other elements,
+including the \<head> and \<body> elements. The \<head> contains information about the document and the \<body> contains the
+content that is visible on the web page. It's important to keep in mind that the structure is hierarchical, meaning that some
+elements are nested within other elements. For example, a \<p>tag would be nested within the \<body> element and the \<img> tag
+would be nested within an \<a>tag.
 
 ### 2. HTML what is a tag
 
@@ -74,14 +74,13 @@ structure the content of a webpage. Some common basic HTML tags include:
 ### 3. HTML element
 
 An HTML element is a building block of an HTML document. It is a container for content, and it can have attributes which provide
-additional information about the element. Elements are represented by tags, which are enclosed in angle brackets (e.g. <p>). An
-example of an HTML element is the <p> element, which is used to create a paragraph of text. The text inside the <p>
-tags is the content of the element, and the <p> and </p> tags are the opening and closing tags of the element, respectively.
-Elements can be nested inside other elements, creating a hierarchical structure for the document. For example, an <a> element (
-used for creating hyperlinks) can be nested inside a <p>
-element, indicating that the text inside the <p> element is a hyperlink. HTML elements have opening and closing tags, and the
-content of the element is placed in between. Some elements are self-closing, means they don't have closing tag, like <img>
-which is used to add image on the web page.
+additional information about the element. Elements are represented by tags, which are enclosed in angle brackets (e.g. \<p>). An
+example of an HTML element is the \<p> element, which is used to create a paragraph of text. The text inside the \<p>tags is the
+content of the element, and the \<p> and \</p> tags are the opening and closing tags of the element, respectively. Elements can be
+nested inside other elements, creating a hierarchical structure for the document. For example, an \<a> element (used for creating
+hyperlinks) can be nested inside a <p>element, indicating that the text inside the \<p> element is a hyperlink. HTML elements have
+opening and closing tags, and the content of the element is placed in between. Some elements are self-closing, means they don't
+have closing tag, like \<img> which is used to add image on the web page.
 
 ### 4 HTML attributes
 
