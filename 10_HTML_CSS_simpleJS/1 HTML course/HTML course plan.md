@@ -86,28 +86,31 @@ have closing tag, like \<img> which is used to add image on the web page.
 
 HTML attributes are used to provide additional information about an HTML element. They are added to the opening tag of an element,
 and are used to define the properties or characteristics of that element. Attributes are made up of a name and a value, separated
-by an equal sign. They come in the form of name="value", for example : <img src="image.jpg" alt="image description">
+by an equal sign. They come in the form of name="value", for example : \<img src="image.jpg" alt="image description">\
 Some common attributes include:
-• id: which is used to uniquely identify an element on a web page • class: which is used to group elements together and apply
-styles to them • src: which is used to specify the source of an image or other media file • href: which is used to specify the
-link destination of a hyperlink • alt: which is used to provide alternative text for an image, to be displayed if the image cannot
-be loaded • style: which is used to apply inline styles to an element. Attributes are added to the opening tag of an element and
-provide additional information about that element. They are used to define the properties and characteristics of the element.
+
+* id: which is used to uniquely identify an element on a web page
+* class: which is used to group elements together and apply styles to them
+* src: which is used to specify the source of an image or other media file
+* href: which is used to specify the link destination of a hyperlink
+* alt: which is used to provide alternative text for an image, to be displayed if the image cannot be loaded
+* style: which is used to apply inline styles to an element. Attributes are added to the opening tag of an element and provide
+  additional information about that element. They are used to define the properties and characteristics of the element.
 
 ### 5 HTML headings
 
 HTML headings are used to create different levels of headings on a web page. There are six levels of headings available in HTML,
-ranging from <h1> (the most important) to <h6> (the least important). The <h1> tag is typically used for the main heading of a
-page, while <h2> is used for subheadings, and so on. Headings are important for providing a clear structure for the content of a
+ranging from \<h1> (the most important) to \<h6> (the least important). The \<h1> tag is typically used for the main heading of a
+page, while \<h2> is used for subheadings, and so on. Headings are important for providing a clear structure for the content of a
 web page and for making it easier for users to find the information they are looking for. They are also commonly used by search
-engines to understand the content of a page and to determine its relevance to search queries. Headings are represented by <h1>
-through <h6> tags, and the number inside the tag denotes the level of heading. It's important to use them in a proper hierarchy,
-meaning that you should start with <h1> and use subheadings accordingly.
+engines to understand the content of a page and to determine its relevance to search queries. Headings are represented by \<h1>
+through \<h6> tags, and the number inside the tag denotes the level of heading. It's important to use them in a proper hierarchy,
+meaning that you should start with \<h1> and use subheadings accordingly.
 
 ### 6 HTML paragraphs
 
-HTML paragraphs are used to create blocks of text in an HTML document. The <p> tag is used to create a paragraph element, and the
-text inside the <p> tags is the content of the element. The <p> tag automatically adds a blank line before and after the
+HTML paragraphs are used to create blocks of text in an HTML document. The \<p> tag is used to create a paragraph element, and the
+text inside the \<p> tags is the content of the element. The \<p> tag automatically adds a blank line before and after the
 paragraph, creating a clear visual separation between paragraphs. Paragraphs are an important way to organize content on a web
 page and to make it more readable and easy to understand. They also help break up large blocks of text and make a page more
 visually appealing. Additionally, in web development, CSS can be used to control the appearance of paragraphs, such as font size,
@@ -117,58 +120,79 @@ font color, and alignment.
 
 HTML formatting elements are used to apply formatting to the text and content of an HTML document. Some common formatting elements
 include:
-•    <b> and <strong>: bold text •    <i> and <em>: italic text •    <u>: underlined text •    <sub> and <sup>:
-subscript and superscript text •    <mark>: text with a highlighter effect •    <del>: text with a strikethrough effect
-•    <code>: text that represents computer code •    <pre>: preformatted text •    <small>:smaller text These elements are used to
-control the presentation of text in web pages, allowing you to make certain words or phrases stand out, indicate code, or indicate
-a specific semantic meaning. It's important to note that with the introduction of CSS in web development, many of these elements
-are not used as much as they used to be, as the same formatting can be achieved using CSS styles.
 
-8 HTML CSS styles ========================================================================= CSS (Cascading Style Sheets)
-is a language that is used to describe the presentation of an HTML document. It allows you to control the layout, colors, fonts,
-and other visual elements of a web page. There are several different types of CSS styles that can be applied to HTML elements:
-• Inline styles: are used to apply styles directly to a specific HTML element, using the style attribute. For
-example, <p style="color: red;">This is a red paragraph.</p>
-• Internal stylesheets: are used to define styles for a single HTML document, by using a <style> element within the <head> of the
-document. • External stylesheets: are used to define styles for multiple HTML documents, by creating a separate CSS file and
-linking to it using the link element within the <head>
-of the HTML document. Each of these types of styles have their own advantages, but external stylesheets are considered best
-practice as they separate the presentation of a web page from its structure and content, making it easier to maintain and update
+* \<b> and \<strong>: bold text
+* \<i> and \<em>: italic text
+* \<u>: underlined text
+* \<sub> and \<sup>: subscript and superscript text
+* \<mark>: text with a highlighter effect
+* \<del>: text with a strikethrough effect
+* \<code>: text that represents computer code
+* \<pre>: preformatted text
+* \<small>:smaller text
 
-9 HTML links ========================================================================= HTML links, also known as hyperlinks, are
-used to create clickable links within an HTML document that can lead to other web pages, other parts of the same page, or other
-types of files. The <a> tag is used to create a link, and the href attribute is used to specify the destination URL. Links are an
-important way to navigate between web pages and to provide additional information to users. They can also be used to open other
-types of files, such as PDFs or images, or to send email messages. Additionally, you can use target attribute to indicate where
-the linked document is to be loaded - whether in a new window or tab, or in the current frame. You can also use id attribute
-and <a> tag to create a link within the same page
+These elements are used to control the presentation of text in web pages, allowing you to make certain words or phrases stand out,
+indicate code, or indicate a specific semantic meaning. It's important to note that with the introduction of CSS in web
+development, many of these elements are not used as much as they used to be, as the same formatting can be achieved using CSS
+styles.
 
-10 HTML forms ========================================================================= Form elements in HTML are used to create
-interactive forms for web pages. These elements allow users to input data, such as text fields, checkboxes, radio buttons, and
-more. Some common form elements include:
-•    <form>: This element is used to create a form and is the container for all other form elements. The action attribute
-specifies where the form data should be sent to and the method attribute specifies how the form data should be sent, either "get"
-or "post". •    <input>: This element is used to create various types of input fields, such as text fields, checkboxes, and radio
-buttons. The type attribute is used to specify the type of input field. •    <textarea>:
-This element is used to create a multi-line text input field. •    <select>: This element is used to create a drop-down list of
-options for the user to select from. •    <option>: This element is used within the <select> element to define the options
-available in the drop-down list. •    <label>: This element is used to associate a text label with a form element, making it
-easier for users to understand the purpose of the form field. •    <fieldset> : This element is used to group related form
-elements together, and it typically contains a <legend> element that provides a brief description of the group •    <button> :
-This element is used to create a button that users can click on to submit the form or perform other actions. To create a form in
-HTML, you would use the <form> element to create the container for the form, and then add various form elements such as text
-fields, checkboxes, and buttons within the <form> element. The <label>
-elements are used to provide a brief description of the form fields, and the <button> element is used to create a submit button
-that the user can click on to send the form data.
+### 8 HTML CSS styles
 
-11 HTML images ========================================================================= HTML images are used to embed images into
-a webpage. The basic syntax for adding an image in HTML is the "img" tag, which requires a "src" attribute that specifies the URL
-of the image file. Additionally, the "alt" attribute can be used to provide a text description of the image for accessibility and
-SEO purposes. Images are an important way to add visual content to a web page and to make it more engaging and interesting for
-users. Additionally, you can use the width and height attributes to control the size of the image, and style attribute to control
-the position or other aspect of the image. You can also use the <figure> and <figcaption> tags to wrap around the image and to add
-a caption to it. It's important to note that using images that are optimized for web can improve the page load time and user
-experience.
+CSS (Cascading Style Sheets) is a language that is used to describe the presentation of an HTML document. It allows you to control
+the layout, colors, fonts, and other visual elements of a web page. There are several different types of CSS styles that can be
+applied to HTML elements:
+
+* Inline styles: are used to apply styles directly to a specific HTML element, using the style attribute. For example, \<p style="
+  color: red;">This is a red paragraph.\</p>
+* Internal stylesheets: are used to define styles for a single HTML document, by using a \<style> element within the \<head> of
+  the document.
+* External stylesheets: are used to define styles for multiple HTML documents, by creating a separate CSS file and linking to it
+  using the link element within the \<head> of the HTML document. Each of these types of styles have their own advantages, but
+  external stylesheets are considered best practice as they separate the presentation of a web page from its structure and
+  content, making it easier to maintain and update
+
+### 9 HTML links
+
+HTML links, also known as hyperlinks, are used to create clickable links within an HTML document that can lead to other web pages,
+other parts of the same page, or other types of files. The \<a> tag is used to create a link, and the href attribute is used to
+specify the destination URL. Links are an important way to navigate between web pages and to provide additional information to
+users. They can also be used to open other types of files, such as PDFs or images, or to send email messages. Additionally, you
+can use target attribute to indicate where the linked document is to be loaded - whether in a new window or tab, or in the current
+frame. You can also use id attribute and \<a> tag to create a link within the same page
+
+### 10 HTML forms
+
+Form elements in HTML are used to create interactive forms for web pages. These elements allow users to input data, such as text
+fields, checkboxes, radio buttons, and more. Some common form elements include:
+
+* `<form>`: This element is used to create a form and is the container for all other form elements. The action attribute specifies
+  where the form data should be sent to and the method attribute specifies how the form data should be sent, either "get"
+  or "post".
+* `<input>`: This element is used to create various types of input fields, such as text fields, checkboxes, and radio buttons. The
+  type attribute is used to specify the type of input field.
+* `<textarea>`: This element is used to create a multi-line text input field.
+* `<select>`: This element is used to create a drop-down list of options for the user to select from.
+* `<option>`: This element is used within the \<select> element to define the options available in the drop-down list.
+* `<label>`: This element is used to associate a text label with a form element, making it easier for users to understand the
+  purpose of the form field.
+* `<fieldset>`: This element is used to group related form elements together, and it typically contains a `<legend>` element that
+  provides a brief description of the group
+* `<button>`: This element is used to create a button that users can click on to submit the form or perform other actions.
+
+To create a form in HTML, you would use the `<form>` element to create the container for the form, and then add various form
+elements such as text fields, checkboxes, and buttons within the `<form>` element. The `<label>` elements are used to provide a
+brief description of the form fields, and the `<button>` element is used to create a submit button that the user can click on to
+send the form data.
+
+### 11 HTML images
+
+HTML images are used to embed images into a webpage. The basic syntax for adding an image in HTML is the `img` tag, which requires
+a `src` attribute that specifies the URL of the image file. Additionally, the `alt` attribute can be used to provide a text
+description of the image for accessibility and SEO purposes. Images are an important way to add visual content to a web page and
+to make it more engaging and interesting for users. Additionally, you can use the width and height attributes to control the size
+of the image, and style attribute to control the position or other aspect of the image. You can also use the `<figure>`
+and \<figcaption> tags to wrap around the image and to add a caption to it. It's important to note that using images that are
+optimized for web can improve the page load time and user experience.
 
 12 HTML head ========================================================================= •    <head>  in an HTML document is used to
 provide meta information about the document. It typically contains elements such as the <title>, <meta>
