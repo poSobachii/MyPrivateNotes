@@ -195,17 +195,19 @@ optimized for web can improve the page load time and user experience.
 
 ### 12 HTML head
 
-* `<head>`  in an HTML document is used to provide meta information about the document. It typically contains elements such as
-  the `<title>`, `<meta>`, `<link>`, and `<style>` elements.
+`<head>`  in an HTML document is used to provide meta information about the document. It typically contains elements such as
+the `<title>`, `<meta>`, `<link>`, and `<style>` elements.
+
 * `<title>` is used to specify the title of the document, which is displayed in the browser's title bar or tab.
 * `<meta>`  is used to provide additional information about the document, such as keywords for search engines, the author of the
   document, and the character set used.
 * `<link>`  is used to link to external resources, such as external stylesheets, and to specify the relationships between the
   document and other documents, such as linking to a favicon.
 * `<style>` is used to define styles for the document, and is typically used to define internal stylesheets.
-* `<head>`  is the first element that appears in an HTML document, and it must be followed by the `<body>` element. The
-  information contained in the head is not displayed on the webpage, but it is used by the browser and search engines to
-  understand the contents of the webpage.
+
+`<head>`  is the first element that appears in an HTML document, and it must be followed by the `<body>` element. The information
+contained in the head is not displayed on the webpage, but it is used by the browser and search engines to understand the contents
+of the webpage.
 
 ### 13 HTML meta tag
 
