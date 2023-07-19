@@ -274,9 +274,15 @@
         <heading>
             progress bar
         </heading>
-        <scene>
+        <scene class="flex column">
             <div class="prgrs-bar">
-                <progress value="70" max="100"></progress>
+                <progress value="70" max="100">Text</progress>
+            </div>
+            <div>
+                <meter value="30" min="0" max="35">Text</meter>
+            </div>
+            <div>
+                <meter value="30" min="0" max="100" low="50" high="75" optimum="87">Text</meter>
             </div>
         </scene>
     </content>

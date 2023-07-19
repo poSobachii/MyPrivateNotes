@@ -25,7 +25,7 @@
 <dt>21 HTML file paths</dt>
 <dt>22 HTML semantics</dt>
 <dt>23 HTML Style guide</dt>
-</dl>
+</dl> <hr>
 
 ### 0. HTML introduction
 

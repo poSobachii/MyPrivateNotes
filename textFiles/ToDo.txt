@@ -9,6 +9,7 @@ todo java
     thread safe - what is it / immutable dependens
     .sinroinizedMap() / .flatMap    - stream foreach map.
     if else - order of checking statements
+    record type (record Customer(String name)
 
 todo more java examples
 
@@ -41,6 +42,16 @@ System design:
     5 database partitioning
     6 api's/services
 
+interview questions:
+    how to handle 1 million request per second ?
+    authorization vs authentication and how to implement both
+    how RESTful API works ?
+    how to ensure data consistency in a distributed system ?
+    caching stragegies in backend ?
+    testing approach (unit/integration/selenenium etc.)
+    how to store sensitive information(security)
+    deploying and maintain backend services
+    logging and monitoring /debuging your applications
 
 
 Algorithms:
@@ -78,23 +89,33 @@ Algorithms:
     Euclid's algorithm
     Union Find algorithm
 
+Data Structures used in daily:
+    List - Twitter feeds
+    Array - Marth operations, large data sets
+    Stack - Undo/Redo of word editor
+    Queue - Printer jobs, user actions in game
+    Heap - task scheduling
+    Tree - HTML document, AI decision
+    Suffix Tree - Search string in document
+    Graph - Friendship tracking, path finding
+    R-tree - Nearest neighbour
+    Hash table - caching systems
+
 todo swagger
     check online swagger editor with OpenAPI specification
-
-
-
-
-
-
-
-
 
 
 
 todo javascript
 
     web3 - document.hiden visibility,               // track if tab is opened or not
-    document.dispatchEvent()                    // top send
+    document.dispatchEvent()                    // to send
     document.addEventListener()                 // to receive
 
     .onLoad() and other js functions
+
+
+
+
+    java -version
+    javac -version

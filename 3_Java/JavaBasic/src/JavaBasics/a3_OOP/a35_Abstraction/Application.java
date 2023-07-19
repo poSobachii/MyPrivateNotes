@@ -10,6 +10,7 @@ public class Application {
         Command command1 = new Sleep();
         Warthog command2 = new Warthog();
         command1.defaultCommand();
+        command1.specialCommand();
         command2.defaultCommand();
         command2.uniqueCommand();
         passParameter(command1);

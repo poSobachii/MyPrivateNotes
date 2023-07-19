@@ -5,7 +5,7 @@ import java.util.List;
 
 class Calculator {
 
-    String calculate(String[] expression) {
+    String calculate(String[] expression) {  // 2 + 2
         List<String> tmp = new ArrayList<>(List.of(expression));
 
         int brOpenIndex = -1;

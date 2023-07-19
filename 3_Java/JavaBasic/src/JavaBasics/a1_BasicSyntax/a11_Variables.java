@@ -1,5 +1,8 @@
 package JavaBasics.a1_BasicSyntax;
 
+import java.math.BigDecimal;
+import java.math.BigInteger;
+
 public class a11_Variables {
 
     private static int globalVar = 100;            // called as field
@@ -36,11 +39,14 @@ public class a11_Variables {
         byte b2 = 127;
         char letter = 'a';
         String text = "Just a text";
-        int number = 100;
-        long longNumber = 100L;
-        float smallDecimal = 10.00f;
-        double bigDecimal = 10.00;
+        int n1 = 2147483647;
+        long l1 = 9223372036854775807L;
+        float f1 = 10.123456789f;             // will round
+        double d1 = 101.1234567890123456789;        // 16 digits max.  will error
         boolean bool = true;
+        BigInteger bi = new BigInteger("9223372036854775808");
+        BigDecimal bd = new BigDecimal("101.1234567890123456789012345");
+
 
         System.out.println(text);
     }

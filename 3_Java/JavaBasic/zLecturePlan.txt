@@ -5,7 +5,7 @@
 0.4 - Useful shortcuts, ctrl + D, ALT vertical use  comments in Java
 
 #Basics
-1.1 - Variables: declaration/types/local/global*field
+1.1 - Variables: declaration/types/local/global*field/instance
         String , int , long, float , double, boolean
         Integer, Long, Boolean etc. Objects to primitive diff 'Integer.parseInt()'     Object uses 'new' keyword
         Implicit casting / Explicit casting
@@ -132,12 +132,10 @@ todo    make some quizes
         learn in interactive way
 
 
-
-HOW to DEBUG Java
-optionals
 #Advanced JAVA
-.equals() .hashCode();
-String immutable explained - thread safe - garbage collector - stack/heap memory -> https://www.baeldung.com/java-stack-heap
+
+String immutable explained
+stack/heap memory -> https://www.baeldung.com/java-stack-heap
 
 
 #usefull

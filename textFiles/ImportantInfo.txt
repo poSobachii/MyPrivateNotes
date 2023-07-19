@@ -130,6 +130,10 @@ scp ansiblePuppetKeys.pem ec2-user@13.48.85.115:/var/ansible       // to copy to
 
 sh script.sh            // to execute sh script
 
+echo $JAVA_HOME               // to see the value of variable
+export VARIABLE_NAME=value
+export -p           // to see all existing exported variable
+unset VARIABLE_NAME
 
 ==============================================================================================================================
 -------------------- MAC CONFIGS --------------------
@@ -233,9 +237,8 @@ factory.initializeBean(Object, Object.getClass().getSimpleName());
 
 ==============================================================================================================================
 --------------------ANGULAR--------------------    https://angular.io/tutorial
-
-ng new someNaming               // to create default angular project
 ng serve            --open                    // to start project
+ng new someNaming               // to create default angular project
 ng generate component heroes                    // to generate components
 ng generate service hero                            // to generate service
 npm install angular-in-memory-web-api --save            // install inbuilt memory
@@ -249,5 +252,18 @@ npm install angular-in-memory-web-api --save            // install inbuilt memor
 repo of drivers  -> https://chromedriver.storage.googleapis.com/index.html
 
 mv chromedriver /usr/local/bin              // move executable to correct path (MAC)
+
+==============================================================================================================================
+--------------------MARKDOWN--------------------
+
+
+
+```java
+class HelloWorld {
+    public static void main(String[] args) {
+        System.our.println('Hello World');
+    }
+}
+```
 
 ==============================================================================================================================

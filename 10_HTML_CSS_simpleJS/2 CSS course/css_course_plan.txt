@@ -1,0 +1,138 @@
+Basic
+
+1 CSS Introduction
+2 CSS syntax and selectors
+CSS Box model
+CSS Layout (Positioning, Floats)
+CSS Borders and Outlines
+CSS Margin and Padding
+CSS Box Sizing
+CSS Units of Measurement(px, em, rem, %)
+CSS Colors and Backgrounds
+CSS Typography (Fonts, Text properties)
+CSS Display Property
+CSS Lists and Tables
+CSS Selectors Specificity
+CSS Pseudo-classes and Pseudo-elements
+CSS Flexbox
+CSS Grid Layout
+CSS Background Images and Gradient
+CSS Shadows and Effects
+CSS Responsive Design (Media Queries)
+CSS Debugging and Browser Developer Tools
+
+1 CSS Introduction
+Introduction to CSS (Cascading Style Sheets) refers to the foundational concepts and principles of CSS, which is a stylesheet language used to define the presentation and visual styling of HTML and XML documents. CSS is a core technology of web development and plays a crucial role in creating visually appealing and engaging web pages.
+
+Here are key points that encompass an introduction to CSS:
+Purpose: CSS separates the content of a web page (HTML structure) from its presentation (styling). It allows web developers to define the visual properties of elements, such as colors, fonts, layouts, and more, in a separate CSS file or within the HTML document itself.
+Syntax: CSS uses a declarative syntax where style rules are written as selectors and declarations. Selectors target specific HTML elements, while declarations define the properties and values to be applied to those elements. CSS rules can be applied inline, within the <style> tag, or in an external CSS file.
+Selectors: CSS selectors allow you to target specific HTML elements based on their tag names, classes, IDs, attributes, and more. Selectors enable you to apply styles to individual elements or groups of elements.
+Properties and Values: CSS properties define the visual characteristics of elements, such as color, font, margin, padding, and many others. Each property accepts specific values that control how the property is applied to the element.
+Cascading and Specificity: CSS follows a cascading principle, meaning that multiple styles can be applied to an element, and they are resolved based on their specificity and order of declaration. Specificity determines which styles take precedence over others.
+Style Inheritance: CSS allows styles to be inherited from parent elements to their child elements. This means that styles applied to a parent element can be automatically inherited by its descendants, simplifying the styling process.
+Browser Support: CSS is supported by all major web browsers and is a standardized technology, allowing consistent rendering of styles across different platforms and devices.
+
+By understanding the basics of CSS, including its syntax, selectors, properties, and principles of cascading and specificity, web developers can effectively style and design web pages, enhance user experiences, and create visually cohesive and responsive websites.
+
+2 CSS syntax and selectors
+
+The syntax of CSS (Cascading Style Sheets) defines how CSS rules are written. It consists of selectors, declarations, properties, and values. Here's an overview of the CSS syntax:
+
+Selectors: Selectors target specific HTML elements to apply styles. They can be based on element names, classes, IDs, attributes, pseudo-classes, or pseudo-elements. For example:
+
+Element selector: h1, p, div
+Class selector: .class-name
+ID selector: #id-name
+Attribute selector: [attribute=value]
+Pseudo-class selector: :hover, :focus
+Pseudo-element selector: ::before, ::after
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CSS Syntax and Selectors
+CSS Box Model
+CSS Colors and Backgrounds
+CSS Typography (Fonts, Text properties)
+CSS Layout (Positioning, Floats)
+CSS Display Property
+CSS Units of Measurement
+CSS Pseudo-classes and Pseudo-elements
+CSS Borders and Outlines
+CSS Margin and Padding
+CSS Lists and Tables
+CSS Transitions and Animations
+CSS Selectors Specificity
+CSS Responsive Design (Media Queries)
+CSS Flexbox
+CSS Grid Layout
+CSS Background Images and Gradient
+CSS Shadows and Effects
+CSS Transforms and 3D Transitions
+CSS Box Sizing
+CSS Image Sprites
+CSS Filters and Blending Modes
+CSS Vendor Prefixes
+CSS Debugging and Browser Developer Tools
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

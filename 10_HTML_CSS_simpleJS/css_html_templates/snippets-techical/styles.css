@@ -195,7 +195,7 @@ div.first-letter-text::first-letter {
 /* Snippet ===============================================================================================================================*/
 
 .prgrs-bar progress {
-    accent-color: green;
+    accent-color: rgba(53, 36, 255, 0.9);
     /*background-color: #039603;*/
 }
 
