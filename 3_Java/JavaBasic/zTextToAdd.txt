@@ -13,3 +13,33 @@ Collections
 
 Operator precedence:
 https://docs.oracle.com/javase/tutorial/java/nutsandbolts/operators.html
+
+
+
+Download the Apache HttpClient library JAR files:
+
+Go to the Apache HttpClient download page: https://hc.apache.org/downloads.cgi
+Look for the version of the HttpClient you want to use (e.g., "HTTPComponents Core" or "HTTPComponents Client").
+Download the JAR files for the core module and the client module.
+Create a new folder in your project where you will keep external libraries (e.g., "lib").
+
+Copy the downloaded JAR files to the "lib" folder.
+
+Add the JAR files to your project's classpath:
+
+In your IDE (Eclipse, IntelliJ, etc.), right-click on your project and select "Properties" or "Open Module Settings."
+Navigate to the "Libraries" or "Dependencies" section.
+Click the "Add JARs" or "Add External JARs" button and select the JAR files from the "lib" folder.
+Now you can use the Apache HttpClient classes in your Java code.
+
+Here's a sample code snippet for testing:
+
+
+#Advanced JAVA
+
+String immutable explained
+stack/heap memory -> https://www.baeldung.com/java-stack-heap
+
+
+#usefull
+collections - https://www.javatpoint.com/collections-in-java

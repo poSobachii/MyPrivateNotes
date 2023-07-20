@@ -10,6 +10,10 @@ empty line
 empty line
 <hr>
 
++ Type `&nbsp;` to add a single space.
++ Type `&ensp;` to add 2 spaces.
++ Type `&emsp;` to add 4 spaces.
+
 ## Headings:
 
 # Heading1

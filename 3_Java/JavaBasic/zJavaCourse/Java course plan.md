@@ -144,20 +144,17 @@
     + 8.2 TCP (Transmission Control Protocol)
         + TCP Overview and communication
         + Socket Programming
-        + ServerSocket
     + 8.3 UDP (User Datagram Protocol)
         + UDP Overview and communication
-        + DatagramPacket
-        + DatagramSocket
+        + Datagram Programming
         + MulticastSocket
     + 8.4 URL and URLConnection
     + 8.5 HTTP and HTTPS
-      + HTTP Overview
-      + HTTP Client
-      + HTTPS
+      + HTTP, HTTPS overview
+      + HTTPUrlConnection vs URLConnection
+      + List of other URLConnection subclasses
     + 8.6 Popular network frameworks
     + 8.7 Network security concepts & secure communication
-    + 8.8 Network troubleshooting & debugging
 
 
 9. JDBC (MySQL preferred + docker / H2 with Spring Boot)
