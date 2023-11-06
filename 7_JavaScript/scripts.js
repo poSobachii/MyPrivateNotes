@@ -117,7 +117,33 @@ document.getElementsByName('body').style.overflow = 'visible';
 // remove elements from DOM
 
 /* Snippet ===============================================================================================================================*/
+
+const process = require('process');
+
+var args = process.argv;
+async function processArguments() {
+    console.log("Hello: " + args[2])
+    console.log("Hello: " + args[3])
+    console.log("Hello: " + args[4])
+}
+
+if(args.length !== 0) {
+    processArguments()
+}
+
+// launch file with at least 3 extra arguments -> node script.js String#1 String#2 String#3
+
 /* Snippet ===============================================================================================================================*/
+
+const objectKeys = ["One", "Two", "Three", "OneTwo", "threeOne"];
+const word = "one";
+
+const filteredObjectKeys = objectKeys.filter(objectKey => objectKey.toLowerCase().includes(word.toLowerCase()));
+
+console.log(filteredObjectKeys);
+
+// filtering with condition
+
 /* Snippet ===============================================================================================================================*/
 /* Snippet ===============================================================================================================================*/
 /* Snippet ===============================================================================================================================*/

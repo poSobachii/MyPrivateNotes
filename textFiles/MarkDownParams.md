@@ -1,4 +1,5 @@
-# Markdown CheatSheet: <hr>
+# Markdown CheatSheet:
+<hr>
 
 End of line is  
 double space and Enter OR\
@@ -67,7 +68,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 
 ## Links:
 
-[Internal links](#markdown-cheatsheet)
+[Internal links for Headers](#markdown-cheatsheet)
 
 [comment]: <> (doesnt work in IntellijIdea for now)
 
@@ -99,7 +100,7 @@ Inline-style:
 ![alt text](../10_HTML_CSS_simpleJS/zAssets/images/animals/favicon.png)
 
 Use < img > HTML tag\
-<img src="https://images.unsplash.com/photo-1611915387288-fd8d2f5f928b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80" alt= “” width="100" height="">
+<img src="https://images.unsplash.com/photo-1611915387288-fd8d2f5f928b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80" alt= “none” width="100" height="">
 
 Reference-style:
 ![alt text][logo]

@@ -1,0 +1,48 @@
+{
+  "engagements": [
+    {
+      "uuid": "c02c01e1-cc59-4874-8f71-3de6a80a179b",
+      "campaignUuid": "3bca5054-7566-405f-83c7-c4b74ca9560f",
+      "name": "SME Help Link DE MySB",
+      "routeName": "RoutingID_2273DE",
+      "preChatConfigID": "mySB",
+      "type": "BUTTON",
+      "selector": "#mach3ChatLink",
+      "onlineHtml": "<div class=\"sdx-container\"><p class=\"text-b2\"><a style=\"cursor:pointer; font-size: 18px;\" data-LP-event=\"click\" onclick=\"window.SCS.webchat.openWebChatInstantly('c02c01e1-cc59-4874-8f71-3de6a80a179b');\">> Chat starten</a></p></div>",
+      "busyHtml": "<div class=\"sdx-container\"><p class=\"text-b2\"><a style=\"cursor:pointer; font-size: 18px;\" data-LP-event=\"click\" onclick=\"window.SCS.webchat.openWebChatInstantly('c02c01e1-cc59-4874-8f71-3de6a80a179b');\">> Chat starten</a></p></div>",
+      "offlineHtml": "<div class=\"sdx-container\"><p class=\"text-b2\" style=\"margin-bottom: 18px; font-size: 18px;\">Chat derzeit geschlossen</p></div>",
+      "delay": 0,
+      "showIfInitialized": true,
+      "showIfDismissed": true,
+      "showIfClicked": true,
+      "showIfInteracted": true,
+      "chatbotEnabled": false,
+      "displayAlways": false,
+      "attachmentEnabled": false,
+      "thresholdMaxWaitingTime": -1,
+      "thresholdWaitingCustomers": -1
+    },
+    {
+      "uuid": "d45b5cfa-b17c-466e-b668-c82f27c4554a",
+      "campaignUuid": "3bca5054-7566-405f-83c7-c4b74ca9560f",
+      "name": "SME_All_Pages_MySB_Sticky",
+      "routeName": "RoutingID_2295DE",
+      "preChatConfigID": "mySB",
+      "type": "BUTTON",
+      "selector": "#mach3ChatButton",
+      "onlineHtml": "<div class=\"side-button\"><img src=\"https://rcp.scsstatic.ch/content/dam/swisscom/de/res/residential-additional-pages/chat/speech_white_blue.svg\" alt=\"\" class=\"LPMimage\" data-di-id=\"#LPMimage-1575897125999-12\" onclick=\"window.SCS.webchat.openWebChat('d45b5cfa-b17c-466e-b668-c82f27c4554a');\"></div>",
+      "busyHtml": "<div class=\"side-button\"><img src=\"https://rcp.scsstatic.ch/content/dam/swisscom/de/res/residential-additional-pages/chat/speech_white_blue.svg\" alt=\"\" class=\"LPMimage\" data-di-id=\"#LPMimage-1575897125999-12\" onclick=\"window.SCS.webchat.openWebChat('d45b5cfa-b17c-466e-b668-c82f27c4554a');\"></div>",
+      "offlineHtml": "",
+      "delay": 0,
+      "showIfInitialized": true,
+      "showIfDismissed": true,
+      "showIfClicked": true,
+      "showIfInteracted": true,
+      "chatbotEnabled": false,
+      "displayAlways": false,
+      "attachmentEnabled": false,
+      "thresholdMaxWaitingTime": -1,
+      "thresholdWaitingCustomers": -1
+    }
+  ]
+}

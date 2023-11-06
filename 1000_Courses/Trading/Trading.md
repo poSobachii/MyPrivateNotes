@@ -6,12 +6,12 @@
     * Annual Dividend per Share / Current Market Price per Share x 100%. Dividend Yield = $4 / $150 x 100% = 2.67%. How much you
       will year on investing every 100$
 2. P/E ratio
-    * P/E Ratio = Market Price per Share / Earnings per Share (EPS). Basically the number of years it will take for a stock to
-      repay the amount you spend on it. The smaller, the 'cheaper' stocks is. A higher P/E ratio generally indicates that
-      investors are willing to pay a higher price for each unit of earnings, suggesting expectations of future growth or positive
-      market sentiment. A lower P/E ratio, on the other hand, may indicate that the stock is relatively cheaper compared to its
-      earnings.
-
+   * P/E Ratio = Market Price per Share / Earnings per Share (EPS). Basically the number of years it will take for a stock to
+     repay the amount you spend on it. The smaller, the 'cheaper' stocks is. A higher P/E ratio generally indicates that investors
+     are willing to pay a higher price for each unit of earnings, suggesting expectations of future growth or positive market
+     sentiment. A lower P/E ratio, on the other hand, may indicate that the stock is relatively cheaper compared to its earnings.
+3. Bid-Ask spread
+   * The bid-ask spread equals the lowest asking price set by a seller minus the highest bid price offered by an interested buyer.
 <hr>
 
 ### Some general investing terms:

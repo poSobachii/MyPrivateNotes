@@ -22,6 +22,7 @@
       <module name="aJavaForTesting" target="11" />
       <module name="Docker-app" target="1.8" />
       <module name="docker-example" target="1.8" />
+      <module name="DockerSimpleApp" target="1.8" />
       <module name="FBmanager" target="1.8" />
       <module name="FbPoster" target="1.8" />
       <module name="intrum-agr-hw" target="11" />
@@ -48,10 +49,11 @@
       <module name="#1002_SportBetCalculator" options="-parameters" />
       <module name="#16_DockerSimpleApp" options="-parameters" />
       <module name="Docker-app" options="-parameters" />
+      <module name="DockerSimpleApp" options="-parameters" />
       <module name="FBmanager" options="-parameters" />
       <module name="FbPoster" options="-parameters" />
       <module name="JS, thymleaf, websockets" options="-parameters" />
-      <module name="JavaBasics" options="-parameters" />
+      <module name="JavaBasics" options="" />
       <module name="JavaBasics2" options="-parameters" />
       <module name="MyShop" options="-parameters" />
       <module name="QuarkusReactiveApp" options="-parameters" />

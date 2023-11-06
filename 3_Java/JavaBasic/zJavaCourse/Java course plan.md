@@ -11,6 +11,7 @@
         + Variable types
             + local/static/instance(field)
             + variable/field/attribute/property
+            + variable shadowing
         + Data types primitive vs non-primitive
         + char, String , int , long, float , double, boolean, array[]
         + Integer, Long, Boolean etc. Objects to primitive diff 'Integer.parseInt()'. Object uses 'new' keyword.
@@ -19,7 +20,7 @@
     + 1.2 Methods
     + 1.3 String manipulations
         + String conversion '.parseInt()'
-        + String formatting
+        + String formatting StringBuilder, String.format()
     + 1.4 Operators
         + arithmetical / unary
         + relational / comparison
@@ -36,6 +37,7 @@
         + while
         + do while
         + continue/break
+        + recursion
     + 1.7 Comments
         + single line
         + comment block
@@ -43,17 +45,19 @@
 
 
 2. Classes & Objects:
-    + 2.1 Classes initialization (blueprint), Object creation (blueprints representation)
+    + 2.1 Objects overview
+        + Classes initialization (blueprint),
+        + Object creation (blueprints representation),
+        + Singletons
+        + Object lifecycle
     + 2.2 Constructors. default constructor == without parameters.
     + 2.3 Access level modifiers public/protected/no-modifier/private
         + private classes can be declared as Inner or Nested
     + 2.4 Modifiers static/final
-        + final class prevents extending of class
-        + synchronized - only one thread at a time
-        + volatile - prevents reordering in cache memory in runtime
-        + transient - marks not to serialize this field.
-    + 2.5 Nested Classes/ Inner classes
-    + 2.6 Enums
+        + static
+        + final
+    + 2.5 Nested / Inner / Anonymous classes
+    + 2.6 Enums - the best Singleton
     + 2.7 Interface
 
 
@@ -66,17 +70,23 @@
         + getters, - Read Only class
         + setters, - Write Only class
         + private modifiers
+        + `this` keyword
     + 3.3 Inheritance
         + interface
         + overriding
-        + super keyword
+        + `super` keyword
+        + multiple interface usage
     + 3.4 Polymorphism
         + overriding
         + overloading
     + 3.5 Abstraction
         + abstract class
         + abstract method
+        + default method
+    + 3.6 Difference between abstract and interface
     + 3.6 .equals() & .hashCode() difference
+    + 3.7 InstanceOf overview
+    + 3.8 Comparable interface & Custom Comparators
 
 
 4. Array, Collections
@@ -84,6 +94,7 @@
     + 4.2 Arrays
         + single [ ]
         + multidimensional [ ][ ]
+        + ragged array
     + 4.3 Lists
         + ArrayList
         + LinkedList
@@ -94,16 +105,16 @@
     + 4.5 Queue / Dequeue
         + priorityQueue
         + ArrayDeque
-    + 4.6 Stack
-    + 4.7 Maps
-        + size/ order / manipulations
-        + hashMap
-        + treeMap
-        + LinkedHashMap
-        + Iterator/iterable
+   + 4.6 Stack
+   + 4.7 Maps
+       + size/ order / manipulations
+       + hashMap
+       + treeMap
+       + LinkedHashMap
+       + Iterator/iterable
 
 
-5. Exceptions
+5. Exceptions & Logging
     + 5.1 Types checked/unchecked
     + 5.2 Try catch block
     + 5.3 Finally block
@@ -114,17 +125,33 @@
         + custom exception have to implement AutoCloseable
     + 5.5 Throwing exceptions inside method, outside method
     + 5.6 Custom exceptions
+    + 5.7 Error handling and Logging
+        + popular framework Log4j / SLF4J
 
 
-6. IO package Input/Output source
+6. IO package Input/Output and File Handling
     + 6.1 Input types
+        + InputStream,
+        + Reader
         + Scanner for primitives input
         + BufferedReader for bigger data input ( file etc.)
+        + ByteArrayInputStream
     + 6.2 Output types
+        + OutputStream
         + console/log - println(), printf()
+        + Writer
+        + BufferedWriter
+        + ByteArrayOutputStream
     + 6.3 Object streams
-    + 6.4 Data serialization/deserialization , transient keyword
+    + 6.4 Data serialization/deserialization
+        + `transient` keyword
+        + xml, json, yml, properties formats
+        + jackson ObjectMapper overview
     + 6.5 Files reader/writer
+        + io vs nio
+        + File vs File vs FileChannel
+        + Selector
+        + Path vs Paths
     + 6.7 Input validation
         + regular expression
         + exception handling for valid inputs
@@ -136,7 +163,10 @@
         + Integration tests
         + Selenium tests
     + 7.2 JUnit testing
+        + Mocking
+        + Asserting
     + 7.3 Debugging tools
+    + 7.4 TDD - Test Driven Development
     
 
 8. Network TCP/UDP
@@ -159,30 +189,41 @@
 
 9. JDBC (MySQL preferred + docker / H2 with Spring Boot)
     + 9.1 DB connection
-    + 9.2 Create query/statement
-        + insert
-        + update
-        + select
-        + delete
+    + 9.2 CRUD operations
+    + 9.3 Prepared statements
+    + 9.4 connection pooling
 
 
 10. Concurrency
-    + 10.1 Processes/Threads
-    + 10.2 Runnable interface
-    + 10.3 Pausing execution
-    + 10.4 interrupts/join
-    + 10.5 Synchronized / volatile keywords
-    + 10.6 High level concurrency/ lock / cyclicBarrier
-    + 10.7 Thread safety
-        + synchronization
-        + locks
-        + atomic variables
-        + concurrent collections
-    + 10.8 Multithreading
+    + 10.1 Processes/Threads/Pools
+    + 10.2 Related interfaces
+        + Runnable
+        + Callble
+        + Future
+    + 10.4 Executors and thread pools
+        + ExecutorService and stoping it
+        + FixedThreadPool
+        + CachedThreadPool
+        + ScheduledExecutorService
+    + 10.5 Execution manipulation
+        + Pause
+        + start
+        + sleep
+        + interrupt
+        + join
+        + wait
+        + notify
+    + 10.6 Thread safety
+        + ThreadLocal & ThreadLocalRandom
+        + `synchronized` keyword - only one thread at a time
+        + `volatile` keyword - prevents reordering in cache memory in runtime
+        + locks and Deadlock
+    + 10.7 High level concurrency & Multithreading
+        + cyclicBarrier
         + Thread synchronization
         + Thread communication/coordination
-    + 10.9 Concurrent collections and utilities
-    + 10.10 Executors and thread pools
+        + atomic variables
+    + 10.8 Concurrent collections and utilities
 
 
 11. Generics
@@ -202,23 +243,43 @@
 
 12. Java Standard Library & Advanced language features
     + 12.1 Date and time manipulation
+        + Date, DateFormat, Calendar,
+        + LocalDate, LocalTime, LocalDateTime
+        + Instant, ZonedDateTime
+        + DateTimeFormatter
     + 12.2 Math and number formatting
     + 12.3 Localization and internationalization
     + 12.4 Optionals (Handling potentially nullable values)
     + 12.5 VARARGS Arbitrary number of arguments in methods parameters method(String... inputString)
     + 12.6 Lambda
-    + 12.7 Streams and parallel processing
-    + 12.8 Static imports.
-    + 12.9 Reflections & Annotations
+        + method reference
+    + 12.7 Functional interfaces
+    + 12.8 Streams and parallel processing
+    + 12.9 Static imports.
+    + 12.10 Reflections & Annotations
         + Java Reflection: Introducing reflection and its capabilities, including dynamically inspecting and modifying classes,
           accessing methods and fields at runtime, and understanding its use cases.
-    + 12.10 Design patterns in Java
-    + 12.11 Immutability in Java
-    + 12.12 Garbage collector
-    + 12.13 Stack/heap memory
+        + Create your own Annotation
+        + Popular annotations @Deprecated, @Override, @Nullable etc.
+    + 12.11 Design patterns in Java
+        + Singleton Pattern
+        + Factory Method Pattern
+        + Observer Pattern
+        + Strategy Pattern
+        + Decorator Pattern
+        + Adapter Pattern
+        + Command Pattern
+        + Template Method Pattern
+        + Iterator Pattern
+        + Proxy Pattern
+    + 12.12 Mutability in Java
+    + 12.13 Garbage collector
+    + 12.14 Stack/heap memory
+    + 12.16 MapReduce technique
+    + 12.17 SOLID principle
 
 
-13. GUI basics
+13. Graphical User Interface (GUI) Development
     + 13.1 Audio
     + 13.2 Swing
         + Frame, Labels, Panels, Buttons
@@ -272,4 +333,5 @@
         + Introduction to Spring Boot and its features
         + Auto-configuration and starters
         + Building standalone, production-ready applications with Spring Boot
+    + 14.10 Spring cloud - Miscroservices
 

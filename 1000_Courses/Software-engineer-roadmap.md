@@ -1,12 +1,6 @@
 Jira, Kanban, Agile methodology
 Monolith, Microservices
 
-
-
-
-
-
-
 =============================== 1 Front-end ==============================
 
 1.1 HTML
