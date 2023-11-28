@@ -43,7 +43,8 @@ Italics, with *asterisks* or _underscores_\
 Strong / bold, with **asterisks** or __underscores__\
 Combined with **asterisks and _underscores_**\
 Combined with __asterisks and _underscores___\
-Strikethrough uses two tildes. ~~Scratch this.~~
+Strikethrough uses two tildes. ~~Scratch this.~~\
+Underline should be in `<u>` tag<u>text</u>
 <hr>
 
 ## Lists:

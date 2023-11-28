@@ -2,7 +2,7 @@
 
 0. Introduction:
     + Basics of programming and Java's role
-    + Installation and setup
+    + Installation of JAVA & IDE and setup
 
 
 1. Basics:
