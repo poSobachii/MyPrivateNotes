@@ -53,7 +53,7 @@ public class a11_Variables {
 
     static void variableAccess() {
         System.out.println("global variables / field are usable anywhere according access modifiers -> " + globalVar);
-        System.out.println("local variables are only sued inisde declared method, we can use here 'localVar' declared in 'someMethod' below");
+        System.out.println("local variables are only used inside declared method, we can't use here 'localVar' declared in 'someMethod' below");
     }
 
 
