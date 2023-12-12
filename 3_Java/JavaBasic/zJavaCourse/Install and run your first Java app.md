@@ -171,7 +171,7 @@ they serve different purposes. Here's a simplified explanation:
    ![ErrorImageNotFound](../zCourseImages/JavaSetupGuide/Screen_NewSampleProjectView.png)
 8. Press green small arrow button on the code line 2 to launch the project. At the bottom you will see console output will pop up, with following
    window:\
-   ![ErrorImageNotFound](../zCourseImages/JavaSetupGuide/Screen_SampleProjectConsoleOutput.png)
+   ![ErrorImageNotFound](../zCourseImages/JavaSetupGuide/Screen_SampleProjectConsole.png)
 9. The output may vary, depending on your system configurations, but the main goal `Hello World` should present. If you see it, then Intellij IDEA is
    configured for the further work.
    
