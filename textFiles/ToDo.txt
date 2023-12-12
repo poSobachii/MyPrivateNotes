@@ -27,6 +27,19 @@ todo more java examples
 
 https://www.geeksforgeeks.org/difference-between-and-equals-method-in-java
 
+        // java stack vs heap memory = primitives vs non-primitives
+https://www.digitalocean.com/community/tutorials/java-heap-space-vs-stack-memory
+https://www.digitalocean.com/community/tutorials/java-jvm-memory-model-memory-management-in-java
+============================================================================================
+
+Integer number = new Integer(5); // 'number' is a reference to an Integer object
+int x = number.intValue();
+starting from java 5 ->
+Integer number = 5; // Autoboxing: converting int to Integer
+int x = number;      // Unboxing: extracting int from Integer
+============================================================================================
+
+
 IT destinations ->
 clouds
 big data
@@ -119,3 +132,21 @@ todo javascript
 
     java -version
     javac -version
+
+============================================================================================
+The word "Java" appears in the name "JavaScript" primarily due to marketing efforts rather than a direct technical
+connection between the two languages. When JavaScript was first introduced in 1995, it was intended to complement
+and extend the Java programming language, which was gaining popularity at the time. Netscape, the company behind
+JavaScript, hoped that by incorporating the name "Java," they could attract developers familiar with Java and encourage
+them to adopt JavaScript for web development.
+
+In reality, JavaScript and Java are distinct programming languages with different syntax, semantics,
+and application domains. Java is a general-purpose, object-oriented programming language primarily used
+for server-side development, while JavaScript is a scripting language primarily used for client-side web development.
+Despite their different roles, JavaScript does borrow some concepts and terminology from Java,
+such as the concept of objects and object-oriented programming.
+
+However, over time, the connection between Java and JavaScript has become less significant.
+JavaScript has evolved into a mature and widely used language, and its association with Java has diminished.
+Today, developers recognize JavaScript as a distinct language with its own strengths and applications.
+

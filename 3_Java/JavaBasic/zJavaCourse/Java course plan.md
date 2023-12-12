@@ -13,7 +13,6 @@
             + variable/field/attribute/property
             + variable shadowing
         + Data types primitive vs non-primitive
-        + char, String , int , long, float , double, boolean, array[]
         + Integer, Long, Boolean etc. Objects to primitive diff 'Integer.parseInt()'. Object uses 'new' keyword.
         + Implicit casting / Explicit casting
         + Autoboxing
@@ -247,7 +246,9 @@
         + LocalDate, LocalTime, LocalDateTime
         + Instant, ZonedDateTime
         + DateTimeFormatter
-    + 12.2 Math and number formatting
+    + 12.2 Math and number formatting:
+      + new Short((short) 10)	Less efficient	May create unnecessary objects
+      + Short.valueOf((short) 10) More efficient	Reuses objects for common values
     + 12.3 Localization and internationalization
     + 12.4 Optionals (Handling potentially nullable values)
     + 12.5 VARARGS Arbitrary number of arguments in methods parameters method(String... inputString)
