@@ -306,33 +306,37 @@
         + Dependency Injection (DI) and Inversion of Control (IoC)
         + Beans and their lifecycle management
         + Application Context and Bean Factory
-    + 14.3 Spring Configuration
-        + XML-based configuration
-        + Annotation-based configuration
-        + Java-based configuration
-    + 14.4 Spring MVC (Model-View-Controller):
-        + Overview of the MVC design pattern
-        + Controllers, views, and request handling
-        + Mapping URLs and handling forms
-    + 14.5 Spring Data Access:
-        + JDBC template and data access objects (DAOs)
-        + Object-relational mapping (ORM) with Spring and Hibernate
-        + Spring Data JPA for simplified database access
-    + 14.6 Spring AOP (Aspect-Oriented Programming):
-        + Understanding AOP concepts
-        + Aspect-oriented programming with Spring
-        + Using aspect annotations and pointcuts
-    + 14.7 Spring Security
-        + Authentication and authorization concepts
-        + Securing web applications with Spring Security
-        + Role-based access control and custom authentication providers
-    + 14.8 Spring Integration
-        + Overview of enterprise integration patterns
-        + Integration with messaging systems and external APIs
-        + Building message-driven applications with Spring Integration
-    + 14.9 Spring Boot
+    + 14.3 Spring Boot
         + Introduction to Spring Boot and its features
         + Auto-configuration and starters
         + Building standalone, production-ready applications with Spring Boot
-    + 14.10 Spring cloud - Miscroservices
+    + 14.4 Spring Configuration
+        + XML-based configuration
+        + Annotation-based configuration
+        + Java-based configuration
+    + 14.5 Spring MVC (Model-View-Controller):
+        + Overview of the MVC design pattern
+        + Controllers, views, and request handling
+        + Mapping URLs and handling forms
+    + 14.6 Spring Data Access:
+        + JDBC template and data access objects (DAOs)
+        + Object-relational mapping (ORM) with Spring and Hibernate
+        + Spring Data JPA for simplified database access
+    + 14.7 Spring AOP (Aspect-Oriented Programming):
+        + Understanding AOP concepts
+        + Aspect-oriented programming with Spring
+        + Using aspect annotations and pointcuts
+    + 14.8 Spring Security
+        + Authentication and authorization concepts
+        + Securing web applications with Spring Security
+        + Role-based access control and custom authentication providers
+    + 14.9 Spring Integration
+        + Overview of enterprise integration patterns
+        + Integration with messaging systems and external APIs
+        + Building message-driven applications with Spring Integration
+    + 14.10 Spring testing & monitoring:
+        + Spring Test 
+        + Spring Boot Actuator: production-ready monitor
+        + Rest Assured
+        + Web Driver
 
