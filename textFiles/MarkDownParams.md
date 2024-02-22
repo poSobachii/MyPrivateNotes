@@ -136,8 +136,8 @@ But let's throw in a <b>tag</b>.
 Colons can be used to align columns.
 
 | Tables        | Are           | Cool  |
-| -------------: |:-------------:| :-----|
-| col 1 is      | right-aligned | $1600 |
+|:--------------|:-------------:| :-----|
+| col 1 is long | right-aligned | $1600 |
 | col 2 is      | centered      |   $12 |
 | col 3 is      | left-aligned  |    $1 |
 

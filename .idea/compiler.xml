@@ -7,9 +7,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="quarkus-simple-app" />
         <module name="JavaBasics" />
+        <module name="quarkus-simple-app" />
         <module name="aJavaForTesting" />
+        <module name="JavaPracticeProjects" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

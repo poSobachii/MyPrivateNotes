@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap');
+
 div.s-between{
     width: 90%;
     display: block;
@@ -201,9 +203,25 @@ div.first-letter-text::first-letter {
 
 /* Snippet ===============================================================================================================================*/
 
+.masked-text {
+    font-size: 5.5rem;
+    text-transform: uppercase;
+    font-family: "Protest Revolution", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    background: url(../../zAssets/images/animals/bird.jpeg) 0 0 / cover no-repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
 /* Snippet ===============================================================================================================================*/
 
+#color-display {
+    width: 50%;
+    height: 50%;
+    border: 3px solid black;
+    margin: 1rem;
+}
 
 /* Snippet ===============================================================================================================================*/
 

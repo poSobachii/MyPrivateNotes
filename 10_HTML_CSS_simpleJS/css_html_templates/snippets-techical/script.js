@@ -4,6 +4,18 @@
 
 
 /* Snippet ===============================================================================================================================*/
+
+const button = document.getElementById("eye-dropper-button");
+const colorDisplay = document.getElementById("color-display");
+const colorText = document.getElementById("color-name");
+
+button.addEventListener("click", async () => {
+    const eyed = new EyeDropper();
+    const result = await eyed.open();
+    const color = result.sRGBHex;
+    colorDisplay.style.backgroundColor = color;
+    colorText.textContent='Color code: ' + color;
+});
 /* Snippet ===============================================================================================================================*/
 /* Snippet ===============================================================================================================================*/
 /* Snippet ===============================================================================================================================*/

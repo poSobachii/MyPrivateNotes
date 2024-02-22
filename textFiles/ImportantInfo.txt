@@ -135,6 +135,15 @@ export VARIABLE_NAME=value
 export -p           // to see all existing exported variable
 unset VARIABLE_NAME
 
+sudo apt update
+sudo apt upgrade                // to update apt packager
+sudo apt install nginx              // install nginx
+sudo systemctl status nginx         // check if its running
+sudo systemctl enable nginx         // enable automatic start
+sudo systemctl restart nginx        // to restart
+sudo systemctl stop nginx           // to stop
+/usr/share/nginx/html               // default nginx index.html file
+
 ==============================================================================================================================
 -------------------- MAC CONFIGS --------------------
 
