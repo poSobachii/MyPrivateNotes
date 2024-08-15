@@ -127,6 +127,9 @@ LC_ALL=en_US.UTF-8
 ssh-add -l
 ssh-add ~/.ssh/id_rs            // your private public key
 scp ansiblePuppetKeys.pem ec2-user@13.48.85.115:/var/ansible       // to copy to remote server
+ssh-keygen -t rsa -b 4096 -C "first_key"                // to generate key
+tr -d '\n' <~/.ssh/id_ed25519.pub | pbcopy                 // copy pub key
+
 
 sh script.sh            // to execute sh script
 
@@ -154,7 +157,6 @@ Command+Shift+G             // Finder to go desired folder
 history | grep 'variable'         // to search for something in terminal  MAC
                                   // complete history located in .zsh_history || .bash_history etc.
 
-/usr/libexec/java_home -V               // to check java versions
 ps -ef | grep java                  //to see all java processers MAC
 netstat -anv | grep 8080            // to see if 8080 port is busy
 netstat -vanp tcp | grep 3000       // alternative
@@ -170,8 +172,27 @@ open -e filename            // open file in editor
 source ~/.bash_profile       // to run reload bash commands and use them.
 sudo nano /etc/hosts         // to check mac hosts list
 
+touch .zprofile             // similar to bach_profile executes for login shells
+touch .zshrc                // gets executed for every interactive non-login shells
+
+defaults write com.apple.finder AppleShowAllFiles TRUE          // to show hidden files in Finder
+defaults write com.apple.finder AppleShowAllFiles FALSE         // to show hide hidden files in Finder
+
+ln -s /Users/taagral5/Desktop/TEXTS /Users/taagral5/IdeaProjects/MyPrivateNotes/textFiles/symlink-folder/linkedTexts         // link folder as symlink
+
+-------------------- HOMEBREW --------------------
+
+brew install
+brew uninstall
+brew list                        // to see what was installed with brew
+brew uninstall --force ruby         // ignores all errors during uninstall
+brew autoremove                    // remove unused dependencies
+brew deps --tree --installed        // to see installed brew in tree mode
+
 -------------------- BASH CONFIG FOR DIFFERENT JAVAS --------------------
 JAVA versions
+
+/usr/libexec/java_home -V               // to check java versions
 
 Type "cd ~/" to go to your home folder
 Type "touch .bash_profile" to create your new file.
@@ -187,15 +208,6 @@ alias java11='export JAVA_HOME=$JAVA_11_HOME'
 # default to Java 11
 java11
 
-defaults write com.apple.finder AppleShowAllFiles TRUE          // to show hidden files in Finder
-defaults write com.apple.finder AppleShowAllFiles FALSE         // to show hide hidden files in Finder
-
-
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-
-nvm -v                      // to check nvm version
 
 ==============================================================================================================================
 -------------------- JAVA TERMINAL RUN --------------------
@@ -204,6 +216,8 @@ javac               // compile .java file into .class file
 java HelloWorld     // no .class needed to run a class
 jar cfm HelloWorld.jar manifest.txt HelloWorld.class      // creating jar file
 java -jar HelloWorld.jar
+
+mvn install -D skipTests=true
 
 ==============================================================================================================================
 -------------------- ANSIBLE AD-HOC COMMANDS --------------------
@@ -263,16 +277,41 @@ repo of drivers  -> https://chromedriver.storage.googleapis.com/index.html
 mv chromedriver /usr/local/bin              // move executable to correct path (MAC)
 
 ==============================================================================================================================
---------------------MARKDOWN--------------------
+--------------------TEXT NAMING--------------------
 
+namingidentifier                  flat case/Lazy Case
+NAMINGIDENTIFIER                  upper flat case
+namingIdentifier                  (lower) camelCase, dromedaryCase
+NamingIdentifier                  (upper) CamelCase, PascalCase, StudlyCase, CapitalCamelCase
+naming_identifier                 snake_case, snake_case, pothole_case, C Case
+Naming_Identifier                 Camel_Snake_Case
+NAMING_IDENTIFIER                 SCREAMING_SNAKE_CASE, MACRO_CASE, UPPER_CASE, CONSTANT_CASE
+naming-identifier                 Kebab Case/caterpillar-case/dash-case, hyphen-case, lisp-case, spinal-case and css-case
+NAMING-IDENTIFIER                 TRAIN-CASE, COBOL-CASE, SCREAMING-KEBAB-CASE
+Naming-Identifier                 Train-Case, HTTP-Header-Case
+_namingIdentifier                 Undercore Notation (prefixed by "_" followed by camelCase
+datatypeNamingIdentifier          Hungarian Notation (variable names Prefixed by metadata data-types which is out-dated)
 
-
-```java
-class HelloWorld {
-    public static void main(String[] args) {
-        System.our.println('Hello World');
-    }
-}
-```
-
+==============================================================================================================================
+==============================================================================================================================
+==============================================================================================================================
+==============================================================================================================================
+==============================================================================================================================
+==============================================================================================================================
+==============================================================================================================================
+==============================================================================================================================
+==============================================================================================================================
+==============================================================================================================================
+==============================================================================================================================
+==============================================================================================================================
+==============================================================================================================================
+==============================================================================================================================
+==============================================================================================================================
+==============================================================================================================================
+==============================================================================================================================
+==============================================================================================================================
+==============================================================================================================================
+==============================================================================================================================
+==============================================================================================================================
+==============================================================================================================================
 ==============================================================================================================================

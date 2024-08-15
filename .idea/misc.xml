@@ -19,10 +19,12 @@
         <option value="$PROJECT_DIR$/3_Java/JavaBasics/pom.xml" />
         <option value="$PROJECT_DIR$/5_Quarkus_Java/QuarkusSheduler/pom.xml" />
         <option value="$PROJECT_DIR$/3_Java/JavaPracticeProjects/pom.xml" />
+        <option value="$PROJECT_DIR$/1011_FullStackApp/back-end/pom.xml" />
+        <option value="$PROJECT_DIR$/4_Spring_SpringBoot/MySqlServer/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" project-jdk-name="17" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

@@ -1,20 +1,28 @@
 Jira, Kanban, Agile methodology
 Monolith, Microservices
 
-=============================== 1 Front-end ==============================
+### Front-end
 
-1.1 HTML
-1.2 CSS
-1.3 JavaScript
+1. HTML
+2. CSS
+3. JavaScript
 
-=============================== 2 Back-end ===============================
+### Back-end 
 
-2.1 Java
-2.2 Spring
+1. Java
+2. Spring
 
-=============================== 3 Dev-Ops ===============================
+### Dev-Ops
 
-3.1 Docker
-3.2 Database(mySql)
-3.3 Git
-3.4 Jenkins
+1. Docker
+2. Database(mySql)
+3. Git
+4. Jenkins
+
+
+### Database 
+
+1. MySql
+2. PostgreSQL
+3. MariaDB 
+4. MsSql

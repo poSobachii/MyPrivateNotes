@@ -1,0 +1,42 @@
+==============================================================================================================================
+BASH_PROFILE
+==============================================================================================================================
+
+export JAVA_8_HOME=$(/usr/libexec/java_home -v1.8)
+export JAVA_11_HOME=$(/usr/libexec/java_home -v11)
+
+alias redundantJava8='export JAVA_HOME=$JAVA_8_HOME'
+alias redundantJava11='export JAVA_HOME=$JAVA_11_HOME'
+
+alias java8='export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home'
+alias java11='export JAVA_HOME=/usr/local/Cellar/openjdk@11/11.0.12/libexec/openjdk.jdk/Contents/Home'
+alias java17='export JAVA_HOME=/usr/local/Cellar/openjdk@17/17.0.4/libexec/openjdk.jdk/Contents/Home'
+alias java18='export JAVA_HOME=/usr/local/Cellar/openjdk/18.0.2/libexec/openjdk.jdk/Contents/Home'
+
+
+alias mavenSwiss='cp /Users/taagral5/Desktop/important/settings-Swiss.xml /Users/taagral5/.m2/settings.xml'
+alias mavenDef='cp /Users/taagral5/Desktop/important/settings-Default-Maven.xml /Users/taagral5/.m2/settings.xml'
+alias mavenCta='cp /Users/taagral5/Desktop/important/settings-cta.xml /Users/taagral5/.m2/settings.xml'
+alias mavenIam='cp /Users/taagral5/Desktop/important/settings-iam.xml /Users/taagral5/.m2/settings.xml'
+
+alias hiddenShow='defaults write com.apple.finder AppleShowAllFiles TRUE
+killall Finder'
+alias hiddenHide='defaults write com.apple.finder AppleShowAllFiles FALSE
+killall Finder'
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+==============================================================================================================================
+Z_PROFILE
+==============================================================================================================================
+
+export JAVA_17_HOME=$(/usr/libexec/java_home -v17)
+export JAVA_21_HOME=$(/usr/libexec/java_home -v21)
+export JAVA_22_HOME=$(/usr/libexec/java_home -v22)
+
+alias java17='export JAVA_HOME=$JAVA_17_HOME'
+alias java21='export JAVA_HOME=$JAVA_21_HOME'
+alias java22='export JAVA_HOME=$JAVA_22_HOME'

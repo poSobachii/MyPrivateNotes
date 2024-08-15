@@ -8,18 +8,16 @@
 1. Basics:
     + 1.1 Variables
         + Declaration
-        + Variable types
-            + local/static/instance(field)
-            + variable/field/attribute/property
-            + variable shadowing
-        + Data types primitive vs non-primitive
-        + Integer, Long, Boolean etc. Objects to primitive diff 'Integer.parseInt()'. Object uses 'new' keyword.
+        + Scopes
+        + Variable shadowing
+        + Data types: primitive vs non-primitive
         + Implicit casting / Explicit casting
-        + Autoboxing
-    + 1.2 Methods
-    + 1.3 String manipulations
+        + Autoboxing / Unboxing
+        + Explicit Conversion
+    + 1.2 String manipulations
         + String conversion '.parseInt()'
         + String formatting StringBuilder, String.format()
+    + 1.3 Methods
     + 1.4 Operators
         + arithmetical / unary
         + relational / comparison
@@ -63,7 +61,7 @@
 3. OOP:
     + 3.1 OOP principles abstraction/encapsulation/polymorphism/inheritance
         + association - connectivity between objects one-to-one , one-to-many etc.
-        + composition - Member is tied to his Owner. Building and room example
+        + composition - Member is tied to his Owner. Building and Room example
         + aggregation - They are not tied. Player and a Team example
     + 3.2 Encapsulation
         + getters, - Read Only class
@@ -104,13 +102,13 @@
     + 4.5 Queue / Dequeue
         + priorityQueue
         + ArrayDeque
-   + 4.6 Stack
-   + 4.7 Maps
-       + size/ order / manipulations
-       + hashMap
-       + treeMap
-       + LinkedHashMap
-       + Iterator/iterable
+    + 4.6 Stack
+    + 4.7 Maps
+        + size/ order / manipulations
+        + hashMap
+        + treeMap
+        + LinkedHashMap
+        + Iterator/iterable
 
 
 5. Exceptions & Logging
@@ -166,7 +164,7 @@
         + Asserting
     + 7.3 Debugging tools
     + 7.4 TDD - Test Driven Development
-    
+
 
 8. Network TCP/UDP
     + 8.1 Network fundamentals, client-server architecture communication protocols
@@ -179,9 +177,9 @@
         + MulticastSocket
     + 8.4 URL and URLConnection
     + 8.5 HTTP and HTTPS
-      + HTTP, HTTPS overview
-      + HTTPUrlConnection vs URLConnection
-      + List of other URLConnection subclasses
+        + HTTP, HTTPS overview
+        + HTTPUrlConnection vs URLConnection
+        + List of other URLConnection subclasses
     + 8.6 Popular network frameworks
     + 8.7 Network security concepts & secure communication
 
@@ -247,8 +245,8 @@
         + Instant, ZonedDateTime
         + DateTimeFormatter
     + 12.2 Math and number formatting:
-      + new Short((short) 10)	Less efficient	May create unnecessary objects
-      + Short.valueOf((short) 10) More efficient	Reuses objects for common values
+        + new Short((short) 10)    Less efficient May create unnecessary objects
+        + Short.valueOf((short) 10) More efficient Reuses objects for common values
     + 12.3 Localization and internationalization
     + 12.4 Optionals (Handling potentially nullable values)
     + 12.5 VARARGS Arbitrary number of arguments in methods parameters method(String... inputString)
@@ -258,8 +256,8 @@
     + 12.8 Streams and parallel processing
     + 12.9 Static imports.
     + 12.10 Reflections & Annotations
-        + Java Reflection: Introducing reflection and its capabilities, including dynamically inspecting and modifying classes,
-          accessing methods and fields at runtime, and understanding its use cases.
+        + Java Reflection: Introducing reflection and its capabilities, including dynamically inspecting and modifying classes, accessing methods and
+          fields at runtime, and understanding its use cases.
         + Create your own Annotation
         + Popular annotations @Deprecated, @Override, @Nullable etc.
     + 12.11 Design patterns in Java
@@ -335,7 +333,7 @@
         + Integration with messaging systems and external APIs
         + Building message-driven applications with Spring Integration
     + 14.10 Spring testing & monitoring:
-        + Spring Test 
+        + Spring Test
         + Spring Boot Actuator: production-ready monitor
         + Rest Assured
         + Web Driver
