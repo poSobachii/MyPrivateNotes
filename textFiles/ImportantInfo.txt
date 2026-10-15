@@ -124,10 +124,10 @@ sudo nano /etc/environment       // locale issue fix
 LANG=en_US.UTF-8
 LC_ALL=en_US.UTF-8
 
-ssh-add -l
-ssh-add ~/.ssh/id_rs            // your private public key
+ssh-add -l                                  // to check which key is using atm
 scp ansiblePuppetKeys.pem ec2-user@13.48.85.115:/var/ansible       // to copy to remote server
 ssh-keygen -t rsa -b 4096 -C "first_key"                // to generate key
+ssh-add ~/.ssh/first_key                     // to add your new key to MAC identity
 tr -d '\n' <~/.ssh/id_ed25519.pub | pbcopy                 // copy pub key
 
 
@@ -160,6 +160,7 @@ history | grep 'variable'         // to search for something in terminal  MAC
 ps -ef | grep java                  //to see all java processers MAC
 netstat -anv | grep 8080            // to see if 8080 port is busy
 netstat -vanp tcp | grep 3000       // alternative
+netstat -anvp tcp
 sudo kill -9 <pid>           // to kill processor with ID MAC
 
 /bin/bash                   // to switch to bash for current session
@@ -218,6 +219,10 @@ jar cfm HelloWorld.jar manifest.txt HelloWorld.class      // creating jar file
 java -jar HelloWorld.jar
 
 mvn install -D skipTests=true
+
+-------------------- JAVA EVALUATE EXPRESSION --------------------
+
+new com.google.gson.Gson().toJson(objectToPrint);
 
 ==============================================================================================================================
 -------------------- ANSIBLE AD-HOC COMMANDS --------------------

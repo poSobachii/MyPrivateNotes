@@ -1,4 +1,5 @@
 # Markdown CheatSheet:
+
 <hr>
 
 End of line is  
@@ -17,17 +18,17 @@ empty line
 
 ## Headings:
 
-# Heading1
+# Heading1 (H1) - Usually around 32px
 
-## Heading2
+## Heading2 (H2) - Usually around 24px
 
-### Heading3
+### Heading3 (H3) - Usually around 18.72px
 
-#### Heading4
+#### Heading4 (H4) - Usually around 16px
 
-##### Heading5
+##### Heading5 (H5) - Usually around 13.28px
 
-###### Heading6
+###### Heading6 (H6) - Usually around 10.72px
 
 Alternative heading1
 =====
@@ -135,25 +136,26 @@ But let's throw in a <b>tag</b>.
 
 Colons can be used to align columns.
 
-| Tables        | Are           | Cool  |
-|:--------------|:-------------:| :-----|
+| Tables        |      Are      | Cool  |
+|:--------------|:-------------:|:------|
 | col 1 is long | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| col 3 is      | left-aligned  |    $1 |
+| col 2 is      |   centered    | $12   |
+| col 3 is      | left-aligned  | $1    |
 
-There must be at least 3 dashes separating each header cell. The outer pipes (|) are optional, and you don't need to make the raw
-Markdown line up prettily. You can also use inline Markdown.
+There must be at least 3 dashes separating each header cell. The outer pipes (|) are optional, and you don't need to make the raw Markdown line up
+prettily. You can also use inline Markdown.
 
-Markdown | Less | Pretty | Another
---- | --- | --- | ---
-*Still* | `renders` | **nicely**
-1 | 2 | 3
+ Markdown | Less      | Pretty     | Another 
+----------|-----------|------------|---------
+ *Still*  | `renders` | **nicely** 
+ 1        | 2         | 3          
 
 <hr>
 
 ## Blockquotes
 
-> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote.
+> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually
+> wrap for everyone. Oh, you can *put* **Markdown** into a blockquote.
 <hr>
 
 <dl>

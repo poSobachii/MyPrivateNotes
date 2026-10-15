@@ -10,7 +10,7 @@ import java.util.Arrays;
 public class FastCheck {
 
     public static void main(String[] args) {
-        bubbleSort();
+        getSummOfHighest(10,10,10);
     }
 
     private static void compareDates() {

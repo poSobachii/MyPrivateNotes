@@ -11,6 +11,8 @@
      are willing to pay a higher price for each unit of earnings, suggesting expectations of future growth or positive market
      sentiment. A lower P/E ratio, on the other hand, may indicate that the stock is relatively cheaper compared to its earnings.
 3. Bid-Ask spread
+   * <b>ASK</b> The lowest price at which a seller is willing to sell.
+   * <b>BID</b> The highest price at which a buyer is willing to purchase.
    * The bid-ask spread equals the lowest asking price set by a seller minus the highest bid price offered by an interested buyer.
 <hr>
 

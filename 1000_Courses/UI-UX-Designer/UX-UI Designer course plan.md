@@ -289,3 +289,5 @@
         + The importance of a strong portfolio in UX/UI design
     + How to advance your career in UX/UI design
     + The importance of networking and building relationships in UX/UI design
+
+18. Resources

@@ -1,0 +1,614 @@
+body {
+    background-color: #ADD8E6; /* Light, cheerful blue */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#hero-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#hero-section img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+#hero-section h1 {
+    font-size: 3em; /* Large and engaging */
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#hero-section p {
+    font-size: 1.2em; /* Clear and readable */
+    color: #555;
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+#hero-section .button {
+    background-color: #FFFFE0; /* Sunny yellow */
+    color: #333;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+#hero-section .button:hover {
+    background-color: #FFFACD; /* Slightly darker yellow for hover */
+}
+
+/* How It Works Section */
+#how-it-works-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #E0FFFF; /* Light cyan, like a clear sky */
+}
+
+#how-it-works-section h2 {
+    font-size: 2.5em;
+    color: #2F4F4F; /* Dark slate gray */
+    margin-bottom: 40px;
+}
+
+.steps-container {
+    display: flex;
+    flex-direction: column; /* Stack steps vertically by default */
+    align-items: center;
+}
+
+.step {
+    background-color: #FFFFFF; /* White background for each step */
+    border: 1px solid #B0E0E6; /* Powder blue border */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    width: 80%;
+    max-width: 400px; /* Max width for a step */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.step img {
+    width: 100px; /* Fixed width for icons */
+    height: 100px;
+    margin-bottom: 15px;
+}
+
+.step h3 {
+    font-size: 1.5em;
+    color: #008080; /* Teal color for step titles */
+    margin-bottom: 10px;
+}
+
+.step p {
+    font-size: 1em;
+    color: #4682B4; /* Steel blue for step text */
+    line-height: 1.6;
+}
+
+/* Media query for wider screens to display steps in a row */
+@media (min-width: 768px) {
+    .steps-container {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start; /* Align items to the top */
+    }
+
+    .step {
+        width: 30%; /* Adjust width for side-by-side layout */
+    }
+}
+
+/* Order Weather Section */
+#order-weather-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #FAFAD2; /* LightGoldenrodYellow, for a magical feel */
+}
+
+#order-weather-section h2 {
+    font-size: 2.5em;
+    color: #8B4513; /* SaddleBrown, earthy and fitting */
+    margin-bottom: 30px;
+}
+
+#order-weather-section form {
+    max-width: 500px;
+    margin: 0 auto; /* Center the form */
+    background-color: #FFF8DC; /* Cornsilk, lighter background for form */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+#order-weather-section label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #6B4226; /* Darker brown for labels */
+    text-align: left;
+}
+
+#order-weather-section input[type="date"],
+#order-weather-section input[type="time"],
+#order-weather-section input[type="text"],
+#order-weather-section select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #CD853F; /* Peru, a brownish border */
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+#order-weather-section select {
+    appearance: none; /* Remove default system appearance */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23CD853F%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.4-5.4-12.8z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 12px;
+    padding-right: 30px; /* Make space for the arrow */
+}
+
+#order-weather-section p {
+    font-size: 0.9em;
+    color: #A0522D; /* Sienna, a softer brown */
+    margin-bottom: 10px;
+}
+
+#order-weather-section p:last-of-type {
+    margin-bottom: 25px; /* More space before the button */
+}
+
+#order-weather-section button[type="submit"] {
+    background-color: #FF7F50; /* Coral, a magical, vibrant color */
+    color: white;
+    padding: 15px 35px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#order-weather-section button[type="submit"]:hover {
+    background-color: #FF6347; /* Tomato, slightly darker for hover */
+    transform: translateY(-2px);
+}
+
+/* Refund Guarantee Section */
+#refund-guarantee-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #D1E8E2; /* A trustworthy, muted teal/green */
+}
+
+#refund-guarantee-section h2 {
+    font-size: 2.5em;
+    color: #13547A; /* Darker, serious blue for trust */
+    margin-bottom: 20px;
+}
+
+#refund-guarantee-section .refund-promise {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #1E6A8B; /* Strong blue */
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+#refund-guarantee-section .visual-placeholder,
+#refund-guarantee-section .trust-icon-placeholder {
+    display: inline-block; /* Or block with margin auto for centering */
+    width: 200px;
+    height: 100px;
+    background-color: #B0C4DE; /* LightSteelBlue placeholder bg */
+    border: 2px dashed #4682B4; /* SteelBlue border */
+    color: #4682B4;
+    padding: 10px;
+    margin: 20px auto;
+    line-height: 100px; /* Vertically center text if needed */
+    font-style: italic;
+}
+
+#refund-guarantee-section .faq-section {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left; /* Align FAQ text to the left for readability */
+    padding: 20px;
+    background-color: #E0F2F1; /* Very light teal, almost white */
+    border-radius: 8px;
+}
+
+#refund-guarantee-section .faq-section h3 {
+    font-size: 1.8em;
+    color: #13547A;
+    margin-bottom: 20px;
+    text-align: center; /* Center FAQ title */
+}
+
+#refund-guarantee-section .faq-section dt {
+    font-weight: bold;
+    color: #2C7A7B; /* Another shade of teal/blue */
+    margin-top: 15px;
+}
+
+#refund-guarantee-section .faq-section dd {
+    margin-left: 0; /* Remove default dl indent for dd if desired */
+    margin-bottom: 15px;
+    color: #345B63; /* Darker, muted color for answers */
+    line-height: 1.5;
+}
+
+/* Social Proof Section */
+#social-proof-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #FFF5EE; /* Seashell, a very light, warm color */
+}
+
+#social-proof-section h2 {
+    font-size: 2.5em;
+    color: #4A4A4A; /* Dark gray for a modern, clean look */
+    margin-bottom: 15px;
+}
+
+#social-proof-section .success-counter {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #FF4500; /* OrangeRed, for excitement */
+    margin-bottom: 40px;
+}
+
+#social-proof-section .recent-orders,
+#social-proof-section .testimonials {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #FFFFFF; /* White background for subsections */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+#social-proof-section h3 {
+    font-size: 1.8em;
+    color: #5D4037; /* Brownish color for subheadings */
+    margin-bottom: 20px;
+}
+
+#social-proof-section .recent-orders ul {
+    list-style: none; /* Remove default bullets */
+    padding: 0;
+    text-align: left; /* Align list items to the left */
+    max-width: 500px;
+    margin: 0 auto; /* Center the list */
+}
+
+#social-proof-section .recent-orders li {
+    background-color: #F0F8FF; /* AliceBlue, light and airy */
+    border: 1px solid #D6EAF8; /* Light blue border */
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #333;
+}
+
+#social-proof-section .testimonial {
+    background-color: #FAF0E6; /* Linen, a very light beige */
+    border: 1px solid #E0D2C3; /* Muted beige border */
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto; /* Centered with margin */
+    max-width: 550px; /* Control width */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center items like avatar */
+    text-align: center; /* Center text for blockquote and cite */
+}
+
+#social-proof-section .testimonial img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 2px solid #D2B48C; /* Tan border for avatar */
+}
+
+#social-proof-section .testimonial blockquote {
+    font-size: 1.1em;
+    color: #555;
+    margin: 0 0 10px 0; /* Remove default margins and add bottom margin */
+    font-style: italic;
+    line-height: 1.6;
+}
+
+#social-proof-section .testimonial cite {
+    font-size: 0.95em;
+    color: #777;
+    font-style: normal;
+}
+
+/* Media query for wider screens to display testimonials side-by-side if desired */
+@media (min-width: 992px) {
+    #social-proof-section .testimonials {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+    #social-proof-section .testimonial {
+        width: 45%; /* Adjust width for side-by-side layout */
+        margin: 0 10px; /* Add some space between testimonials */
+    }
+}
+
+/* Pricing Plans Section */
+#pricing-plans-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #F0E6FF; /* Light lavender, for a magical touch */
+}
+
+#pricing-plans-section h2 {
+    font-size: 2.8em;
+    color: #483D8B; /* DarkSlateBlue, for a premium feel */
+    margin-bottom: 50px;
+}
+
+.pricing-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch; /* Make cards same height */
+    flex-wrap: wrap;
+    gap: 30px; /* Space between cards */
+}
+
+.pricing-plan {
+    flex-basis: 320px; /* Base width for each card */
+    background-color: #FFFFFF;
+    border: 1px solid #D8BFD8; /* Thistle border */
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: space-between; /* Distribute space */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative; /* For badge positioning */
+    overflow: hidden; /* To contain the badge if it uses certain styles */
+}
+
+.pricing-plan:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(72, 61, 139, 0.2); /* DarkSlateBlue shadow on hover */
+}
+
+.pricing-plan h3 {
+    font-size: 1.8em;
+    color: #6A5ACD; /* SlateBlue */
+    margin-bottom: 15px;
+}
+
+.pricing-plan .plan-description {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    flex-grow: 1; /* Allow description to take available space */
+}
+
+.pricing-plan .plan-price {
+    font-size: 2em;
+    font-weight: bold;
+    color: #483D8B; /* DarkSlateBlue */
+    margin-bottom: 25px;
+}
+
+.select-plan-btn {
+    background-color: #9370DB; /* MediumPurple */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block; /* Make button take full width of its container (if not flexed) */
+    width: 100%; /* Ensure full width */
+    margin-top: auto; /* Push button to bottom */
+}
+
+.select-plan-btn:hover {
+    background-color: #8A2BE2; /* BlueViolet */
+}
+
+/* Specific styling for the "Magic Pass" card */
+.pricing-plan#magic {
+    border-color: #8A2BE2; /* BlueViolet border for popular plan */
+    box-shadow: 0 8px 20px rgba(138, 43, 226, 0.25); /* Enhanced shadow */
+}
+
+.popular-badge {
+    position: absolute;
+    top: -1px; /* Adjust to align with border */
+    right: -1px;
+    background-color: #FFD700; /* Gold */
+    color: #483D8B; /* DarkSlateBlue text */
+    padding: 8px 15px;
+    font-size: 0.9em;
+    font-weight: bold;
+    border-top-right-radius: 12px; /* Match card's border radius */
+    border-bottom-left-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+/* Optional: Slight rotation for badge - more complex to align perfectly */
+/*
+.popular-badge {
+    position: absolute;
+    top: 20px;
+    right: -30px;
+    background-color: #FFD700;
+    color: #483D8B;
+    padding: 5px 40px;
+    font-size: 0.9em;
+    font-weight: bold;
+    transform: rotate(45deg);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+*/
+
+/* Footer Section */
+#footer-section {
+    background-color: #333333; /* Dark background */
+    color: #F0F0F0; /* Light text color */
+    padding: 50px 20px;
+    text-align: center; /* Default text alignment */
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px; /* Space between columns */
+    margin-bottom: 40px;
+    text-align: left; /* Align text to left within columns */
+}
+
+.footer-column {
+    flex: 1; /* Allow columns to grow */
+    min-width: 220px; /* Minimum width for each column */
+    padding: 0 15px; /* Padding within columns */
+}
+
+#footer-section h4 {
+    font-size: 1.4em;
+    color: #FFD700; /* Gold color for headings */
+    margin-bottom: 20px;
+    border-bottom: 1px solid #555; /* Subtle separator */
+    padding-bottom: 10px;
+}
+
+/* Quick Links */
+.quick-links {
+    list-style: none;
+    padding: 0;
+}
+
+.quick-links li {
+    margin-bottom: 10px;
+}
+
+.quick-links a {
+    color: #E0E0E0; /* Lighter gray for links */
+    text-decoration: none;
+    transition: color 0.3s ease, padding-left 0.3s ease;
+}
+
+.quick-links a:hover {
+    color: #FFFFE0; /* Light yellow hover */
+    padding-left: 5px; /* Slight indent on hover */
+}
+
+/* Social Media Icons */
+.social-media-icons {
+    margin-top: 10px;
+}
+
+.social-icon {
+    display: inline-block;
+    color: #E0E0E0;
+    text-decoration: none;
+    padding: 8px 12px;
+    margin-right: 10px;
+    margin-bottom: 10px; /* For wrapping */
+    border: 1px solid #777; /* Border around icon */
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.social-icon:hover {
+    background-color: #FFD700; /* Gold background on hover */
+    color: #333; /* Dark text on hover */
+    transform: translateY(-2px);
+}
+
+/* Newsletter Form */
+.newsletter-form input[type="email"] {
+    width: calc(100% - 110px); /* Adjust width to fit button */
+    padding: 10px;
+    margin-right: 8px;
+    border: 1px solid #777;
+    border-radius: 5px;
+    background-color: #555;
+    color: #FFF;
+    font-size: 0.9em;
+}
+
+.newsletter-form input[type="email"]::placeholder {
+    color: #BBB;
+}
+
+.newsletter-form button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #FFD700; /* Gold button */
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.newsletter-form button[type="submit"]:hover {
+    background-color: #FFFFE0; /* Light yellow hover */
+    color: #000;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    border-top: 1px solid #555; /* Separator line */
+    padding-top: 30px;
+    text-align: center; /* Center copyright and legal links */
+}
+
+.copyright-text {
+    font-size: 0.9em;
+    color: #AAA;
+    margin-bottom: 15px;
+}
+
+.legal-links a {
+    color: #BBB;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 0.9em;
+    transition: color 0.3s ease;
+}
+
+.legal-links a:hover {
+    color: #FFF; /* White hover for legal links */
+}
